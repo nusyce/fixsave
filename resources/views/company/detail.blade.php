@@ -48,23 +48,23 @@
 
                             <div class="loctext"><i class="fa fa-map-marker" aria-hidden="true"></i>
 
-                                {{$company->plz}} - {{$company->stadt}} - {{$company->strabe}}</div>
+                                <span style="font-weight: bold">Plz: </span> {{$company->plz}} - <span style="font-weight: bold">Stadt: </span>{{$company->stadt}} - <span style="font-weight: bold">Straße: </span>{{$company->strabe}}</div>
 
                             @if(!empty($company->firma))
 
-                                <div class="loctext"><span style="font-weight: bold">Firma </span>{{$company->firma}} </div>
+                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Firma </span>{{$company->firma}} </div>
 
                             @endif
 
                             @if(!empty($company->geschlecht))
 
-                                <div class="loctext"><span style="font-weight: bold">Geschlecht </span>{{$company->geschlecht}} </div>
+                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Geschlecht </span>{{$company->geschlecht}} </div>
 
                             @endif
 
                             @if(!empty($company->vorname))
 
-                                <div class="loctext"><span style="font-weight: bold">Vorname </span>{{$company->vorname}} </div>
+                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Vorname </span>{{$company->vorname}} </div>
 
                             @endif
 

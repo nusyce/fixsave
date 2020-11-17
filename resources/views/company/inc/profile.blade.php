@@ -21,6 +21,8 @@
             <small  class="error text-danger">{!! APFrmErrHelp::showErrors($errors, 'password') !!} </small>
            
             </div>
+			{!! Form::text('password','', array('class'=>'form-control', 'id'=>'password', 'placeholder'=>__('Password'))) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'password') !!} </div>
     </div>
 </div>
 <hr>
@@ -102,6 +104,8 @@
             <small  class="error text-danger"> {!! APFrmErrHelp::showErrors($errors, 'location') !!}  </small>
            
             </div>
+			{!! Form::text('location', '', array('class'=>'form-control', 'id'=>'location', 'placeholder'=>__($company->strabe))) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'location') !!} </div>
     </div>
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'no_of_offices') !!}">
@@ -162,6 +166,14 @@
          
              </div>
             
+			{!! Form::text('fax', '', array('class'=>'form-control', 'id'=>'fax', 'placeholder'=>__($company->hausnummer))) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'fax') !!} </div>
+    </div>
+    <div class="col-md-4">
+        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
+			<label>{{__('Phone')}}</label>
+			{!! Form::text('phone','', array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__($company->telefon))) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </div>
     </div>
     <div class="clearfix"></div>
     <div class="col-md-6">
@@ -316,7 +328,7 @@
             var reader = new FileReader()
             reader.onload = (function (theFile) {
                 return function (e) {
-                    $('#thumbnail').append('<div class="fileattached"><img height="100px" src="' + e.target.result + '" > <div>' + theFile.name + '</div><div class="clearfix"></div></div>');
+                    $('#thumbnail').append('<div class="fileattached" style="margin-bottom: 14px;"><img height="100px"  src="' + e.target.result + '" > <div style="margin-top: 14px;">' + theFile.name + '</div><div class="clearfix"></div></div>');
                 };
             }(file))
             var ret = reader.readAsDataURL(file);

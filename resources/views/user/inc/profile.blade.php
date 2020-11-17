@@ -201,7 +201,7 @@
       </div>
   </div>
     <div class="col-md-12">
-        <div class="formrow"><button type="submit" class="btn">{{__('Profil aktualisieren und speichern')}}  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button></div>
+        <div class="formrow"><button type="submit" class="btn">{{__('PROFIL AKTUALISIEREN')}}  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button></div>
     </div>
 </div>
 

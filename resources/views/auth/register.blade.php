@@ -155,7 +155,7 @@
 
                         <div id="employer" class="formpanel tab-pane fade {{($c_or_e == 'employer')? 'active':''}}">
 
-                            <form class="form-horizontal" method="POST" action="{{ route('company.register') }}">
+                            <form class="form-horizontal" method="POST" action="{{ route('company.register') }}" >
 
                                 {{ csrf_field() }}
 
@@ -173,14 +173,14 @@
                                 <br>
 
                                 <div class="form-group" style="display: flex;flex-direction: row">
-                                <div style="margin-right: 65px;margin-left:10px;"> <label style="font-size: 16px;">  Geschlecht </label></div>
-                                    <div style="margin-right: 65px;font-size: 16px;">
+                                <div style="margin-right: 65px;margin-left:10px;"> <span style="font-size: 16px;"></span></div>
+                                    <div style="margin-right: 45px;font-size: 16px;">
                                     <input type="radio" name="radio"   id="Herr" value="Herr" class="form-check-input" style="position: relative;bottom: 2px;">
                                     <label style="position: relative;bottom: 3px;" for="Herr" class="form-check-label">Herr </label>
                                     </div>
 
                                     <div style="margin-right: 65px;font-size: 16px;">
-                                    <input type="radio" name="radio"   id="Frau" value="Frau" class="form-check-input" style="position: relative;bottom: 2px;">
+                                    <input type="radio" name="radio"   id="Frau" value="Frau" class="form-check-input" style="position: relative;bottom: 2px;" required>
                                     <label style="position: relative;bottom: 3px;" for="Frau" class="form-check-label">Frau </label>
                                     </div>
                                         <div style="margin-right: 65px;font-size: 16px;">
@@ -305,7 +305,7 @@
 
                                 <div class="formrow">
 
-                                    <input type="checkbox" value="1" name="terms_of_use" />
+                                    <input type="checkbox" value="1" name="terms_of_use" required="" />
 
                                    Ich habe die  <a href="#"> <span style="color: blue;text-decoration: underline">Datenschutzbestimmung </span> </a>gelesen
 
@@ -363,4 +363,4 @@
 
     @include('includes.footer')
 
-@endsection 
+@endsection
