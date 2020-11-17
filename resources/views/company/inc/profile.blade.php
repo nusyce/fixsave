@@ -21,8 +21,8 @@
             <small  class="error text-danger">{!! APFrmErrHelp::showErrors($errors, 'password') !!} </small>
            
             </div>
-			{!! Form::text('password','', array('class'=>'form-control', 'id'=>'password', 'placeholder'=>__('Password'))) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'password') !!} </div>
+
+            </div>
     </div>
 </div>
 <hr>
