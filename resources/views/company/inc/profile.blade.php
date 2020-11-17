@@ -11,7 +11,7 @@
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'password') !!}">
 			<label>{{__('Password')}}</label>
-			{!! Form::password('password', array('class'=>'form-control', 'id'=>'password', 'placeholder'=>__('Password'))) !!}
+			{!! Form::text('password','', array('class'=>'form-control', 'id'=>'password', 'placeholder'=>__('Password'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'password') !!} </div>
     </div>
 </div>
@@ -69,7 +69,7 @@
     <div class="col-md-12">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'location') !!}">
 			<label>{{__('Address')}}</label>
-			{!! Form::text('location', null, array('class'=>'form-control', 'id'=>'location', 'placeholder'=>__('Location'))) !!}
+			{!! Form::text('location', '', array('class'=>'form-control', 'id'=>'location', 'placeholder'=>__($company->strabe))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'location') !!} </div>
     </div>
     <div class="col-md-4">
@@ -101,13 +101,13 @@
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'fax') !!}">
 			<label>{{__('Fax')}}</label>
-			{!! Form::text('fax', null, array('class'=>'form-control', 'id'=>'fax', 'placeholder'=>__('Fax'))) !!}
+			{!! Form::text('fax', '', array('class'=>'form-control', 'id'=>'fax', 'placeholder'=>__($company->hausnummer))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'fax') !!} </div>
     </div>
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
 			<label>{{__('Phone')}}</label>
-			{!! Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__('Phone'))) !!}
+			{!! Form::text('phone','', array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__($company->telefon))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </div>
     </div>
     <div class="clearfix"></div>
@@ -226,7 +226,7 @@
             var reader = new FileReader()
             reader.onload = (function (theFile) {
                 return function (e) {
-                    $('#thumbnail').append('<div class="fileattached"><img height="100px" src="' + e.target.result + '" > <div>' + theFile.name + '</div><div class="clearfix"></div></div>');
+                    $('#thumbnail').append('<div class="fileattached" style="margin-bottom: 14px;"><img height="100px"  src="' + e.target.result + '" > <div style="margin-top: 14px;">' + theFile.name + '</div><div class="clearfix"></div></div>');
                 };
             }(file))
             var ret = reader.readAsDataURL(file);

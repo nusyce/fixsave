@@ -104,7 +104,7 @@
                                     </ul>
                                 </li>
                             @endif @if(Auth::guard('company')->check())
-                                <li class="nav-item postjob"><a href="{{route('post.job')}}" class="nav-link register">{{__('Post a job')}}</a> </li>
+                                <li class="nav-item postjob"><a href="{{route('post.job')}}" class="nav-link register">{{__('Stellen ausschreiben')}}</a> </li>
                                 <li class="nav-item dropdown userbtn"><a href="">{{Auth::guard('company')->user()->printCompanyImage()}}</a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item"><a href="{{route('company.home')}}" class="nav-link"><i class="fa fa-tachometer" aria-hidden="true"></i> {{__('Dashboard')}}</a> </li>

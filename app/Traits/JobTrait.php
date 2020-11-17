@@ -223,7 +223,7 @@ trait JobTrait
         $company = Auth::guard('company')->user();
 
 		if ((bool)$company->is_active === false) {
-            flash(__('Your account is inactive contact site admin to activate it'))->error();
+            flash(__('Ihr Konto ist inaktiv, um es zu aktivieren'))->error();
             return \Redirect::route('company.home');
             exit;
         }
