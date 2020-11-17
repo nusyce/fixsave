@@ -17,13 +17,13 @@ $queryString = MiscHelper::getLangQueryStr();
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}" id="country_id_div">
         {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}
-        {!! Form::select('country_id', ['' => 'Select Country']+$countries, old('country_id', (isset($city))? $city->getState()->getCountry('country_id'):$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
+        {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, old('country_id', (isset($city))? $city->getState()->getCountry('country_id'):$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}" id="state_id_div">
         {!! Form::label('state_id', 'State', ['class' => 'bold']) !!}                    
         <span id="default_state_dd">
-            {!! Form::select('state_id', ['' => 'Select State'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
+            {!! Form::select('state_id', ['' => 'Staat auswählen'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>

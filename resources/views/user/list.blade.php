@@ -27,25 +27,25 @@
                                 <div class="col-md-{{((bool)$siteSetting->country_specific_site)? 5:3}}">
                                     <input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills or job seeker details')}}" />
                                 </div>
-                                <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Select Functional Area')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div>
+                                <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Funktionsbereich auswählen')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div>
 
 
                                 @if((bool)$siteSetting->country_specific_site)
                                 {!! Form::hidden('country_id[]', Request::get('country_id[]', $siteSetting->default_country_id), array('id'=>'country_id')) !!}
                                 @else
                                 <div class="col-md-2">
-                                    {!! Form::select('country_id[]', ['' => __('Select Country')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
+                                    {!! Form::select('country_id[]', ['' => __('Land auswählen')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
                                 </div>
                                 @endif
 
                                 <div class="col-md-2">
                                     <span id="state_dd">
-                                        {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id', null), array('class'=>'form-control', 'id'=>'state_id')) !!}
+                                        {!! Form::select('state_id[]', ['' => __('Staat auswählen')], Request::get('state_id', null), array('class'=>'form-control', 'id'=>'state_id')) !!}
                                     </span>
                                 </div>
                                 <div class="col-md-2">
                                     <span id="city_dd">
-                                        {!! Form::select('city_id[]', ['' => __('Select City')], Request::get('city_id', null), array('class'=>'form-control', 'id'=>'city_id')) !!}
+                                        {!! Form::select('city_id[]', ['' => __('Stadt auswählen')], Request::get('city_id', null), array('class'=>'form-control', 'id'=>'city_id')) !!}
                                     </span>
                                 </div>
                                 <div class="col-md-1">

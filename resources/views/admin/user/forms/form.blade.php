@@ -81,20 +81,20 @@
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}">
         {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}                    
-        {!! Form::select('country_id', [''=>'Select Country']+$countries, old('country_id', (isset($user))? $user->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
+        {!! Form::select('country_id', [''=>'Land auswählen']+$countries, old('country_id', (isset($user))? $user->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}">
         {!! Form::label('state_id', 'State', ['class' => 'bold']) !!}                    
         <span id="default_state_dd">
-            {!! Form::select('state_id', [''=>'Select State'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
+            {!! Form::select('state_id', [''=>'Staat auswählen'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city_id') !!}">
         {!! Form::label('city_id', 'City', ['class' => 'bold']) !!}                    
         <span id="default_city_dd">
-            {!! Form::select('city_id', [''=>'Select City'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
+            {!! Form::select('city_id', [''=>'Stadt auswählen'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}                                       
     </div>
@@ -125,7 +125,7 @@
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'functional_area_id') !!}">
         {!! Form::label('functional_area_id', 'Functional Area', ['class' => 'bold']) !!}                    
-        {!! Form::select('functional_area_id', [''=>'Select Functional Area']+$functionalAreas, null, array('class'=>'form-control', 'id'=>'functional_area_id')) !!}
+        {!! Form::select('functional_area_id', [''=>'Funktionsbereich auswählen']+$functionalAreas, null, array('class'=>'form-control', 'id'=>'functional_area_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'functional_area_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'current_salary') !!}">

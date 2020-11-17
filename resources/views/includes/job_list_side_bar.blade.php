@@ -378,7 +378,7 @@
 
             <!-- button -->
             <div class="searchnt">
-                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Search Jobs')}}</button>
+                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Stelle suchens')}}</button>
             </div>
             <!-- button end--> 
         </div>

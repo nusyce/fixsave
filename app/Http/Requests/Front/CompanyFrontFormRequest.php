@@ -78,9 +78,9 @@ class CompanyFrontFormRequest extends Request
             'fax.required' => __('Fax number required'),
             'phone.required' => __('Phone number required'),
             'logo.image' => __('Only Images can be used as logo'),
-            'country_id.required' => __('Please select country'),
-            'state_id.required' => __('Please select state'),
-            'city_id.required' => __('Please select city'),
+            'country_id.required' => __('Please Land auswählen'),
+            'state_id.required' => __('Please Staat auswählen'),
+            'city_id.required' => __('Please Stadt auswählen'),
         ];
     }
 
