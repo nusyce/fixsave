@@ -36,8 +36,8 @@
            </div>
            <div class="col-lg-4 offset-lg-3 formrow">
                <div>
-                   <input type="radio" name="geschlecht"  style="position: relative;bottom: 2px;" id="nationales_recruiting" value="nationales Recruiting" class="form-check-input">
-                   <label style="position: relative;bottom: 3px;" for="nationales_recruiting" class="form-check-label">nationales Recruiting </label>
+                   <input type="radio" name="geschlecht"  style="position: relative;bottom: 2px;" id="nationales_recruiting" value="Herr" class="form-check-input">
+                   <label style="position: relative;bottom: 3px;" for="nationales_recruiting" class="form-check-label">Herr</label>
                </div>
 
            </div>
@@ -45,8 +45,8 @@
 
 
                <div style="margin-right: 65px;font-size: 16px;">
-                   <input type="radio" name="geschlecht" style="position: relative;bottom: 2px;"  id="internat_recruiting" value="internat Recruiting" class="form-check-input" selected="">
-                   <label style="position: relative;bottom: 3px;" for="internat_recruiting" class="form-check-label">internat Recruiting </label>
+                   <input type="radio" name="geschlecht" style="position: relative;bottom: 2px;"  id="internat_recruiting" value="Frau" class="form-check-input" selected="">
+                   <label style="position: relative;bottom: 3px;" for="internat_recruiting" class="form-check-label">Frau</label>
                </div>
            </div>
        </div>
@@ -812,7 +812,7 @@
     <div class="formrow"  style="position: relative;">
 
         <input type="text" name="wanie" class="form-control" id="tagswannie" autocomplete="off" required="required"
-               placeholder="{{__('Wanie deine Tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
+               placeholder="{{__('wahle tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
 
     </div>
 
