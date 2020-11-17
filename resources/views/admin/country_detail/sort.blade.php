@@ -8,8 +8,8 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <a href="{{ route('list.country.details') }}">Country Details</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Sort Country Details</span> </li>
+                <li> <a href="{{ route('list.country.details') }}">Land Details</a> <i class="fa fa-circle"></i> </li>
+                <li> <span>Sort Land Details</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR -->        
@@ -20,11 +20,11 @@
             <div class="col-md-12">
                 <div class="portlet light bordered">
                     <div class="portlet-title">
-                        <div class="caption font-red-sunglo"> <i class="icon-settings font-red-sunglo"></i> <span class="caption-subject bold uppercase">Sort Country Details</span> </div>
+                        <div class="caption font-red-sunglo"> <i class="icon-settings font-red-sunglo"></i> <span class="caption-subject bold uppercase">Sort Land Details</span> </div>
                     </div>
                     <div class="portlet-body form">          
                         <ul class="nav nav-tabs">              
-                            <li class="active"> <a href="#Details" data-toggle="tab" aria-expanded="false"> Sort Country Details </a> </li>
+                            <li class="active"> <a href="#Details" data-toggle="tab" aria-expanded="false"> Sort Land Details </a> </li>
                         </ul>
                         <div class="tab-content">              
                             <div class="tab-pane fade active in" id="Details"> @include('admin.country_detail.forms.sort') </div>

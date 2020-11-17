@@ -1,6 +1,6 @@
 <?php
 
-/* * ******  Country Start ********** */
+/* * ******  Land Start ********** */
 Route::get('list-countries', array_merge(['uses' => 'Admin\CountryController@indexCountries'], $all_users))->name('list.countries');
 Route::get('create-country', array_merge(['uses' => 'Admin\CountryController@createCountry'], $all_users))->name('create.country');
 Route::post('store-country', array_merge(['uses' => 'Admin\CountryController@storeCountry'], $all_users))->name('store.country');
@@ -13,4 +13,4 @@ Route::put('make-not-active-country', array_merge(['uses' => 'Admin\CountryContr
 Route::get('sort-countries', array_merge(['uses' => 'Admin\CountryController@sortCountries'], $all_users))->name('sort.countries');
 Route::get('country-sort-data', array_merge(['uses' => 'Admin\CountryController@countrySortData'], $all_users))->name('country.sort.data');
 Route::put('country-sort-update', array_merge(['uses' => 'Admin\CountryController@countrySortUpdate'], $all_users))->name('country.sort.update');
-/* * ****** End Country ********** */
+/* * ****** End Land ********** */

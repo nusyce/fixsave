@@ -11,7 +11,7 @@ Invite Job Seekers
 Schedule an Interview
 Create an Test
 My Profile
-Logout
+Abmeldung
 
 Job Seekers Panel
 
@@ -24,7 +24,7 @@ Reviews & Rating
 Jobs Applied
 Invite Friends
 Pratice Mock Test
-Logout
+Abmeldung
 
 Interviewer Panel
 
@@ -33,4 +33,4 @@ My Profile
 Interview Requests
 Create an Test
 Reviews & Rating
-Logout
+Abmeldung

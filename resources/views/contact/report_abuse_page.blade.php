@@ -4,7 +4,7 @@
 @include('includes.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('Report Abuse')])
+@include('includes.inner_page_title', ['page_title'=>__('Missbrauch melden')])
 <!-- Inner Page Title end -->
 <!-- Page Title End -->
 <div class="listpgWraper">
@@ -15,7 +15,7 @@
                 <div class="userccount"> {!! Form::open(array('method' => 'post', 'route' => ['report.abuse', $slug])) !!}
                     <div class="formpanel"> 
                         <!-- Ad Information -->
-                        <h5>{{__('Report Abuse')}}</h5>            
+                        <h5>{{__('Missbrauch melden')}}</h5>            
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="formrow{{ $errors->has('listing_url') ? ' has-error' : '' }}">

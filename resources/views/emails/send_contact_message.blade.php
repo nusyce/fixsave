@@ -20,7 +20,7 @@
                                     <p>Following email has been recieved from contact form :</p>
                                     <p><strong>Full Name</strong> : {{$full_name}}</p>
                                     <p><strong>Email</strong> : {{$email}}</p>
-                                    <p><strong>Phone</strong> : {{$phone}}</p>
+                                    <p><strong>Telefonnummer</strong> : {{$Telefonnummer}}</p>
                                     <p><strong>Subject</strong> : "{{ $subject }}" <br>
                                         <br>
                                         {{ $message_txt }}

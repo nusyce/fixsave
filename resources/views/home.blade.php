@@ -23,12 +23,12 @@
 								<h4>{{auth()->user()->name}}</h4> 
 								<h6><i class="fa fa-map-marker" aria-hidden="true"></i> {{Auth::user()->getLocation()}}</h6>
 							</div>
-							<div class="col-lg-5"><div class="editbtbn"><a href="{{ route('my.profile') }}"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit Profile</a>
+							<div class="col-lg-5"><div class="editbtbn"><a href="{{ route('my.profile') }}"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Profil bearbeiten</a>
 						</div></div>
 						</div>
 
 						<ul class="row userdata">
-							<li class="col-lg-6 col-md-6"><i class="fa fa-phone" aria-hidden="true"></i> {{auth()->user()->phone}}</li>							
+							<li class="col-lg-6 col-md-6"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> {{auth()->user()->Telefonnummer}}</li>							
 							<li class="col-lg-6 col-md-6"><i class="fa fa-envelope" aria-hidden="true"></i> {{auth()->user()->email}}</li>
 						</ul>
 

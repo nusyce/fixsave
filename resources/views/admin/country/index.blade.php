@@ -28,7 +28,7 @@
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
                         <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Countries</span> </div>
-                        <div class="actions"> <a href="{{ route('create.country') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Country</a> </div>
+                        <div class="actions"> <a href="{{ route('create.country') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Land</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -37,7 +37,7 @@
                                     <thead>
                                         <tr role="row" class="filter"> 
                                             <td>{!! Form::select('lang', ['' => 'Select Language']+$languages, config('default_lang'), array('id'=>'lang', 'class'=>'form-control')) !!}</td>
-                                            <td><input type="text" class="form-control" name="country" id="country" autocomplete="off" placeholder="Country"></td>                      
+                                            <td><input type="text" class="form-control" name="country" id="country" autocomplete="off" placeholder="Land"></td>                      
                                             <td><select name="is_active" id="is_active"  class="form-control">
                                                     <option value="-1">Is Active?</option>
                                                     <option value="1" selected="selected">Active</option>
@@ -45,7 +45,7 @@
                                                 </select></td></tr>
                                         <tr role="row" class="heading">                                            
                                             <th>Language</th>
-                                            <th>Country</th>
+                                            <th>Land</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -108,7 +108,7 @@
     function deleteCountry(id, is_default) {
         var msg = 'Are you sure?';
         if (is_default == 1) {
-            msg = 'Are you sure? You are going to delete default Country, all other non default Countries will be deleted too!';
+            msg = 'Are you sure? You are going to delete default Land, all other non default Countries will be deleted too!';
         }
         if (confirm(msg)) {
             $.post("{{ route('delete.country') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})

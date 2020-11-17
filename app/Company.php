@@ -87,8 +87,12 @@ class Company extends Authenticatable
     {
 
         $logo = (string)$this->logo;
-
+        $checklogo = file_exists("company_logos/$logo");
+        if ($checklogo == 1)
         return \ImgUploader::print_image("company_logos/$logo", $width, $height, $this->name);
+
+        else
+return false;
 
     }
 

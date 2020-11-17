@@ -77,19 +77,19 @@
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'country_id') !!}">
-			<label for="">{{__('Country')}}</label>
+			<label for="">{{__('Land')}}</label>
             <?php $country_id = old('country_id', (isset($user) && (int) $user->country_id > 0) ? $user->country_id : $siteSetting->default_country_id); ?>
             {!! Form::select('country_id', [''=>__('Land auswählen')]+$countries, $country_id, array('class'=>'form-control', 'id'=>'country_id')) !!}
             {!! APFrmErrHelp::showErrors($errors, 'country_id') !!} </div>
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'state_id') !!}">
-			<label for="">{{__('State')}}</label>
+			<label for="">{{__('Staat')}}</label>
 			<span id="state_dd"> {!! Form::select('state_id', [''=>__('Staat auswählen')], null, array('class'=>'form-control', 'id'=>'state_id')) !!} </span> {!! APFrmErrHelp::showErrors($errors, 'state_id') !!} </div>
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'city_id') !!}">
-			<label for="">{{__('City')}}</label>
+			<label for="">{{__('Stadt')}}</label>
 			<span id="city_dd"> {!! Form::select('city_id', [''=>__('Stadt auswählen')], null, array('class'=>'form-control', 'id'=>'city_id')) !!} </span> {!! APFrmErrHelp::showErrors($errors, 'city_id') !!} </div>
     </div>
     <div class="col-md-6">
@@ -111,10 +111,10 @@
             {!! APFrmErrHelp::showErrors($errors, 'national_id_card_number') !!} </div>
     </div>
     <div class="col-md-6">
-        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
-			<label for="">{{__('Phone')}}</label>
-			{!! Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__('Phone'))) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </div>
+        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'Telefonnummer') !!}">
+			<label for="">{{__('Telefonnummer')}}</label>
+			{!! Form::text('Telefonnummer', null, array('class'=>'form-control', 'id'=>'Telefonnummer', 'placeholder'=>__('Telefonnummer'))) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'Telefonnummer') !!} </div>
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'mobile_num') !!}">
@@ -196,12 +196,12 @@
 	}
 	?>
       <input type="checkbox" value="1" name="is_subscribed" {{$is_checked}} />
-      {{__('Subscribe to news letter')}}
+      {{__('Newsletter abonnieren')}}
       {!! APFrmErrHelp::showErrors($errors, 'is_subscribed') !!}
       </div>
   </div>
     <div class="col-md-12">
-        <div class="formrow"><button type="submit" class="btn">{{__('Update Profile and Save')}}  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button></div>
+        <div class="formrow"><button type="submit" class="btn">{{__('Profil aktualisieren und speichern')}}  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button></div>
     </div>
 </div>
 

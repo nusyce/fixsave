@@ -111,9 +111,9 @@
                         <div class="candidateinfo">
 
 {{--
-                            @if(!empty($company->phone))
+                            @if(!empty($company->Telefonnummer))
 
-                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$company->phone}}">{{$company->phone}}</a></div>
+                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$company->Telefonnummer}}">{{$company->Telefonnummer}}</a></div>
 
                             @endif--}}
                             @if(!empty($company->land))
@@ -136,7 +136,7 @@
 
                         @if(!empty($company->telefon))
 
-                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$company->telefon}}">{{$company->telefon}}</a></div>
+                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$company->telefon}}">{{$company->telefon}}</a></div>
 
                             @endif
 
@@ -178,15 +178,15 @@
 
                     href="{{route('add.to.favourite.company', $company->slug)}}" class="btn"><i class="fa fa-floppy-o"
 
-                        aria-hidden="true"></i> {{__('Add to Favourite')}}</a> @endif <a
+                        aria-hidden="true"></i> {{__('Favorisieren')}}</a> @endif <a
 
                     href="{{route('report.abuse.company', $company->slug)}}" class="btn report"><i
 
-                        class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{__('Report Abuse')}}</a> <a
+                        class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{__('Missbrauch melden')}}</a> <a
 
                     href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope"
 
-                        aria-hidden="true"></i> {{__('Send Message')}}</a> </div>
+                        aria-hidden="true"></i> {{__('Nachricht senden')}}</a> </div>
 
         </div>
 
@@ -330,7 +330,7 @@
 
                             <li class="row">
 
-                                <div class="col-md-6 col-xs-6">{{__('Established In')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Etabliert in')}}</div>
 
                                 <div class="col-md-6 col-xs-6"><span>{{$company->established_in}}</span></div>
 
@@ -392,7 +392,7 @@
 
                 <div class="modal-header">                    
 
-                    <h4 class="modal-title">Send Message</h4>
+                    <h4 class="modal-title">Nachricht senden</h4>
 
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 

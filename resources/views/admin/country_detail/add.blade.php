@@ -8,8 +8,8 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <a href="{{ route('list.country.details') }}">Country Details</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Add Country Detail</span> </li>
+                <li> <a href="{{ route('list.country.details') }}">Land Details</a> <i class="fa fa-circle"></i> </li>
+                <li> <span>Add Land Detail</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR -->        
@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <div class="portlet light bordered">
                     <div class="portlet-title">
-                        <div class="caption font-red-sunglo"> <i class="icon-settings font-red-sunglo"></i> <span class="caption-subject bold uppercase">Country Detail Form</span> </div>
+                        <div class="caption font-red-sunglo"> <i class="icon-settings font-red-sunglo"></i> <span class="caption-subject bold uppercase">Land Detail Form</span> </div>
                     </div>
                     <div class="portlet-body form">          
                         <ul class="nav nav-tabs">              

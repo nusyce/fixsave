@@ -16,13 +16,13 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'lang') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}" id="country_id_div">
-        {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}                    
+        {!! Form::label('country_id', 'Land', ['class' => 'bold']) !!}                    
         {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, old('country_id', (isset($state))? $state->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id', 'onchange'=>'filterDefaultStates(0);')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state') !!}">
-        {!! Form::label('state', 'State', ['class' => 'bold']) !!}
-        {!! Form::text('state', null, array('class'=>'form-control', 'id'=>'state', 'placeholder'=>'State', 'dir'=>$direction)) !!}
+        {!! Form::label('state', 'Staat', ['class' => 'bold']) !!}
+        {!! Form::text('state', null, array('class'=>'form-control', 'id'=>'state', 'placeholder'=>'Staat', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'state') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_default') !!}">
@@ -46,9 +46,9 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'is_default') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}" id="state_id_div">
-        {!! Form::label('state_id', 'Default State', ['class' => 'bold']) !!}                    
+        {!! Form::label('state_id', 'Default Staat', ['class' => 'bold']) !!}                    
         <span id="default_state_dd">
-            {!! Form::select('state_id', ['' => 'Select Default State'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
+            {!! Form::select('state_id', ['' => 'Select Default Staat'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>

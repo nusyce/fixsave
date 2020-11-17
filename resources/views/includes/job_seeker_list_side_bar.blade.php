@@ -6,14 +6,14 @@
     <div class="sidebar">
         <input type="hidden" name="search" value="{{Request::get('search', '')}}"/>
 
-        <!-- Jobs By Country -->
+        <!-- Jobs By Land -->
         <div class="widget">
-            <h4 class="widget-title">{{__('By Country')}}</h4>
+            <h4 class="widget-title">{{__('By Land')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($countryIdsArray) && count($countryIdsArray))
                 @foreach($countryIdsArray as $key=>$country_id)
                 @php
-                $country = App\Country::where('country_id','=',$country_id)->lang()->active()->first();			  
+                $country = App\Land::where('country_id','=',$country_id)->lang()->active()->first();			  
                 @endphp
                 @if(null !== $country)
                 @php
@@ -28,12 +28,12 @@
                 @endif
             </ul>
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
-        <!-- Jobs By Country end--> 
+        <!-- Jobs By Land end--> 
 
 
-        <!-- Jobs By State -->
+        <!-- Jobs By Staat -->
         <div class="widget">
-            <h4 class="widget-title">{{__('By State')}}</h4>
+            <h4 class="widget-title">{{__('By Staat')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($stateIdsArray) && count($stateIdsArray))
                 @foreach($stateIdsArray as $key=>$state_id)
@@ -53,12 +53,12 @@
                 @endif
             </ul>
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
-        <!-- Jobs By State end--> 
+        <!-- Jobs By Staat end--> 
 
 
-        <!-- Jobs By City -->
+        <!-- Jobs By Stadt -->
         <div class="widget">
-            <h4 class="widget-title">{{__('By City')}}</h4>
+            <h4 class="widget-title">{{__('By Stadt')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($cityIdsArray) && count($cityIdsArray))
                 @foreach($cityIdsArray as $key=>$city_id)
@@ -78,7 +78,7 @@
                 @endif
             </ul>
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
-        <!-- Jobs By City end--> 
+        <!-- Jobs By Stadt end--> 
 
         <!-- Jobs By Experience -->
         <div class="widget">

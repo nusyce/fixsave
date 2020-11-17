@@ -39,7 +39,8 @@
 
                         <nav>
                             <ul style="display: flex;flex-direction: row;position: relative;right: 190px;">
-                                <li><a href="{{ route('bewerbung') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li>
+                            <li><a href="#" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li>
+                            <!-- <li><a href="{{ route('bewerbung') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li> -->
                                 <li><a href="{{ route('my.favourite2.jobs') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">star_rate</span>  Meine Merkliste</a></li>
 
                                @if(!Auth::user() && !Auth::guard('company')->user())
@@ -87,7 +88,7 @@
                             @endforeach
                            {{-- <li class="nav-item {{ Request::url() == route('bewerbung') ? 'active' : '' }}"><a href="{{ route('bewerbung') }}" class="nav-link" style="color: white">{{__('Initiative-Bewerbung')}}</a> </li>--}}
 
-                            <li class="nav-item {{ Request::url() == route('contact.us') ? 'active' : '' }}"><a href="{{ route('contact.us') }}" class="nav-link" style="color: white">{{__('Kontakt')}}</a> </li>
+                            <li class="nav-item {{ Request::url() == route('contact.us') ? 'active' : '' }}"><a href="{{ route('contact.us') }}" class="nav-link" style="color: white">{{__('Kontaktdaten')}}</a> </li>
                             <li class="nav-item"><a href="#" class="nav-link" style="color: white">{{__('Standorte')}}</a> </li>
 
                         @if(Auth::check())
@@ -97,7 +98,7 @@
                                         <li class="nav-item"><a href="{{ route('my.profile') }}" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> {{__('My Profile')}}</a> </li>
                                         <li class="nav-item"><a href="{{ route('view.public.profile', Auth::user()->id) }}" class="nav-link"><i class="fa fa-eye" aria-hidden="true"></i> {{__('View Public Profile')}}</a> </li>
                                         <li><a href="{{ route('my.job.applications') }}" class="nav-link"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('My Job Applications')}}</a> </li>
-                                        <li class="nav-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header').submit();" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a> </li>
+                                        <li class="nav-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header').submit();" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Abmeldung')}}</a> </li>
                                         <form id="logout-form-header" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
@@ -109,9 +110,9 @@
                                     <ul class="dropdown-menu">
                                         <li class="nav-item"><a href="{{route('company.home')}}" class="nav-link"><i class="fa fa-tachometer" aria-hidden="true"></i> {{__('Dashboard')}}</a> </li>
                                         <li class="nav-item"><a href="{{ route('company.profile') }}" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Profile')}}</a></li>
-                                        <li class="nav-item"><a href="{{ route('post.job') }}" class="nav-link"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Post Job')}}</a></li>
-                                        <li class="nav-item"><a href="{{route('company.messages')}}" class="nav-link"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Company Messages')}}</a></li>
-                                        <li class="nav-item"><a href="{{ route('company.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header1').submit();" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a> </li>
+                                        <li class="nav-item"><a href="{{ route('post.job') }}" class="nav-link"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Stelle ausschreiben')}}</a></li>
+                                        <li class="nav-item"><a href="{{route('company.messages')}}" class="nav-link"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Nachrichten')}}</a></li>
+                                        <li class="nav-item"><a href="{{ route('company.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header1').submit();" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Abmeldung')}}</a> </li>
                                         <form id="logout-form-header1" action="{{ route('company.logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>

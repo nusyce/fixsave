@@ -15,8 +15,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'lang') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country') !!}">
-        {!! Form::label('country', 'Country', ['class' => 'bold']) !!}                    
-        {!! Form::text('country', null, array('class'=>'form-control', 'id'=>'country', 'placeholder'=>'Country', 'dir'=>$direction)) !!}
+        {!! Form::label('country', 'Land', ['class' => 'bold']) !!}                    
+        {!! Form::text('country', null, array('class'=>'form-control', 'id'=>'country', 'placeholder'=>'Land', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'nationality') !!}">
@@ -45,8 +45,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'is_default') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}" id="country_id_div">
-        {!! Form::label('country_id', 'Default Country', ['class' => 'bold']) !!}                    
-        {!! Form::select('country_id', ['' => 'Select Default Country']+$countries, null, array('class'=>'form-control', 'id'=>'country_id')) !!}
+        {!! Form::label('country_id', 'Default Land', ['class' => 'bold']) !!}                    
+        {!! Form::select('country_id', ['' => 'Select Default Land']+$countries, null, array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_active') !!}">

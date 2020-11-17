@@ -1,7 +1,7 @@
 {!! APFrmErrHelp::showErrorsNotice($errors) !!}
 @include('flash::message')
 <div class="form-body">
-    <h3>Drag and Drop to Sort Country Details</h3>
+    <h3>Drag and Drop to Sort Land Details</h3>
     {!! Form::select('lang', ['' => 'Select Language']+$languages, config('default_lang'), array('class'=>'form-control', 'id'=>'lang', 'onchange'=>'refreshCountryDetailSortData();')) !!}
     <div id="countryDetailSortDataDiv"></div>
 </div>

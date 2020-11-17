@@ -52,7 +52,7 @@
                 @endif
 
                 @if(null !== $profileCv)<a href="{{asset('cvs/'.$profileCv->cv_file)}}" class="btn"><i class="fa fa-download" aria-hidden="true"></i> {{__('Download CV')}}</a>@endif
-                <a href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Send Message')}}</a>
+                <a href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Nachricht senden')}}</a>
 
             </div>
         </div>
@@ -99,11 +99,11 @@
 					<div class="jobdetail">
                         <h3>{{__('Candidate Contact')}}</h3>
                         <div class="candidateinfo">            
-                            @if(!empty($user->phone))
-                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$user->phone}}">{{$user->phone}}</a></div>
+                            @if(!empty($user->Telefonnummer))
+                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->Telefonnummer}}">{{$user->Telefonnummer}}</a></div>
                             @endif
                             @if(!empty($user->mobile_num))
-                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$user->mobile_num}}">{{$user->mobile_num}}</a></div>
+                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->mobile_num}}">{{$user->mobile_num}}</a></div>
                             @endif
                             @if(!empty($user->email))
                             <div class="loctext"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:{{$user->email}}">{{$user->email}}</a></div>
@@ -189,7 +189,7 @@
                 @csrf
                 <input type="hidden" name="seeker_id" id="seeker_id" value="{{$user->id}}">
                 <div class="modal-header">                    
-                    <h4 class="modal-title">Send Message</h4>
+                    <h4 class="modal-title">Nachricht senden</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">

@@ -182,7 +182,7 @@ if ($username == "" and $password == "") {
 
     <?php if($_SESSION["username"] != "disabled_pw"){ ?>
         <br><h3 class="settingsh3">Password:</h3>
-        <p class="uploadP" onclick="window.location.href = 'logout.php';"><img src="img/cd-icon-logout.png" class="headerIcon"> Logout</p>
+        <p class="uploadP" onclick="window.location.href = 'logout.php';"><img src="img/cd-icon-logout.png" class="headerIcon"> Abmeldung</p>
         <p class="uploadP" onclick="window.open('http://imageuploaderforckeditor.altervista.org/disable_pw.html','about:blank', 'toolbar=no, scrollbars=yes, resizable=no, width=900, height=600');"><img src="img/cd-icon-disable.png" class="headerIcon"> Disable password</p>
     <?php } ?>
 

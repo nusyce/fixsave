@@ -38,8 +38,8 @@
                     </div>
                     <!-- Contact Info -->
                     <div class="col-lg-4 column">
-                        <div class="contact"> <span><i class="fa fa-phone"></i></span>
-                            <div class="information"> <strong>{{__('Phone')}}:</strong>
+                        <div class="contact"> <span><i class="fa fa-Telefonnummer"></i></span>
+                            <div class="information"> <strong>{{__('Telefonnummer')}}:</strong>
                                 <p><a href="tel:{{ $siteSetting->site_phone_primary }}">{{ $siteSetting->site_phone_primary }}</a></p>
                                 <p><a href="tel:{{ $siteSetting->site_phone_secondary }}">{{ $siteSetting->site_phone_secondary }}</a></p>
                             </div>
@@ -69,9 +69,9 @@
                                     {!! Form::text('email', null, array('id'=>'email', 'placeholder'=>__('Email'), 'required'=>'required')) !!}                
                                     @if ($errors->has('email')) <span class="help-block"> <strong>{{ $errors->first('email') }}</strong> </span> @endif
                                 </div>
-                                <div class="col-md-6{{ $errors->has('phone') ? ' has-error' : '' }}">                  
-                                    {!! Form::text('phone', null, array('id'=>'phone', 'placeholder'=>__('Phone'))) !!}                
-                                    @if ($errors->has('phone')) <span class="help-block"> <strong>{{ $errors->first('phone') }}</strong> </span> @endif
+                                <div class="col-md-6{{ $errors->has('Telefonnummer') ? ' has-error' : '' }}">                  
+                                    {!! Form::text('Telefonnummer', null, array('id'=>'Telefonnummer', 'placeholder'=>__('Telefonnummer'))) !!}                
+                                    @if ($errors->has('Telefonnummer')) <span class="help-block"> <strong>{{ $errors->first('Telefonnummer') }}</strong> </span> @endif
                                 </div>
                                 <div class="col-md-6{{ $errors->has('subject') ? ' has-error' : '' }}">                  
                                     {!! Form::text('subject', null, array('id'=>'subject', 'placeholder'=>__('Subject'), 'required'=>'required')) !!}                

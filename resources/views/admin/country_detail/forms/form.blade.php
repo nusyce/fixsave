@@ -3,7 +3,7 @@
 <div class="form-body">        
     {!! Form::hidden('id', null) !!}
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}">
-        {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}
+        {!! Form::label('country_id', 'Land', ['class' => 'bold']) !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'sort_name') !!}">
         {!! Form::label('sort_name', 'Sort Name', ['class' => 'bold']) !!}
@@ -11,8 +11,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'sort_name') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'phone_code') !!}">
-        {!! Form::label('phone_code', 'Phone Code', ['class' => 'bold']) !!}
-        {!! Form::text('phone_code', null, array('class'=>'form-control', 'id'=>'phone_code', 'placeholder'=>'Phone Code')) !!}
+        {!! Form::label('phone_code', 'Telefonnummer Code', ['class' => 'bold']) !!}
+        {!! Form::text('phone_code', null, array('class'=>'form-control', 'id'=>'phone_code', 'placeholder'=>'Telefonnummer Code')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'phone_code') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'currency') !!}">

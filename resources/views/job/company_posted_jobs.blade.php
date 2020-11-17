@@ -4,7 +4,7 @@
 @include('includes.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('Company Posted Jobs')])
+@include('includes.inner_page_title', ['page_title'=>__('Veröffentlichte Jobs')])
 <!-- Inner Page Title end -->
 <div class="listpgWraper">
     <div class="container">
@@ -13,7 +13,7 @@
 
             <div class="col-md-9 col-sm-8"> 
                 <div class="myads">
-                    <h3>{{__('Company Posted Jobs')}}</h3>
+                    <h3>{{__('Veröffentlichte Jobs')}}</h3>
                     <ul class="searchList">
                         <!-- job start --> 
                         @if(isset($jobs) && count($jobs))
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="col-md-4 col-sm-4">                
                                     <div class="listbtn"><a href="{{route('list.favourite.applied.users', [$job->id])}}">{{__('List Short Listed Candidates')}}</a></div>
-                                    <div class="listbtn"><a href="{{route('list.applied.users', [$job->id])}}">{{__('List Candidates')}}</a></div>
+                                    <div class="listbtn"><a href="{{route('list.applied.users', [$job->id])}}">{{__('KANDIDATENLISTE')}}</a></div>
                                     <div class="listbtn"><a href="{{route('edit.front.job', [$job->id])}}">{{__('Edit')}}</a></div>
                                     <div class="listbtn"><a href="javascript:;" onclick="deleteJob({{$job->id}});">{{__('Delete')}}</a></div>
                                 </div>

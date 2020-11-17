@@ -14,12 +14,12 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Country Details</span> </li>
+                <li> <span>Land Details</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR --> 
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">Manage Country Details <small>Country Details</small> </h3>
+        <h3 class="page-title">Manage Land Details <small>Land Details</small> </h3>
         <!-- END PAGE TITLE--> 
         <!-- END PAGE HEADER-->
         <div class="row">
@@ -27,7 +27,7 @@
                 <!-- Begin: life time stats -->
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
-                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Country Details</span> </div>            
+                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Land Details</span> </div>            
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -35,9 +35,9 @@
                                 <table class="table table-striped table-bordered table-hover"  id="countryDetailDatatableAjax">
                                     <thead>
                                         <tr role="row" class="heading">
-                                            <th>Country</th>
+                                            <th>Land</th>
                                             <th>Sort Name</th>
-                                            <th>Phone Code</th>
+                                            <th>Telefonnummer Code</th>
                                             <th>Currency</th>
                                             <th>Code</th>
                                             <th>Symbol</th>

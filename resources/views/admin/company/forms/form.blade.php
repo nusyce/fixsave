@@ -45,23 +45,23 @@
         {!! Form::textarea('map', null, array('class'=>'form-control', 'id'=>'map', 'placeholder'=>'Google Map')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'map') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'no_of_offices') !!}"> {!! Form::label('no_of_offices', 'Number of offices', ['class' => 'bold']) !!}
-        {!! Form::select('no_of_offices', ['' => 'Select num. of offices']+MiscHelper::getNumOffices(), null, array('class'=>'form-control', 'id'=>'no_of_offices')) !!}
+        {!! Form::select('no_of_offices', ['' => 'Anzahl der Büros auswählen']+MiscHelper::getNumOffices(), null, array('class'=>'form-control', 'id'=>'no_of_offices')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'no_of_offices') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'website') !!}"> {!! Form::label('website', 'Website', ['class' => 'bold']) !!}
         {!! Form::text('website', null, array('class'=>'form-control', 'id'=>'website', 'placeholder'=>'Website')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'website') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'no_of_employees') !!}"> {!! Form::label('no_of_employees', 'Number of employees', ['class' => 'bold']) !!}
-        {!! Form::select('no_of_employees', ['' => 'Select num. of employees']+MiscHelper::getNumEmployees(), null, array('class'=>'form-control', 'id'=>'no_of_employees')) !!}
+        {!! Form::select('no_of_employees', ['' => 'Anzahl der Büros auswählen']+MiscHelper::getNumEmployees(), null, array('class'=>'form-control', 'id'=>'no_of_employees')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'no_of_employees') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'established_in') !!}"> {!! Form::label('established_in', 'Established in', ['class' => 'bold']) !!}
-        {!! Form::select('established_in', ['' => 'Select Established In']+MiscHelper::getEstablishedIn(), null, array('class'=>'form-control', 'id'=>'established_in')) !!}
+        {!! Form::select('established_in', ['' => 'Select Etabliert in']+MiscHelper::getEstablishedIn(), null, array('class'=>'form-control', 'id'=>'established_in')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'established_in') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'fax') !!}"> {!! Form::label('fax', 'Fax #', ['class' => 'bold']) !!}
         {!! Form::text('fax', null, array('class'=>'form-control', 'id'=>'fax', 'placeholder'=>'Fax #')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'fax') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'phone') !!}"> {!! Form::label('phone', 'Phone #', ['class' => 'bold']) !!}
-        {!! Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>'Phone #')) !!}
-        {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </div>
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'Telefonnummer') !!}"> {!! Form::label('Telefonnummer', 'Telefonnummer #', ['class' => 'bold']) !!}
+        {!! Form::text('Telefonnummer', null, array('class'=>'form-control', 'id'=>'Telefonnummer', 'placeholder'=>'Telefonnummer #')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'Telefonnummer') !!} </div>
 
 
 
@@ -82,15 +82,15 @@
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'pinterest') !!}"> {!! Form::label('pinterest', 'Pinterest', ['class' => 'bold']) !!}
         {!! Form::text('pinterest', null, array('class'=>'form-control', 'id'=>'pinterest', 'placeholder'=>'Pinterest')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'pinterest') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}"> {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}                    
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}"> {!! Form::label('country_id', 'Land', ['class' => 'bold']) !!}                    
         {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, old('country_id', (isset($company))? $company->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}"> {!! Form::label('state_id', 'State', ['class' => 'bold']) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}"> {!! Form::label('state_id', 'Staat', ['class' => 'bold']) !!}
         <span id="default_state_dd">                    
             {!! Form::select('state_id', ['' => 'Staat auswählen'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city_id') !!}"> {!! Form::label('city_id', 'City', ['class' => 'bold']) !!}  
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city_id') !!}"> {!! Form::label('city_id', 'Stadt', ['class' => 'bold']) !!}  
         <span id="default_city_dd">                  
             {!! Form::select('city_id', ['' => 'Stadt auswählen'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
         </span>

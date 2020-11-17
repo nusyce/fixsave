@@ -28,7 +28,7 @@
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
                         <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Cities</span> </div>
-                        <div class="actions"> <a href="{{ route('create.city') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New City</a> </div>
+                        <div class="actions"> <a href="{{ route('create.city') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Stadt</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -39,10 +39,10 @@
                                             <td>{!! Form::select('lang', ['' => 'Select Language']+$languages, config('default_lang'), array('id'=>'lang', 'class'=>'form-control')) !!}</td>
                                             <td>
                                                 <?php $default_country_id = Request::query('country_id', $siteSetting->default_country_id); ?>
-                                                {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, $default_country_id, array('id'=>'country_id', 'class'=>'form-control')) !!} <span id="default_state_dd">{!! Form::select('state_id', ['' => 'Staat auswählen'], null, array('id'=>'state_id', 'class'=>'form-control')) !!}</span></td><td><input type="text" class="form-control" name="city" id="city" autocomplete="off" placeholder="City"></td><td><select name="is_active" id="is_active" class="form-control"><option value="-1">Is Active?</option><option value="1" selected="selected">Active</option><option value="0">In Active</option></select></td>
+                                                {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, $default_country_id, array('id'=>'country_id', 'class'=>'form-control')) !!} <span id="default_state_dd">{!! Form::select('state_id', ['' => 'Staat auswählen'], null, array('id'=>'state_id', 'class'=>'form-control')) !!}</span></td><td><input type="text" class="form-control" name="city" id="city" autocomplete="off" placeholder="Stadt"></td><td><select name="is_active" id="is_active" class="form-control"><option value="-1">Is Active?</option><option value="1" selected="selected">Active</option><option value="0">In Active</option></select></td>
                                         </tr>
                                         <tr role="row" class="heading">
-                                            <th>Language</th><th>State</th><th>City</th><th>Actions</th>
+                                            <th>Language</th><th>Staat</th><th>Stadt</th><th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -117,7 +117,7 @@
     function deleteCity(id, is_default) {
         var msg = 'Are you sure?';
         if (is_default == 1) {
-            msg = 'Are you sure? You are going to delete default City, all other non default Cities will be deleted too!';
+            msg = 'Are you sure? You are going to delete default Stadt, all other non default Cities will be deleted too!';
         }
         if (confirm(msg)) {
             $.post("{{ route('delete.city') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})

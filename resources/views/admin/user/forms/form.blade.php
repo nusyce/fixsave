@@ -80,28 +80,28 @@
         {!! APFrmErrHelp::showErrors($errors, 'national_id_card_number') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}">
-        {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}                    
+        {!! Form::label('country_id', 'Land', ['class' => 'bold']) !!}                    
         {!! Form::select('country_id', [''=>'Land auswählen']+$countries, old('country_id', (isset($user))? $user->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}">
-        {!! Form::label('state_id', 'State', ['class' => 'bold']) !!}                    
+        {!! Form::label('state_id', 'Staat', ['class' => 'bold']) !!}                    
         <span id="default_state_dd">
             {!! Form::select('state_id', [''=>'Staat auswählen'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city_id') !!}">
-        {!! Form::label('city_id', 'City', ['class' => 'bold']) !!}                    
+        {!! Form::label('city_id', 'Stadt', ['class' => 'bold']) !!}                    
         <span id="default_city_dd">
             {!! Form::select('city_id', [''=>'Stadt auswählen'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}                                       
     </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
-        {!! Form::label('phone', 'Phone', ['class' => 'bold']) !!}                    
-        {!! Form::text('phone', null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>'Phone')) !!}
-        {!! APFrmErrHelp::showErrors($errors, 'phone') !!}                                       
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'Telefonnummer') !!}">
+        {!! Form::label('Telefonnummer', 'Telefonnummer', ['class' => 'bold']) !!}                    
+        {!! Form::text('Telefonnummer', null, array('class'=>'form-control', 'id'=>'Telefonnummer', 'placeholder'=>'Telefonnummer')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'Telefonnummer') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'mobile_num') !!}">
         {!! Form::label('mobile_num', 'Mobile Number', ['class' => 'bold']) !!}                    

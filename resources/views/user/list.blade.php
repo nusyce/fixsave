@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         @if(Auth::guard('company')->check())
-                        <a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Post Job')}}</a>
+                        <a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Stelle ausschreiben')}}</a>
                         @else
                         <a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
                         @endif

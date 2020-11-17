@@ -10,7 +10,7 @@
 	
 	
 	@if(Auth::guard('company')->check())
-	<a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Post Job')}}</a>
+	<a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Stelle ausschreiben')}}</a>
 	@else
 	<a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
 	@endif
@@ -39,9 +39,9 @@
             <!-- title end --> 
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
 
-        <!-- Jobs By Country -->
+        <!-- Jobs By Land -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Country')}}</h4>
+            <h4 class="widget-title">{{__('Jobs By Land')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($countryIdsArray) && count($countryIdsArray))
                 @foreach($countryIdsArray as $key=>$country_id)
@@ -61,12 +61,12 @@
                 @endif
             </ul>
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
-        <!-- Jobs By Country end--> 
+        <!-- Jobs By Land end--> 
 
 
-        <!-- Jobs By State -->
+        <!-- Jobs By Staat -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By State')}}</h4>
+            <h4 class="widget-title">{{__('Jobs By Staat')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($stateIdsArray) && count($stateIdsArray))
                 @foreach($stateIdsArray as $key=>$state_id)
@@ -86,12 +86,12 @@
                 @endif
             </ul>
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
-        <!-- Jobs By State end--> 
+        <!-- Jobs By Staat end--> 
 
 
-        <!-- Jobs By City -->
+        <!-- Jobs By Stadt -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By City')}}</h4>
+            <h4 class="widget-title">{{__('Jobs By Stadt')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($cityIdsArray) && count($cityIdsArray))
                 @foreach($cityIdsArray as $key=>$city_id)
@@ -111,7 +111,7 @@
                 @endif
             </ul>
             <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
-        <!-- Jobs By City end--> 
+        <!-- Jobs By Stadt end--> 
 
         <!-- Jobs By Experience -->
         <div class="widget">

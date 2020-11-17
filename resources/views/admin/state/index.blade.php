@@ -28,7 +28,7 @@
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
                         <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">States</span> </div>
-                        <div class="actions"> <a href="{{ route('create.state') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New State</a> </div>
+                        <div class="actions"> <a href="{{ route('create.state') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Staat</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -40,7 +40,7 @@
                                             <td>
                                                 <?php $default_country_id = Request::query('country_id', $siteSetting->default_country_id); ?>
                                                 {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, $default_country_id, array('id'=>'country_id', 'class'=>'form-control')) !!}</td>
-                                            <td><input type="text" class="form-control" name="state" id="state" autocomplete="off" placeholder="State"></td>
+                                            <td><input type="text" class="form-control" name="state" id="state" autocomplete="off" placeholder="Staat"></td>
                                             <td><select name="is_active" id="is_active"  class="form-control">
                                                     <option value="-1">Is Active?</option>
                                                     <option value="1" selected="selected">Active</option>
@@ -49,8 +49,8 @@
                                         </tr>
                                         <tr role="row" class="heading">
                                             <th>Language</th>
-                                            <th>Country</th>
-                                            <th>State</th>
+                                            <th>Land</th>
+                                            <th>Staat</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -119,7 +119,7 @@
     function deleteState(id, is_default) {
         var msg = 'Are you sure?';
         if (is_default == 1) {
-            msg = 'Are you sure? You are going to delete default State, all other non default States will be deleted too!';
+            msg = 'Are you sure? You are going to delete default Staat, all other non default States will be deleted too!';
         }
         if (confirm(msg)) {
             $.post("{{ route('delete.state') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})

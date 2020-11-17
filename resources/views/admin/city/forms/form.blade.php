@@ -16,20 +16,20 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'lang') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}" id="country_id_div">
-        {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}
+        {!! Form::label('country_id', 'Land', ['class' => 'bold']) !!}
         {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, old('country_id', (isset($city))? $city->getState()->getCountry('country_id'):$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}" id="state_id_div">
-        {!! Form::label('state_id', 'State', ['class' => 'bold']) !!}                    
+        {!! Form::label('state_id', 'Staat', ['class' => 'bold']) !!}                    
         <span id="default_state_dd">
             {!! Form::select('state_id', ['' => 'Staat auswählen'], null, array('class'=>'form-control', 'id'=>'state_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city') !!}">
-        {!! Form::label('city', 'City', ['class' => 'bold']) !!}
-        {!! Form::text('city', null, array('class'=>'form-control', 'id'=>'city', 'placeholder'=>'City', 'dir'=>$direction)) !!}
+        {!! Form::label('city', 'Stadt', ['class' => 'bold']) !!}
+        {!! Form::text('city', null, array('class'=>'form-control', 'id'=>'city', 'placeholder'=>'Stadt', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'city') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_default') !!}">
@@ -53,9 +53,9 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'is_default') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'city_id') !!}" id="city_id_div">
-        {!! Form::label('city_id', 'Default City', ['class' => 'bold']) !!}                    
+        {!! Form::label('city_id', 'Default Stadt', ['class' => 'bold']) !!}                    
         <span id="default_cities_dd">
-            {!! Form::select('city_id', ['' => 'Select Default City'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
+            {!! Form::select('city_id', ['' => 'Select Default Stadt'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
         </span>
         {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}                                       
     </div>

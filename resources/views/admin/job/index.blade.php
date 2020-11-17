@@ -63,7 +63,7 @@
                                             <th>Company</th>
                                             <th>Job title</th>
                                             <th>Job description</th>
-                                            <th>City</th>
+                                            <th>Stadt</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>

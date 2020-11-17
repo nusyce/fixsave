@@ -128,7 +128,7 @@
 
 
                                     <input type="checkbox" value="1"
-                                           name="is_subscribed" {{$is_checked}} />{{__('Subscribe to news letter')}}
+                                           name="is_subscribed" {{$is_checked}} />{{__('Newsletter abonnieren')}}
 
                                     @if ($errors->has('is_subscribed')) <span
                                             class="help-block"> <strong>{{ $errors->first('is_subscribed') }}</strong> </span> @endif

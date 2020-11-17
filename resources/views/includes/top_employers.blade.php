@@ -12,7 +12,7 @@
             @foreach($topCompanyIds as $company_id_num_jobs)
             <?php
             $company = App\Company::where('id', '=', $company_id_num_jobs->company_id)->active()->first();
-            if (null !== $company) {
+            if (null !== $company && $company->printCompanyImage() != false) {
                 ?>
                 <li class="item" data-toggle="tooltip" data-placement="bottom" title="{{$company->name}}" data-original-title="{{$company->name}}">
 					<div class="empint">

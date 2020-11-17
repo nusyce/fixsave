@@ -32,4 +32,9 @@
 <style type="text/css">
     .userccount p{ text-align:left !important;}
 </style>
+<script>
+function myFunction() {
+  alert("Hello! I am an alert box!");
+}
+</script>
 @endpush

@@ -49,13 +49,13 @@
         {!! APFrmErrHelp::showErrors($errors, 'site_slogan') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'site_phone_primary') !!}">
-        {!! Form::label('site_phone_primary', 'Primary Phone#', ['class' => 'bold']) !!}                    
-        {!! Form::text('site_phone_primary', null, array('class'=>'form-control', 'id'=>'site_phone_primary', 'placeholder'=>'Primary Phone#')) !!}
+        {!! Form::label('site_phone_primary', 'Primary Telefonnummer#', ['class' => 'bold']) !!}                    
+        {!! Form::text('site_phone_primary', null, array('class'=>'form-control', 'id'=>'site_phone_primary', 'placeholder'=>'Primary Telefonnummer#')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'site_phone_primary') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'site_phone_secondary') !!}">
-        {!! Form::label('site_phone_secondary', 'Secondary Phone#', ['class' => 'bold']) !!}                    
-        {!! Form::text('site_phone_secondary', null, array('class'=>'form-control', 'id'=>'site_phone_secondary', 'placeholder'=>'Secondary Phone#')) !!}
+        {!! Form::label('site_phone_secondary', 'Secondary Telefonnummer#', ['class' => 'bold']) !!}                    
+        {!! Form::text('site_phone_secondary', null, array('class'=>'form-control', 'id'=>'site_phone_secondary', 'placeholder'=>'Secondary Telefonnummer#')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'site_phone_secondary') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'mail_from_address') !!}">
@@ -79,12 +79,12 @@
         {!! APFrmErrHelp::showErrors($errors, 'mail_to_name') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'default_country_id') !!}">
-        {!! Form::label('default_country_id', 'Default Country', ['class' => 'bold']) !!}                    
+        {!! Form::label('default_country_id', 'Default Land', ['class' => 'bold']) !!}                    
         {!! Form::select('default_country_id',$countries, null, array('class'=>'form-control', 'id'=>'default_country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'default_country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_specific_site') !!}">
-        {!! Form::label('country_specific_site', 'Make site specific to this Country?', ['class' => 'bold']) !!}        <div class="radio-list">
+        {!! Form::label('country_specific_site', 'Make site specific to this Land?', ['class' => 'bold']) !!}        <div class="radio-list">
             <label class="radio-inline">{!! Form::radio('country_specific_site', 1, true, ['id' => 'country_specific_site_yes']) !!} Yes </label>
             <label class="radio-inline">{!! Form::radio('country_specific_site', 0, null, ['id' => 'country_specific_site_no']) !!} No </label>
         </div>
