@@ -17,7 +17,7 @@ $queryString = MiscHelper::getLangQueryStr();
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}" id="country_id_div">
         {!! Form::label('country_id', 'Country', ['class' => 'bold']) !!}                    
-        {!! Form::select('country_id', ['' => 'Select Country']+$countries, old('country_id', (isset($state))? $state->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id', 'onchange'=>'filterDefaultStates(0);')) !!}
+        {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, old('country_id', (isset($state))? $state->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id', 'onchange'=>'filterDefaultStates(0);')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state') !!}">

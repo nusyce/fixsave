@@ -43,7 +43,7 @@ class StateFormRequest extends Request
     public function messages()
     {
         return [
-            'lang.required' => 'Please select language.', 'country_id.required' => 'Please select Country.', 'state.required' => 'Please enter State Name.', 'is_default.required' => 'Is this state default/fallback ?.', 'state_id.required_if' => 'Please select default/fallback State.', 'is_active.required' => 'Is this State active?',
+            'lang.required' => 'Please select language.', 'country_id.required' => 'Please Land auswählen.', 'state.required' => 'Please enter State Name.', 'is_default.required' => 'Is this state default/fallback ?.', 'state_id.required_if' => 'Please select default/fallback State.', 'is_active.required' => 'Is this State active?',
         ];
     }
 

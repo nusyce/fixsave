@@ -15,20 +15,20 @@
             <?php
             $country_id = (isset($profileExperience) ? $profileExperience->country_id : $siteSetting->default_country_id);
             ?>
-            {!! Form::select('country_id', [''=>'Select Country']+$countries, $country_id, array('class'=>'form-control', 'id'=>'experience_country_id')) !!}
+            {!! Form::select('country_id', [''=>'Land auswählen']+$countries, $country_id, array('class'=>'form-control', 'id'=>'experience_country_id')) !!}
             <span class="help-block country_id-error"></span> </div>
 
         <div class="form-group" id="div_state_id">
             <label for="state_id" class="bold">State</label>
             <span id="default_state_experience_dd">
-                {!! Form::select('state_id', [''=>'Select State'], null, array('class'=>'form-control', 'id'=>'experience_state_id')) !!}
+                {!! Form::select('state_id', [''=>'Staat auswählen'], null, array('class'=>'form-control', 'id'=>'experience_state_id')) !!}
             </span>
             <span class="help-block state_id-error"></span> </div>
 
         <div class="form-group" id="div_city_id">
             <label for="city_id" class="bold">City</label>
             <span id="default_city_experience_dd">
-                {!! Form::select('city_id', [''=>'Select City'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
+                {!! Form::select('city_id', [''=>'Stadt auswählen'], null, array('class'=>'form-control', 'id'=>'city_id')) !!}
             </span>
             <span class="help-block city_id-error"></span> </div>
 

@@ -80,9 +80,9 @@ class CompanyFormRequest extends Request
             'fax.required' => 'Fax number required',
             'phone.required' => 'Phone number required',
             'logo.required' => 'Company logo is required',
-            'country_id.required' => 'Please select country',
-            'state_id.required' => 'Please select state',
-            'city_id.required' => 'Please select city',
+            'country_id.required' => 'Please Land auswählen',
+            'state_id.required' => 'Please Staat auswählen',
+            'city_id.required' => 'Please Stadt auswählen',
             'is_active.required' => 'Is this Company Acive?',
             'is_featured.required' => 'Is this Company featured?',
         ];

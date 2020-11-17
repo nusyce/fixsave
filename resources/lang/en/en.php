@@ -9,9 +9,9 @@ return [
     'lang_required' => 'Please select language.',
     'is_default_required' => 'Is this default/fallback?',
     'is_active_required' => 'Is this active?',
-    'country_id_required' => 'Please select country.',
-    'state_id_required' => 'Please select state.',
-    'city_id_required' => 'Please select city.',
+    'country_id_required' => 'Please Land auswählen.',
+    'state_id_required' => 'Please Staat auswählen.',
+    'city_id_required' => 'Please Stadt auswählen.',
     'image_image' => 'Only images can be uploaded.',
     // Marital Status
     'marital_status_required' => 'Please enter Marital Status.',
