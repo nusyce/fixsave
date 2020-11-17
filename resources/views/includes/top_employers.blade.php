@@ -2,7 +2,7 @@
     <div class="container"> 
         <!-- title start -->
         <div class="titleTop">            
-            <h3>{{__('Featured')}} <span>{{__('Companies')}}</span></h3>
+            <h3>{{__('Ausgewählte')}} <span>{{__('Unternehmen')}}</span></h3>
         </div>
         <!-- title end -->
 
@@ -30,7 +30,7 @@
             <div class="col-lg-7 offset-lg-4" style="display: flex;flex-direction: row;text-align: center;position: relative;right: 30px">
                 <div style="margin-right: 40px;">
                     <div><h3>{{__('Unternehmen')}}</h3> </div>
-                    <div> <a href="{{url('/companies')}}"><button class="btn btn-outline-info">Top-kandidaten finden</button> </a></div>
+                    <div> <a href="{{url('/companies')}}"><button class="btn btn-outline-info">Unternehmen finden</button> </a></div>
                 </div>
 
                 <div>
