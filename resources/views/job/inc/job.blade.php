@@ -1,4 +1,4 @@
-<h5>{{__('Job Details')}}</h5>
+<h5>{{__('Details Zur Stelle')}}</h5>
  @if(isset($job))
 {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
 {!! Form::hidden('id', $job->id) !!}
@@ -345,7 +345,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'expiry_date') !!}"> {!! Form::text('start', null, array('class'=>'form-control datepicker', 'id'=>'expiry_date', 'placeholder'=>__('Job expiry date'), 'autocomplete'=>'off')) !!}
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'expiry_date') !!}"> {!! Form::text('start', null, array('class'=>'form-control datepicker', 'id'=>'expiry_date', 'placeholder'=>__('Ablaufdatum der Stelle'), 'autocomplete'=>'off')) !!}
                     {!! APFrmErrHelp::showErrors($errors, 'expiry_date') !!} </div>
             </div>
 
