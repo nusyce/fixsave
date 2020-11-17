@@ -1,5 +1,5 @@
 <div class="section">
-    <div class="container"> 
+    <div class="container">
         <!-- title start -->
         <div class="titleTop">
             <h3>{{__('Latest')}} <span>{{__('Jobs')}}</span></h3>
@@ -25,17 +25,17 @@
                             <div class="company"><a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}">{{$company->name}}</a> - <span>{{$latestJob->getCity('city')}}</span></div>
                             <div class="jobloc">
                                 <label class="fulltime" title="{{$latestJob->getJobType('job_type')}}">{{$latestJob->getJobType('job_type')}}</label> </div>
-                        </div>                       
+                        </div>
                     </div>
                 </div>
             </li>
-            <!--Job end--> 
+            <!--Job end-->
             @endif
             @endforeach
             @endif
         </ul>
         <!--view button-->
         <div class="viewallbtn"><a href="{{route('job.list')}}">{{__('View All Latest Jobs')}}</a></div>
-        <!--view button end--> 
+        <!--view button end-->
     </div>
 </div>
