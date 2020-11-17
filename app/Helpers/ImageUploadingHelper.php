@@ -158,7 +158,7 @@ class ImageUploadingHelper
     public static function get_doc($doc_path, $doc_title, $alt_title_txt = '')
     {
         if (!empty($doc_path) && file_exists(ImageUploadingHelper::real_public_path() . $doc_path)) {
-            return '<a href="' . ImageUploadingHelper::public_path() . $doc_path . '" ' . ' alt="' . $alt_title_txt . '" title="' . $alt_title_txt . '">' . $doc_title . '</a>';
+            return '<a href="' . ImageUploadingHelper::public_path() . $doc_path . '" ' . ' alt="' . $alt_title_txt . '" title="' . $alt_title_txt . '" target="_blank">' . $doc_title . '</a>';
         } else {
             return 'No Doc Available';
         }
