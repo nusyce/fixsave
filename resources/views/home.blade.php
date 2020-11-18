@@ -73,7 +73,7 @@
 			 <div class="row">
                         <div class="col-lg-7">
                             <div class="profbox">
-                                <h3><i class="fa fa-black-tie" aria-hidden="true"></i> Recommended Jobs</h3>
+                                <h3><i class="fa fa-black-tie" aria-hidden="true"></i>Empfohlen Jobs</h3>
                                 <ul class="recomndjobs">
                                     @if(null!==($matchingJobs)) @foreach($matchingJobs as $match)
                                     <li>
@@ -87,7 +87,7 @@
 
                    <div class="col-lg-5">
 							<div class="profbox followbox">
-								<h3><i class="fa fa-users"></i> My Followings</h3>
+								<h3><i class="fa fa-users"></i>Follower</h3>
 
 								<ul class="followinglist">
 									@if(isset($followers) && null!==($followers)) @foreach($followers as $follow) @php $company = DB::table('companies')->where('slug',$follow->company_slug)->where('is_active',1)->first(); @endphp
@@ -100,7 +100,7 @@
 
 								</ul>
 
-								<div class="allbtn"><a href="{{route('my.followings')}}"><i class="fas fa-users"></i> View All</a>
+								<div class="allbtn"><a href="{{route('my.followings')}}"><i class="fas fa-users"></i>Alle anzeigen</a>
 								</div>
 							</div>
 						</div>

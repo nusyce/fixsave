@@ -1,4 +1,4 @@
-<h5 onclick="showProjects();">{{__('Projects')}}</h5>
+<h5 onclick="showProjects();">{{__('Projekt')}}</h5>
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-<a href="javascript:;" onclick="showProfileProjectModal();"> {{__('Add Project')}} </a>
+<a href="javascript:;" onclick="showProfileProjectModal();"> {{__('Projekt hinzufugen')}} </a>
 
 <hr>
 

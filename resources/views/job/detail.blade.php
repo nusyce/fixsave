@@ -26,7 +26,7 @@ $company = $job->getCompany();
 
         <!-- Job Detail start -->
         <div class="row">
-            <div class="col-lg-7"> 
+            <div class="col-lg-8">
 				
 				 <!-- Job Header start -->
         <div class="job-header">
@@ -148,7 +148,7 @@ $company = $job->getCompany();
             </div>
             <!-- related jobs end -->
 
-            <div class="col-lg-5"> 
+            <div class="col-lg-4">
 				<div class="jobButtons applybox">
 				@if($job->isJobExpired())
                 <span class="jbexpire"><i class="fa fa-paper-plane" aria-hidden="true"></i> {{__('Job is expired')}}</span>

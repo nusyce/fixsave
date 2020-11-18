@@ -1,4 +1,4 @@
-<h5 onclick="showSkills();">{{__('Skills')}}</h5>
+<h5 onclick="showSkills();">{{__('Fähigkeit')}}</h5>
 
 <div class="row">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-<a href="javascript:;" onclick="showProfileSkillModal();"> {{__('Add Skill')}} </a>
+<a href="javascript:;" onclick="showProfileSkillModal();"> {{__('Fähigkeit hinzufügen')}} </a>
 
 <hr>
 

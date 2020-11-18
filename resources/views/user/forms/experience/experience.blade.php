@@ -1,4 +1,4 @@
-<h5 onclick="showExperience();">{{__('Experience')}}</h5>
+<h5 onclick="showExperience();">{{__('Erfahrung')}}</h5>
 
 <div class="row">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-<a href="javascript:;" onclick="showProfileExperienceModal();"> {{__('Add Experience')}} </a>
+<a href="javascript:;" onclick="showProfileExperienceModal();"> {{__('Erfahrung hinzufügen')}} </a>
 
 <hr>
 

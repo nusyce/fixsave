@@ -1,4 +1,4 @@
-<h5 id="cvs" onclick="showCvs();">{{__('Curriculum vitae')}}</h5>
+<h5 id="cvs" onclick="showCvs();">{{__('Lebenslauf')}}</h5>
 
 <div class="row">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-<a href="javascript:;" onclick="showProfileCvModal();"> {{__('Add CV')}} </a>
+<a href="javascript:;" onclick="showProfileCvModal();"> {{__('LEBENSLAUF HINZUFUGEN')}} </a>
 
 <hr>
 

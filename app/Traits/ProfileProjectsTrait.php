@@ -80,11 +80,11 @@ trait ProfileProjectsTrait
                 $image = ImgUploader::get_image("project_images/thumb/$project->image");
                 $html .= '<!--Project Start-->
 				  <div class="col-md-4" id="project_' . $project->id . '">
-					<div class="thumbnail">					  
+					<div class="thumbnail" style="margin-bottom: 14px;">					  
 						' . $image . '
 						<div class="caption">
 						  <h3>' . $project->name . '</h3>
-						  <p>' . $project->date_start->format('d M, Y') . ' - ' . $date_end . '<br />
+						  <p style="margin-bottom: 14px;">' . $project->date_start->format('d M, Y') . ' - ' . $date_end . '<br />
 						  ' . Str::limit($project->description, 25, '...') . '</p>
 						  <a class="text text-default" href="javascript:void(0);" onclick="showProfileProjectEditModal(' . $project->id . ');">' . __('Edit') . '</a>&nbsp;|&nbsp;<a class="text text-danger" href="javascript:void(0);" onclick="delete_profile_project(' . $project->id . ');">' . __('Delete') . '</a>
 						  </ul>

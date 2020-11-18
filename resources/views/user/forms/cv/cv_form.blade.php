@@ -1,7 +1,7 @@
 <div class="modal-body">
     <div class="form-body">
         <div class="formrow" id="div_title">
-            <input class="form-control" id="title" placeholder="{{__('CV title')}}" name="title" type="text" value="{{(isset($profileCv)? $profileCv->title:'')}}">
+            <input class="form-control" id="title" placeholder="{{__('Titel des Lebenslaufs')}}" name="title" type="text" value="{{(isset($profileCv)? $profileCv->title:'')}}">
             <span class="help-block title-error"></span> </div>
 
         @if(isset($profileCv))
@@ -15,7 +15,7 @@
             <span class="help-block cv_file-error"></span> </div>
 
         <div class="formrow" id="div_is_default">
-            <label for="is_default" class="bold">{{__('Is default?')}}</label>
+            <label for="is_default" class="bold">{{__('Standardmabig?')}}</label>
             <div class="radio-list">
                 <?php
                 $val_1_checked = '';
@@ -27,8 +27,8 @@
                 }
                 ?>
 
-                <label class="radio-inline"><input id="default" name="is_default" type="radio" value="1" {{$val_1_checked}}> {{__('Yes')}} </label>
-                <label class="radio-inline"><input id="not_default" name="is_default" type="radio" value="0" {{$val_2_checked}}> {{__('No')}} </label>
+                <label class="radio-inline"><input id="default" name="is_default" type="radio" value="1" {{$val_1_checked}}> {{__('Ja')}} </label>
+                <label class="radio-inline"><input id="not_default" name="is_default" type="radio" value="0" {{$val_2_checked}}> {{__('Nein')}} </label>
             </div>
             <span class="help-block is_default-error"></span>
         </div>

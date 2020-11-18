@@ -125,7 +125,7 @@
     <div class="col-md-12">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'street_address') !!}">
 			<label for="">{{__('Street Address')}}</label>
-			{!! Form::textarea('street_address', null, array('class'=>'form-control', 'id'=>'street_address', 'placeholder'=>__('Street Address'))) !!}
+			{!! Form::text('street_address', null, array('class'=>'form-control', 'id'=>'street_address', 'placeholder'=>__('Street Address'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'street_address') !!} </div>
     </div>
 	
@@ -156,25 +156,25 @@
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'functional_area_id') !!}">
-			<label for="">{{__('Functional Area')}}</label>
+			<label for="">{{__('Funktionsbereich auswahlen')}}</label>
 			{!! Form::select('functional_area_id', [''=>__('Funktionsbereich auswählen')]+$functionalAreas, null, array('class'=>'form-control', 'id'=>'functional_area_id')) !!}
             {!! APFrmErrHelp::showErrors($errors, 'functional_area_id') !!} </div>
     </div>
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'current_salary') !!}">
-			<label for="">{{__('Current Salary')}}</label>
+			<label for="">{{__('Aktuelles Gehalt')}}</label>
 			{!! Form::text('current_salary', null, array('class'=>'form-control', 'id'=>'current_salary', 'placeholder'=>__('Current Salary'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'current_salary') !!} </div>
     </div>
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'expected_salary') !!}">
-			<label for="">{{__('Expected Salary')}}</label>
+			<label for="">{{__('Erwartetes Gehalt')}}</label>
 			{!! Form::text('expected_salary', null, array('class'=>'form-control', 'id'=>'expected_salary', 'placeholder'=>__('Expected Salary'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'expected_salary') !!} </div>
     </div>
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'salary_currency') !!}">
-			<label for="">{{__('Salary Currency')}}</label>			
+			<label for="">{{__('Wahrung')}}</label>
             @php
             $salary_currency = Request::get('salary_currency', (isset($user) && !empty($user->salary_currency))? $user->salary_currency:$siteSetting->default_currency_code);
             @endphp
@@ -257,7 +257,7 @@
                 var reader = new FileReader()
                 reader.onload = (function (theFile) {
                     return function (e) {
-                        $('#thumbnail').append('<div class="fileattached"><img height="100px" src="' + e.target.result + '" > <div>' + theFile.name + '</div><div class="clearfix"></div></div>');
+                        $('#thumbnail').append('<div class="fileattached" style="margin-bottom: 14px;"><img height="100px" style="margin-bottom: 14px;" src="' + e.target.result + '" > <div>' + theFile.name + '</div><div class="clearfix"></div></div>');
                     };
                 }(file))
                 var ret = reader.readAsDataURL(file);
