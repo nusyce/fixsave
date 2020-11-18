@@ -4,24 +4,24 @@
 @include('includes.header')
 <!-- Header end -->
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('My Job Alerts')])
+@include('includes.inner_page_title', ['page_title'=>__('Meine Stellen-Warnungen')])
 <!-- Inner Page Title end -->
 <div class="listpgWraper">
     <div class="container">
         <div class="row"> @include('includes.user_dashboard_menu')
             <div class="col-lg-9 col-sm-8">
                 <div class="userdashbox">
-                    <h3>{{__('My Job Alerts')}}</h3>
+                    <h3>{{__('Meine Stellen-Warnungen')}}</h3>
                    
 						<table class="table">
 						  <tbody>
 							<tr>
-							  <th scope="col">Alert Title</th>	
+							  <th scope="col">Titel</th>
 								@if(isset($id) && $id!='')
 							  <th scope="col">Location</th>
 								@endif
-								<th scope="col">Created On</th>
-							  <th scope="col">Action</th>
+								<th scope="col">Erstelt am</th>
+							  <th scope="col">Aktion</th>
 							</tr>							
 							 <!-- job start -->
                         @if(isset($alerts) && count($alerts))

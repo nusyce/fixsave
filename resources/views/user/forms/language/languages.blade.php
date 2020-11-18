@@ -1,4 +1,4 @@
-<h5 onclick="showLanguages();">{{__('Languages')}}</h5>
+<h5 onclick="showLanguages();">{{__('Sprache')}}</h5>
 
 <div class="row">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-<a href="javascript:;" onclick="showProfileLanguageModal();"> {{__('Add Language')}} </a>
+<a href="javascript:;" onclick="showProfileLanguageModal();"> {{__('Sprache hinzufügen')}} </a>
 
 <hr>
 

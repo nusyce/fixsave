@@ -4,13 +4,13 @@
 @include('includes.header') 
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('My Messages')])
+@include('includes.inner_page_title', ['page_title'=>__('Meine Nachrichten')])
 <div class="listpgWraper messageWrap">
     <div class="container">
         <div class="row"> @include('includes.user_dashboard_menu')
             <div class="col-md-9 col-sm-8">
                 <div class="myads message-body">
-                    <h3>{{__('Seeker Messages')}}</h3> 
+                    <h3>{{__('Seeker Nachrichten')}}</h3>
                           <div class="row">
                             <div class="col-lg-4 col-md-4">
                               <div class="message-inbox">

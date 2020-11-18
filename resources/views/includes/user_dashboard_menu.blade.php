@@ -25,8 +25,8 @@
         </li>
         <li><a href="{{ route('my-alerts') }}"><i class="fa fa-bullhorn" aria-hidden="true"></i> {{__('Job-Alarm')}}</a>
         </li>
-        <li><a href="{{url('my-profile#cvs')}}"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Lebensläufe verwalten')}}</a>
-        </li>
+       {{-- <li><a href="{{url('my-profile#cvs')}}"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Lebensläufe verwalten')}}</a>
+        </li>--}}
         <li><a href="{{route('my.messages')}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Nachrichten')}}</a>
         </li>
         <li><a href="{{route('my.followings')}}"><i class="fa fa-user-o" aria-hidden="true"></i> {{__('Follower')}}</a>

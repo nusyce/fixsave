@@ -3,7 +3,7 @@
         <form class="form" id="add_edit_profile_language" method="POST" action="{{ route('store.front.profile.language', [$user->id]) }}">{{ csrf_field() }}
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">{{__('Add Language')}}</h4>
+                <h4 class="modal-title">{{__('Sprache hinzufügen')}}</h4>
             </div>
             @include('user.forms.language.language_form')
             <div class="modal-footer">

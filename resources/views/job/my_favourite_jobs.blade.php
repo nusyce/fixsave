@@ -4,7 +4,7 @@
 @include('includes.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('Favourite Jobs')])
+@include('includes.inner_page_title', ['page_title'=>__('Favorisierte Stellen')])
 <!-- Inner Page Title end -->
 <div class="listpgWraper">
     <div class="container">
@@ -13,7 +13,7 @@
 
             <div class="col-md-9 col-sm-8"> 
                 <div class="myads">
-                    <h3>{{__('Favourite Jobs')}}</h3>
+                    <h3>{{__('Favorisierte Stellen')}}</h3>
                     <ul class="searchList">
                         <!-- job start --> 
                         @if(isset($jobs) && count($jobs))
