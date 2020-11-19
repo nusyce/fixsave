@@ -1,7 +1,7 @@
 <div class="section">
-    <div class="container"> 
+    <div class="container">
         <!-- title start -->
-        <div class="titleTop">            
+        <div class="titleTop">
             <h3>{{__('Ausgewählte')}} <span>{{__('Unternehmen')}}</span></h3>
         </div>
         <!-- title end -->
@@ -16,8 +16,8 @@
                 ?>
                 <li class="item" data-toggle="tooltip" data-placement="bottom" title="{{$company->name}}" data-original-title="{{$company->name}}">
 					<div class="empint">
-					<a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}">{{$company->printCompanyImage()}}</a>			
-					
+					<a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}">{{$company->printCompanyImage()}}</a>
+
 					</div>
 			</li>
                 <?php
@@ -49,8 +49,8 @@
 <div class="clearfix"></div>
 </div>
 
-	
-	
+
+
 </div>
 
 

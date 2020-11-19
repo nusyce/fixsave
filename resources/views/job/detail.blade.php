@@ -48,12 +48,12 @@ $company = $job->getCompany();
 			<!-- Job Detail start -->
                 <div class="jobmainreq">
                     <div class="jobdetail">
-                       <h3><i class="fa fa-align-left" aria-hidden="true"></i> {{__('Job Detail')}}</h3>
+                       <h3><i class="fa fa-align-left" aria-hidden="true"></i> {{__('Auftragsdetail')}}</h3>
 						
 							
 							 <ul class="jbdetail">
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Location')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Ort')}}:</div>
                                 <div class="col-md-8 col-xs-7">
                                     @if((bool)$job->is_freelance)
                                     <span>Freelance</span>
@@ -83,15 +83,15 @@ $company = $job->getCompany();
                                 <div class="col-md-8 col-xs-7"><span>{{$job->num_of_positions}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Experience')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Erfahrung')}}:</div>
                                 <div class="col-md-8 col-xs-7"><span>{{$job->getJobExperience('job_experience')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Gender')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Geschlecht')}}:</div>
                                 <div class="col-md-8 col-xs-7"><span>{{$job->getGender('gender')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Degree')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Grad')}}:</div>
                                 <div class="col-md-8 col-xs-7"><span>{{$job->getDegreeLevel('degree_level')}}</span></div>
                             </li>
                             <li class="row">
@@ -108,8 +108,8 @@ $company = $job->getCompany();
 			
 			<hr>
             <div class="jobButtons">
-                <a href="{{route('email.to.friend', $job->slug)}}" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Email to Friend')}}</a>
-                @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug)) <a href="{{route('remove.from.favourite', $job->slug)}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favourite Job')}} </a> @else <a href="{{route('add.to.favourite', $job->slug)}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favorisieren')}}</a> @endif
+                <a href="{{route('email.to.friend', $job->slug)}}" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Email to Friend')}}</a> 
+                @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug)) <a href="{{route('remove.from.favourite', $job->slug)}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favourite Job')}} </a> @else  <?php if(Auth::check()) { ?> <a href="{{route('add.to.favourite', $job->slug)}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favorisieren')}}</a> <?php }else{ ?> <a href="{{route('add.to.favouriteE', $job->slug)}}"  class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favorisieren')}}</a>  <?php } ?> @endif
                 <a href="{{route('report.abuse', $job->slug)}}" class="btn report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{__('Missbrauch melden')}}</a>
             </div>
         </div>
@@ -119,7 +119,7 @@ $company = $job->getCompany();
                 <!-- Job Description start -->
                 <div class="job-header">
                     <div class="contentbox">
-                        <h3><i class="fa fa-file-text-o" aria-hidden="true"></i> {{__('Job Description')}}</h3>
+                        <h3><i class="fa fa-file-text-o" aria-hidden="true"></i> {{__('Arbeitsbeschreibung')}}</h3>
                         <p>{!! $job->description !!}</p>                       
                     </div>
                 </div>
@@ -127,14 +127,14 @@ $company = $job->getCompany();
 				
 				<div class="job-header benefits">
                     <div class="contentbox">
-                        <h3><i class="fa fa-file-text-o" aria-hidden="true"></i> {{__('Benefits')}}</h3>
+                        <h3><i class="fa fa-file-text-o" aria-hidden="true"></i> {{__('Leistungen')}}</h3>
                         <p>{!! $job->benefits !!}</p>                       
                     </div>
                 </div>
 				
 				<div class="job-header">
                     <div class="contentbox">                        
-                        <h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i> {{__('Skills Required')}}</h3>
+                        <h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i> {{__('Fähigkeiten benötigt')}}</h3>
                         <ul class="skillslist">
                             {!!$job->getJobSkillsList()!!}
                         </ul>
@@ -155,7 +155,7 @@ $company = $job->getCompany();
                 @elseif(Auth::check() && Auth::user()->isAppliedOnJob($job->id))
                 <a href="javascript:;" class="btn apply applied"><i class="fa fa-paper-plane" aria-hidden="true"></i> {{__('Already Applied')}}</a>
                 @else
-                <a href="{{route('apply.job', $job->slug)}}" class="btn apply"><i class="fa fa-paper-plane" aria-hidden="true"></i> {{__('SAVE IT')}}</a>
+                <a href="{{route('apply.job', $job->slug)}}" class="btn apply"><i class="fa fa-paper-plane" aria-hidden="true"></i> {{__('SPEICHERN SIE ES')}}</a>
                 @endif
 				</div>
 				

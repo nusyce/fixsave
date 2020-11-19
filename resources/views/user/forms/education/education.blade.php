@@ -1,4 +1,4 @@
-<h5 onclick="showEducation();">{{__('Education')}}</h5>
+<h5 onclick="showEducation();">{{__('Bildung')}}</h5>
 
 <div class="row">
 
@@ -10,7 +10,7 @@
 
 </div>
 
-<a href="javascript:;" onclick="showProfileEducationModal();"> {{__('Add Education')}} </a>
+<a href="javascript:;" onclick="showProfileEducationModal();"> {{__('Bildung hinzufügen')}} </a>
 
 <hr>
 

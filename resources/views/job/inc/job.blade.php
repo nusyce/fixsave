@@ -812,7 +812,7 @@
     <div class="formrow"  style="position: relative;">
 
         <input type="text" name="wanie" class="form-control" id="tagswannie" autocomplete="off" required="required"
-               placeholder="{{__('wahle tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
+               placeholder="{{__('Wähle deine Tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
 
     </div>
 
@@ -1034,10 +1034,10 @@
 
         // Initialize ajax autocomplete:
         $('#tagswannie').autocomplete({
-            serviceUrl: '{{ route('ajax.wahle') }}',
-            onSelect: function (suggestion) {
+            serviceUrl: '{{ route('ajax.wahle') }}'
+            /*onSelect: function (suggestion) {
                 alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-            }
+            }*/
         });
 
 

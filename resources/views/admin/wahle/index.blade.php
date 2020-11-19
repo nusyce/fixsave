@@ -33,13 +33,14 @@
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
-                            <form method="post">
+
                                 <table class="table table-striped table-bordered table-hover"  id="jobDatatableAjax">
                                     <thead>
 
                                     <tr role="row" class="heading">
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>Action</th>
 
                                     </tr>
                                     </thead>
@@ -50,6 +51,7 @@
                                     <tr role="row" class="heading">
                                         <th><?php echo $vals['id']; ?></th>
                                         <th><?php echo $vals['name']; ?> </th>
+                                        <th><a href="{{route('loschen.wahle', $vals['id'])}}"> <button class="btn btn-danger">Loschen</button> </a> </th>
 
                                     </tr>
                                     </thead> <?php
@@ -57,7 +59,7 @@
                                     <tbody>
                                     </tbody>
                                 </table>
-                            </form>
+
                         </div>
                     </div>
                 </div>

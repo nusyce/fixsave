@@ -31,7 +31,7 @@
         </li>
 
         @include('admin/shared/side_bars/job')
-        @include('admin/shared/side_bars/Wahle')
+        @include('admin/shared/side_bars/wahle')
         @include('admin/shared/side_bars/company')
         @include('admin/shared/side_bars/berufe')
         @include('admin/shared/side_bars/site_user')

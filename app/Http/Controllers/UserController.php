@@ -151,27 +151,27 @@ class UserController extends Controller
 		
         $user->update();
 
-        $this->updateUserFullTextSearch($user);
+      /*  $this->updateUserFullTextSearch($user);*/
 		/*************************/
-		Subscription::where('email', 'like', $user->email)->delete();
+		/*Subscription::where('email', 'like', $user->email)->delete();
 		if((bool)$user->is_subscribed)
 		{			
 			$subscription = new Subscription();
 			$subscription->email = $user->email;
 			$subscription->name = $user->name;
-			$subscription->save();
+			$subscription->save();*/
 			
 			/*************************/
-			Newsletter::subscribeOrUpdate($subscription->email, ['FNAME'=>$subscription->name]);
+			//Newsletter::subscribeOrUpdate($subscription->email, ['FNAME'=>$subscription->name]);
 			/*************************/
-		}
+		/*}
 		else
-		{
+		{*/
 			/*************************/
-			Newsletter::unsubscribe($user->email);
+		//	Newsletter::unsubscribe($user->email);
 			/*************************/
-		}
-		
+		/*}*/
+
         flash(__('You have updated your profile successfully'))->success();
         return \Redirect::route('my.profile');
     }

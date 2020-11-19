@@ -94,6 +94,10 @@ class CompanyController extends Controller
         }
         /*         * ************************************** */
         $company->name = $request->input('name');
+        $company->strabe = $request->input('strabe');
+        $company->hausnummer = $request->input('hausnummer');
+        $company->bundesland = $request->input('bundesland');
+        $company->plz = $request->input('plz');
         $company->email = $request->input('email');
         if (!empty($request->input('password'))) {
             $company->password = Hash::make($request->input('password'));
@@ -110,7 +114,7 @@ class CompanyController extends Controller
         $company->no_of_employees = $request->input('no_of_employees');
         $company->established_in = $request->input('established_in');
         $company->fax = $request->input('fax');
-        $company->phone = $request->input('phone');
+        $company->telefon = $request->input('phone');
         $company->facebook = $request->input('facebook');
         $company->twitter = $request->input('twitter');
         $company->linkedin = $request->input('linkedin');
@@ -386,6 +390,15 @@ class CompanyController extends Controller
         $jobs = Job::whereIn('slug', $myFavouriteJobSlugs)->paginate(10);
         return view('company.my_favourite_jobsb')
             ->with('jobs', $jobs);
+    }
+
+    public function addToFavouriteJobb(Request $request, $job_slug)
+    {
+        $data['job_slug'] = $job_slug;
+        $data['user_id'] = Auth::guard('company')->user()->id;
+        $data_save = FavouriteJob::create($data);
+        flash(__('Job has been added in favorites list'))->success();
+        return \Redirect::route('job.detail', $job_slug);
     }
 
 }

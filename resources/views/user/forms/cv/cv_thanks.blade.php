@@ -9,7 +9,7 @@
                         <h5>{{__('LEBENSLAUF HINZUFUGEN')}}</h5>
                         <div class="formpanel">
                             <div class="formrow">
-                                <h3>{{__('CV added successfully')}}</h3>
+                                <h3>{{__('Lebenslauf erfolgreich hinzugefügt')}}</h3>
                             </div>                
                         </div>            
                     </div>

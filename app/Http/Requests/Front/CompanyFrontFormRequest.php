@@ -28,30 +28,30 @@ class CompanyFrontFormRequest extends Request
         switch ($this->method()) {
             case 'PUT':
             case 'POST': {
-                    $id = (int) Auth::guard('company')->user()->id;
-                    $unique_id = ($id > 0) ? ',' . $id : '';
-                    return [
-                        "id" => "",
-                        "name" => "required|max:150",
-                        'email' => 'required|unique:companies,email' . $unique_id . '|email|max:100',
-                        "ceo" => "required|max:60",
-                        "industry_id" => "required",
-                        "ownership_type_id" => "required",
-                        "description" => "required",
-                        "location" => "required|max:150",
-                        //"map" => "required",
-                        "no_of_offices" => "required|max:11",
-                        "website" => "required|url|max:150",
-                        "no_of_employees" => "required|max:15",
-                        "established_in" => "required|max:12",
-                        "fax" => "required|max:30",
-                        "phone" => "required|max:30",
-                        "logo" => 'image',
-                        "country_id" => "required",
-                        "state_id" => "required",
-                        "city_id" => "required",
-                    ];
-                }
+                $id = (int) Auth::guard('company')->user()->id;
+                $unique_id = ($id > 0) ? ',' . $id : '';
+                return [
+                    "id" => "",
+                    "name" => "required|max:150",
+                    'email' => 'required|unique:companies,email' . $unique_id . '|email|max:100',
+                    "ceo" => "required|max:60",
+                    "industry_id" => "required",
+                    "ownership_type_id" => "required",
+                    "description" => "required",
+                    "location" => "required|max:150",
+                    //"map" => "required",
+                    "no_of_offices" => "required|max:11",
+                    "website" => "required|url|max:150",
+                    "no_of_employees" => "required|max:15",
+                    "established_in" => "required|max:12",
+                    "fax" => "required|max:30",
+                    "phone" => "required|max:30",
+                    "logo" => 'image',
+                    "country_id" => "required",
+                    "state_id" => "required",
+                    "city_id" => "required",
+                ];
+            }
             default:break;
         }
     }
@@ -59,25 +59,25 @@ class CompanyFrontFormRequest extends Request
     public function messages()
     {
         return [
-            'name.required' => __('Name is required'),
-            'email.required' => __('Email is required'),
-            'email.email' => __('The email must be a valid email address'),
-            'email.unique' => __('This Email has already been taken'),
-            'password.required' => __('Password is required'),
-            'ceo.required' => __('CEO name is required'),
-            'industry_id.required' => __('Please select Industry'),
-            'ownership_type_id.required' => __('Please select Ownership Type'),
-            'description.required' => __('Description required'),
-            'location.required' => __('Location required'),
-            'map.required' => __('Google Map required'),
-            'no_of_offices.required' => __('Number of offices required'),
-            'website.required' => __('Website required'),
-            'website.url' => __('Complete url of website required'),
-            'no_of_employees.required' => __('Number of employees required'),
-            'established_in.required' => __('Established in year required'),
-            'fax.required' => __('Fax number required'),
-            'phone.required' => __('Phone number required'),
-            'logo.image' => __('Only Images can be used as logo'),
+            'name.required' => __('Name ist erforderlich'),
+            'email.required' => __('E-Mail ist erforderlich'),
+            'email.email' => __('Die E-Mail muss eine gültige E-Mail-Adresse sein'),
+            'email.unique' => __('Diese E-Mail wurde bereits vergeben'),
+            'password.required' => __('Passwort ist erforderlich'),
+            'ceo.required' => __('CEO Name ist erforderlich'),
+            'industry_id.required' => __('Bitte wählen Sie Industrie'),
+            'ownership_type_id.required' => __('Bitte wählen Sie Eigentümertyp'),
+            'description.required' => __('Beschreibung erforderlich'),
+            'location.required' => __('Standort erforderlich'),
+            'map.required' => __('Google Map erforderlich '),
+            'no_of_offices.required' => __('Anzahl der erforderlichen Büros'),
+            'website.required' => __('Website erforderlich'),
+            'website.url' => __('Vollständige URL der Website erforderlich'),
+            'no_of_employees.required' => __('Anzahl der benötigten Mitarbeiter'),
+            'established_in.required' => __('Gegründet im Jahr erforderlich'),
+            'fax.required' => __('Faxnummer erforderlich'),
+            'phone.required' => __('Telefonnummer erforderlich'),
+            'logo.image' => __('Nur Bilder können als Logo verwendet werden'),
             'country_id.required' => __('Please Land auswählen'),
             'state_id.required' => __('Please Staat auswählen'),
             'city_id.required' => __('Please Stadt auswählen'),

@@ -9,7 +9,7 @@
                         <h5>{{__('Projekt hinzufugen')}}</h5>
                         <div class="formpanel">
                             <div class="formrow">
-                                <h3>{{__('Project added successfully')}}</h3>
+                                <h3>{{__('Projekt erfolgreich hinzugefügt')}}</h3>
                             </div>                
                         </div>            
                     </div>

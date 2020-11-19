@@ -26,11 +26,11 @@
                             <div class="title">
                                 {{$user->getName()}}
                                 @if((bool)$user->is_immediate_available)
-                                <sup style="font-size:12px; color:#090;">{{__('Immediate Available For Work')}}</sup>
+                                <sup style="font-size:12px; color:#090;">{{__('Sofort verfügbar')}}</sup>
                                 @endif
                             </div>
                             <div class="desi">{{$user->getLocation()}}</div>
-                            <div class="loctext"><i class="fa fa-history" aria-hidden="true"></i> {{__('Member Since')}}, {{$user->created_at->format('M d, Y')}}</div>
+                            <div class="loctext"><i class="fa fa-history" aria-hidden="true"></i> {{__('Mitglied seit')}}, {{$user->created_at->format('M d, Y')}}</div>
                             
                             <div class="clearfix"></div>
                         </div>
@@ -51,8 +51,8 @@
                 @endif
                 @endif
 
-                @if(null !== $profileCv)<a href="{{asset('cvs/'.$profileCv->cv_file)}}" class="btn"><i class="fa fa-download" aria-hidden="true"></i> {{__('Download CV')}}</a>@endif
-                <a href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Nachricht senden')}}</a>
+                @if(null !== $profileCv)<a href="{{asset('cvs/'.$profileCv->cv_file)}}" class="btn"><i class="fa fa-download" aria-hidden="true"></i> {{__('Lebenslauf herunterladen')}}</a>@endif
+              {{--  <a href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Nachricht senden')}}</a>--}}
 
             </div>
         </div>
@@ -63,7 +63,7 @@
                 <!-- About Employee start -->
                 <div class="job-header">
                     <div class="contentbox">
-                        <h3>{{__('About me')}}</h3>
+                        <h3>{{__('Über mich')}}</h3>
                         <p>{{$user->getProfileSummary('summary')}}</p>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                 <!-- Education start -->
                 <div class="job-header">
                     <div class="contentbox">
-                        <h3>{{__('Education')}}</h3>
+                        <h3>{{__('Bildung')}}</h3>
                         <div class="" id="education_div"></div>            
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <!-- Experience start -->
                 <div class="job-header">
                     <div class="contentbox">
-                        <h3>{{__('Experience')}}</h3>
+                        <h3>{{__('Erfahrung')}}</h3>
                         <div class="" id="experience_div"></div>            
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                 <!-- Portfolio start -->
                 <div class="job-header">
                     <div class="contentbox">
-                        <h3>{{__('Portfolio')}}</h3>
+                        <h3>{{__('Geschäftsbereich')}}</h3>
                         <div class="" id="projects_div"></div>            
                     </div>
                 </div>
@@ -97,7 +97,7 @@
 				 <!-- Candidate Contact -->
 				<div class="job-header">
 					<div class="jobdetail">
-                        <h3>{{__('Candidate Contact')}}</h3>
+                        <h3>{{__('Kontakt')}}</h3>
                         <div class="candidateinfo">            
                             @if(!empty($user->Telefonnummer))
                             <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->Telefonnummer}}">{{$user->Telefonnummer}}</a></div>
@@ -117,44 +117,44 @@
                 <!-- Candidate Detail start -->
                 <div class="job-header">
                     <div class="jobdetail">
-                        <h3>{{__('Candidate Detail')}}</h3>
+                        <h3>{{__('Kandidat Detail')}}</h3>
                         <ul class="jbdetail">
 
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Is Email Verified')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Ist E-Mail verifiziert')}}</div>
                                 <div class="col-md-6 col-xs-6"><span>{{((bool)$user->verified)? 'Yes':'No'}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Immediate Available')}}</div>
-                                <div class="col-md-6 col-xs-6"><span>{{((bool)$user->is_immediate_available)? 'Yes':'No'}}</span></div>
+                                <div class="col-md-6 col-xs-6">{{__('Sofort verfügbar')}}</div>
+                                <div class="col-md-6 col-xs-6"><span>{{((bool)$user->is_immediate_available)? 'Ja':'Nein'}}</span></div>
                             </li>
 
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Age')}}</div>
-                                <div class="col-md-6 col-xs-6"><span>{{$user->getAge()}} Years</span></div>
+                                <div class="col-md-6 col-xs-6">{{__('Alter')}}</div>
+                                <div class="col-md-6 col-xs-6"><span>{{$user->getAge()}} Jahre</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Gender')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Geschlecht')}}</div>
                                 <div class="col-md-6 col-xs-6"><span>{{$user->getGender('gender')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Marital Status')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Famillienstand')}}</div>
                                 <div class="col-md-6 col-xs-6"><span>{{$user->getMaritalStatus('marital_status')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Experience')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Erfahrung')}}</div>
                                 <div class="col-md-6 col-xs-6"><span>{{$user->getJobExperience('job_experience')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Career Level')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Karriere Level')}}</div>
                                 <div class="col-md-6 col-xs-6"><span>{{$user->getCareerLevel('career_level')}}</span></div>
                             </li>             
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Current Salary')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Aktuelles Gehalt')}}</div>
                                 <div class="col-md-6 col-xs-6"><span class="permanent">{{$user->current_salary}} {{$user->salary_currency}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Expected Salary')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Erwartetes Gehalt')}}</div>
                                 <div class="col-md-6 col-xs-6"><span class="freelance">{{$user->expected_salary}} {{$user->salary_currency}}</span></div>
                             </li>              
                         </ul>
@@ -164,14 +164,14 @@
                 <!-- Google Map start -->
                 <div class="job-header">
                     <div class="jobdetail">
-                        <h3>{{__('Skills')}}</h3>
+                        <h3>{{__('Fertigkeiten')}}</h3>
                         <div id="skill_div"></div>            
                     </div>
                 </div>
 
                 <div class="job-header">
                     <div class="jobdetail">
-                        <h3>{{__('Languages')}}</h3>
+                        <h3>{{__('Sprachen')}}</h3>
                         <div id="language_div"></div>            
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">registrieren</button>
                 </div>
             </form>
         </div>

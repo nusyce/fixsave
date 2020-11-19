@@ -9,7 +9,7 @@
                         <h5>{{__('Fähigkeit hinzufügen')}}</h5>
                         <div class="formpanel">
                             <div class="formrow">
-                                <h3>{{__('Skill added successfully')}}</h3>
+                                <h3>{{__('Fähigkeit erfolgreich hinzugefügt')}}</h3>
                             </div>                
                         </div>            
                     </div>

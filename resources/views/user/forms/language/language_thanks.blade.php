@@ -9,7 +9,7 @@
                         <h5>{{__('Sprache hinzufügen')}}</h5>
                         <div class="formpanel">
                             <div class="formrow">
-                                <h3>{{__('Language added successfully')}}</h3>
+                                <h3>{{__('Sprache erfolgreich hinzugefügt')}}</h3>
                             </div>                
                         </div>            
                     </div>

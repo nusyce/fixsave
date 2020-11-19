@@ -9,7 +9,7 @@
                         <h5>{{__('Erfahrung hinzufügen')}}</h5>
                         <div class="formpanel">
                             <div class="formrow">
-                                <h3>{{__('Experience added successfully')}}</h3>
+                                <h3>{{__('Erfahrung erfolgreich hinzugefügt')}}</h3>
                             </div>                
                         </div>            
                     </div>

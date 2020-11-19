@@ -18,7 +18,7 @@
 
 
             <div class="form-group" id="div_cv_file">
-                <label for="cv_file" class="bold">{{__('CV File')}}</label>
+                <label for="cv_file" class="bold">{{__('CV-Datei')}}</label>
                 <input class="form-control" id="cv_file" name="cv_file" type="file">
                 <span class="help-block cv_file-error"></span> </div>
 

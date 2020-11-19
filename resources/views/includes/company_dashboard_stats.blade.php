@@ -2,7 +2,7 @@
     <li class="col-md-4 col-6">
         <div class="inbox"> <i class="fa fa-clock-o" aria-hidden="true"></i>
             <h6><a href="{{route('posted.jobs')}}">{{Auth::guard('company')->user()->countOpenJobs()}}</a></h6>
-            <strong>{{__('Offene Jobs')}}</strong> </div>
+            <strong>{{__('Stellenangebote')}}</strong> </div>
     </li>
     <li class="col-md-4 col-6">
         <div class="inbox"> <i class="fa fa-users" aria-hidden="true"></i>
@@ -12,6 +12,6 @@
     <li class="col-md-4 col-6">
         <div class="inbox"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <h6><a href="{{route('company.messages')}}">{{Auth::guard('company')->user()->countCompanyMessages()}}</a></h6>
-            <strong>{{__('Mitteilungen')}}</strong> </div>
+            <strong>{{__('Nachrichten')}}</strong> </div>
     </li>
 </ul>

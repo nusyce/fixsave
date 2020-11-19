@@ -4,7 +4,7 @@
             <?php
             $degree_level_id = (isset($profileEducation) ? $profileEducation->degree_level_id : null);
             ?>
-            {!! Form::select('degree_level_id', [''=>__('Select Degree Level')]+$degreeLevels, $degree_level_id, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
+            {!! Form::select('degree_level_id', [''=>__('Wählen Sie Gradstufe')]+$degreeLevels, $degree_level_id, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
             <span class="help-block degree_level_id-error"></span> </div>
 
 
@@ -13,12 +13,12 @@
             $degree_type_id = (isset($profileEducation) ? $profileEducation->degree_type_id : null);
             ?>
             <span id="degree_types_dd">
-                {!! Form::select('degree_type_id', [''=>__('Select Degree Type')], $degree_type_id, array('class'=>'form-control', 'id'=>'degree_type_id')) !!}
+                {!! Form::select('degree_type_id', [''=>__('Wählen Sie Gradart')], $degree_type_id, array('class'=>'form-control', 'id'=>'degree_type_id')) !!}
             </span>
             <span class="help-block degree_type_id-error"></span> </div>
 
         <div class="formrow" id="div_degree_title">
-            <input class="form-control" id="degree_title" placeholder="{{__('Degree Title')}}" name="degree_title" type="text" value="{{(isset($profileEducation)? $profileEducation->degree_title:'')}}">
+            <input class="form-control" id="degree_title" placeholder="{{__('Titel des Abschlusses')}}" name="degree_title" type="text" value="{{(isset($profileEducation)? $profileEducation->degree_title:'')}}">
             <span class="help-block degree_title-error"></span> </div>
 
         <div class="formrow" id="div_major_subjects">
@@ -56,12 +56,12 @@
             <?php
             $date_completion = (isset($profileEducation) ? $profileEducation->date_completion : null);
             ?>
-            {!! Form::select('date_completion', [''=>__('Select Year')]+MiscHelper::getEstablishedIn(), $date_completion, array('class'=>'form-control', 'id'=>'date_completion')) !!}
+            {!! Form::select('date_completion', [''=>__('Wählen Sie Jahr')]+MiscHelper::getEstablishedIn(), $date_completion, array('class'=>'form-control', 'id'=>'date_completion')) !!}
             <span class="help-block date_completion-error"></span> </div>
 
 
         <div class="formrow" id="div_degree_result">
-            <input class="form-control" id="degree_result" placeholder="{{__('Degree Result')}}" name="degree_result" type="text" value="{{(isset($profileEducation)? $profileEducation->degree_result:'')}}">
+            <input class="form-control" id="degree_result" placeholder="{{__('Abschluss Ergebnis')}}" name="degree_result" type="text" value="{{(isset($profileEducation)? $profileEducation->degree_result:'')}}">
             <span class="help-block degree_result-error"></span> </div>
 
 
@@ -70,7 +70,7 @@
             <?php
             $result_type_id = (isset($profileEducation) ? $profileEducation->result_type_id : null);
             ?>
-            {!! Form::select('result_type_id', [''=>__('Select Result Type')]+$resultTypes, $result_type_id, array('class'=>'form-control', 'id'=>'result_type_id')) !!}
+            {!! Form::select('result_type_id', [''=>__('Wählen Sie Ergebnistyp')]+$resultTypes, $result_type_id, array('class'=>'form-control', 'id'=>'result_type_id')) !!}
             <span class="help-block result_type_id-error"></span> </div>
 
     </div>

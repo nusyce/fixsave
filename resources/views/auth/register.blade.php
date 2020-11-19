@@ -59,55 +59,55 @@
 
                                 <div class="formrow{{ $errors->has('first_name') ? ' has-error' : '' }}">
 
-                                    <input type="text" name="first_name" class="form-control" required="required"
-                                           placeholder="{{__('First Name')}}" value="{{old('first_name')}}">
+                                    <input style="margin-bottom:14px;" type="text" name="first_name" class="form-control" required="required"
+                                           placeholder="{{__('Vorname')}}" value="{{old('first_name')}}">
 
-                                    @if ($errors->has('first_name')) <span
+                                    @if ($errors->has('first_name')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('first_name') }}</strong> </span> @endif
                                 </div>
 
                                 <div class="formrow{{ $errors->has('middle_name') ? ' has-error' : '' }}">
 
-                                    <input type="text" name="middle_name" class="form-control"
-                                           placeholder="{{__('Middle Name')}}" value="{{old('middle_name')}}">
+                                    <input style="margin-bottom:14px;" type="text" name="middle_name" class="form-control"
+                                           placeholder="{{__('Zweiter Vorname')}}" value="{{old('middle_name')}}">
 
-                                    @if ($errors->has('middle_name')) <span
+                                    @if ($errors->has('middle_name')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('middle_name') }}</strong> </span> @endif
                                 </div>
 
                                 <div class="formrow{{ $errors->has('last_name') ? ' has-error' : '' }}">
 
-                                    <input type="text" name="last_name" class="form-control" required="required"
-                                           placeholder="{{__('Last Name')}}" value="{{old('last_name')}}">
+                                    <input style="margin-bottom:14px;" type="text" name="last_name" class="form-control" required="required"
+                                           placeholder="{{__('Nachname')}}" value="{{old('last_name')}}">
 
-                                    @if ($errors->has('last_name')) <span
+                                    @if ($errors->has('last_name')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('last_name') }}</strong> </span> @endif
                                 </div>
 
                                 <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                                    <input type="email" name="email" class="form-control" required="required"
-                                           placeholder="{{__('Email')}}" value="{{old('email')}}">
+                                    <input style="margin-bottom:14px;" type="email" name="email" class="form-control" required="required"
+                                           placeholder="{{__('E-Mail')}}" value="{{old('email')}}">
 
-                                    @if ($errors->has('email')) <span
+                                    @if ($errors->has('email')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('email') }}</strong> </span> @endif
                                 </div>
 
                                 <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
 
-                                    <input type="password" name="password" class="form-control" required="required"
-                                           placeholder="{{__('Password')}}" value="">
+                                    <input style="margin-bottom:14px;" type="password" name="password" class="form-control" required="required"
+                                           placeholder="{{__('Passwort')}}" value="">
 
-                                    @if ($errors->has('password')) <span
+                                    @if ($errors->has('password')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('password') }}</strong> </span> @endif
                                 </div>
 
                                 <div class="formrow{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
 
-                                    <input type="password" name="password_confirmation" class="form-control"
-                                           required="required" placeholder="{{__('Password Confirmation')}}" value="">
+                                    <input style="margin-bottom:14px;" type="password" name="password_confirmation" class="form-control"
+                                           required="required" placeholder="{{__('Passwort Bestätigung')}}" value="">
 
-                                    @if ($errors->has('password_confirmation')) <span
+                                    @if ($errors->has('password_confirmation')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('password_confirmation') }}</strong> </span> @endif
                                 </div>
 
@@ -128,7 +128,7 @@
 
 
                                     <input type="checkbox" value="1"
-                                           name="is_subscribed" {{$is_checked}} />{{__('Newsletter abonnieren')}}
+                                           name="is_subscribed" {{$is_checked}} /><span style="margin-left: 6px;font-size:16px;">{{__('Newsletter abonnieren')}}</span>
 
                                     @if ($errors->has('is_subscribed')) <span
                                             class="help-block"> <strong>{{ $errors->first('is_subscribed') }}</strong> </span> @endif
@@ -137,17 +137,17 @@
 
                                 <div class="formrow{{ $errors->has('terms_of_use') ? ' has-error' : '' }}">
 
-                                    <input type="checkbox" value="1" name="terms_of_use"/>
+                                    <input style="margin-bottom:14px;" type="checkbox" value="1" name="terms_of_use"/>
 
-                                    <a href="{{url('cms/terms-of-use')}}">{{__('I accept Terms of Use')}}</a>
+                                    <a  style="margin-left: 6px;font-size:16px;" href="{{url('cms/terms-of-use')}}" target="_blank">{{__('Ich akzeptiere die Nutzungsbedingungen')}}</a><br>
 
 
-                                    @if ($errors->has('terms_of_use')) <span
+                                    @if ($errors->has('terms_of_use')) <span style="color: #ea5c90;"
                                             class="help-block"> <strong>{{ $errors->first('terms_of_use') }}</strong> </span> @endif
                                 </div>
 
 
-                                <input type="submit" class="btn" value="{{__('Register')}}">
+                                <input type="submit" class="btn" value="{{__('Registrieren')}}">
 
                             </form>
 
@@ -164,8 +164,8 @@
 
                                 <div class="formrow">
 
-                                    <input type="text" name="firma" class="form-control" required="required"
-                                           placeholder="{{__('Firma')}}">
+                                    <input style="margin-bottom:14px;" type="text" name="firma" class="form-control" required="required"
+                                    oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"   placeholder="{{__('Firma')}}">
 
                                 </div>
 
@@ -175,12 +175,12 @@
                                 <div class="form-group" style="display: flex;flex-direction: row">
                                 <div style="margin-right: 65px;margin-left:10px;"> <span style="font-size: 16px;"></span></div>
                                     <div style="margin-right: 45px;font-size: 16px;">
-                                    <input type="radio" name="radio"   id="Herr" value="Herr" class="form-check-input" style="position: relative;bottom: 2px;">
+                                    <input type="radio" name="radio"   id="Herr" value="Herr" class="form-check-input" style="position: relative;bottom: 2px;" required="required">
                                     <label style="position: relative;bottom: 3px;" for="Herr" class="form-check-label">Herr </label>
                                     </div>
 
                                     <div style="margin-right: 65px;font-size: 16px;">
-                                    <input type="radio" name="radio"   id="Frau" value="Frau" class="form-check-input" style="position: relative;bottom: 2px;" required>
+                                    <input type="radio" name="radio"   id="Frau" value="Frau" class="form-check-input" style="position: relative;bottom: 2px;">
                                     <label style="position: relative;bottom: 3px;" for="Frau" class="form-check-label">Frau </label>
                                     </div>
                                         <div style="margin-right: 65px;font-size: 16px;">
@@ -192,8 +192,8 @@
 
                                 <div class="formrow{{ $errors->has('name') ? ' has-error' : '' }}">
 
-                                    <input type="text" name="name" class="form-control" required="required"
-                                           placeholder="{{__('Name')}}" value="{{old('name')}}">
+                                    <input type="text" name="name" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
+                                           placeholder="{{__('Nachname')}}" value="{{old('name')}}">
 
                                     @if ($errors->has('name')) <span
                                             class="help-block"> <strong>{{ $errors->first('name') }}</strong> </span> @endif
@@ -201,14 +201,14 @@
 
                                 <div class="formrow">
 
-                                    <input type="text" name="vorname" class="form-control" required="required"
+                                    <input type="text" name="vorname" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Vorname')}}" value="{{old('Vorname')}}">
 
                                 </div>
 
                                 <div class="formrow">
 
-                                    <input type="text" name="land" class="form-control" required="required"
+                                    <input type="text" name="land" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Land')}}" value="{{old('Land')}}">
 
                                 </div>
@@ -218,45 +218,45 @@
 
                                 <div class="formrow">
 
-                                    <input type="text" name="bundesland" class="form-control" required="required"
+                                    <input type="text" name="bundesland" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Bundesland')}}" >
 
                                 </div>
 
                                 <div class="formrow">
 
-                                    <input type="text" name="plz" class="form-control" required="required"
+                                    <input type="text" name="plz" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Plz')}}"  >
 
                                 </div>
 
                                 <div class="formrow">
 
-                                    <input type="text" name="stadt" class="form-control" required="required"
+                                    <input type="text" name="stadt" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Stadt')}}" >
 
                                 </div>
 
                                 <div class="formrow">
 
-                                    <input type="text" name="strabe" class="form-control" required="required"
+                                    <input type="text" name="strabe" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Straße')}}" >
 
                                 </div>
 
                                 <div class="formrow">
 
-                                    <input type="text" name="hausnummer" class="form-control" required="required"
+                                    <input type="text" name="hausnummer" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Hausnummer')}}">
 
                                 </div>
 
-                                <label style="margin-bottom: 20px;margin-left:10px;font-size: 16px;"> <u> Kontakt </u></label>
+                                <label style="margin-bottom: 20px;margin-left:10px;font-size: 16px;"> <u> Kontaktdaten </u></label>
                                 <br>
 
                                 <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                                    <input type="email" name="email" class="form-control" required="required"
+                                    <input type="email" name="email" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Email')}}" value="{{old('email')}}">
 
                                     @if ($errors->has('email')) <span
@@ -265,7 +265,7 @@
 
                                 <div class="formrow">
 
-                                    <input type="text" name="telefon" class="form-control" required="required"
+                                    <input type="text" name="telefon" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Telefon')}}">
 
                                 </div>
@@ -275,7 +275,7 @@
 
                                 <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
 
-                                    <input type="password" name="password" class="form-control" required="required"
+                                    <input type="password" name="password" class="form-control" required="required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                                            placeholder="{{__('Dein Passwort')}}" value="">
 
                                     @if ($errors->has('password')) <span
@@ -295,7 +295,7 @@
 
                                     <input type="checkbox" value="1" name="terms_of_use" checked=""/>
 
-                                    Ich akzeptiere die Flixsave24 <a href="{{url('terms-of-use')}}"> <span style="color: blue;text-decoration: underline">AGB </span></a>
+                                    <span style="margin-left: 6px;font-size:16px;">  Ich akzeptiere die Flixsave24 <a href="{{url('cms/terms-of-use')}}" target="_blank"> <span style="color: blue;text-decoration: underline">AGB </span></a> </span>
 
 
                                     @if ($errors->has('terms_of_use')) <span
@@ -305,9 +305,9 @@
 
                                 <div class="formrow">
 
-                                    <input type="checkbox" value="1" name="terms_of_use" required="" />
+                                    <input type="checkbox" value="1" name="terms_of_use" required="" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"/>
 
-                                   Ich habe die  <a href="#"> <span style="color: blue;text-decoration: underline">Datenschutzbestimmung </span> </a>gelesen
+                                    <span style="margin-left: 6px;font-size:16px;">   Ich habe die  <a href="{{ route('datenschutzbestimmung') }}" target="_blank"> <span style="color: red;text-decoration: underline">Datenschutzbestimmung </span> </a>&nbsp;gelesen</span>
 
                                 </div>
 
@@ -327,7 +327,7 @@
 
 
                                     <input type="checkbox" value="1"
-                                           name="is_subscribed"  /> Ich  den Flixsave24 Newsletter erhalten
+                                           name="is_subscribed"  /><span style="margin-left: 6px;font-size:16px;"> Ich würde gern den Flixsave24 Newsletter erhalten </span>
 
                                     @if ($errors->has('is_subscribed')) <span
                                             class="help-block"> <strong>{{ $errors->first('is_subscribed') }}</strong> </span> @endif
@@ -336,7 +336,7 @@
 
 
 
-                                <input type="submit" class="btn" value="{{__('Jetzt registrieren')}}">
+                                <input type="submit" class="btn" value="{{__('Registrieren')}}">
 
                             </form>
 

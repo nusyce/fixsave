@@ -4,7 +4,7 @@
 @include('includes.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('Applied Jobs')])
+@include('includes.inner_page_title', ['page_title'=>__('Beworbene Stellen')])
 <!-- Inner Page Title end -->
 <div class="listpgWraper">
     <div class="container">
@@ -13,7 +13,7 @@
 
             <div class="col-md-9 col-sm-8"> 
                 <div class="myads">
-                    <h3>{{__('Applied Jobs')}}</h3>
+                    <h3>{{__('Beworbene Stellen')}}</h3>
                     <ul class="searchList">
                         <!-- job start --> 
                         @if(isset($jobs) && count($jobs))
@@ -34,7 +34,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
-                                    <div class="listbtn"><a href="{{route('job.detail', [$job->slug])}}">{{__('View Details')}}</a></div>
+                                    <div class="listbtn"><a href="{{route('job.detail', [$job->slug])}}">{{__('Details anzeigen')}}</a></div>
                                 </div>
                             </div>
                             <p>{{\Illuminate\Support\Str::limit(strip_tags($job->description), 150, '...')}}</p>

@@ -34,7 +34,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
-                                    <div class="listbtn"><a href="{{route('job.detail', [$job->slug])}}">{{__('View Details')}}</a></div>
+                                    <div class="listbtn"><a href="{{route('job.detail', [$job->slug])}}">{{__('Details anzeigen')}}</a></div>
                                 </div>
                             </div>
                             <p>{{\Illuminate\Support\Str::limit(strip_tags($job->description), 150, '...')}}</p>

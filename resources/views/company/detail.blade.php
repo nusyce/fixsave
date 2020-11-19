@@ -10,7 +10,7 @@
 
 <!-- Inner Page Title start -->
 
-@include('includes.inner_page_title', ['page_title'=>__('Company Detail')])
+@include('includes.inner_page_title', ['page_title'=>__('Unternehmen Detail')])
 
 <!-- Inner Page Title end -->
 
@@ -44,7 +44,7 @@
 
                             <div class="loctext"><i class="fa fa-history" aria-hidden="true"></i>
 
-                                {{__('Member Since')}}, {{$company->created_at->format('M d, Y')}}</div>
+                                {{__('Mitglied Seit')}}, {{$company->created_at->format('M d, Y')}}</div>
 
                             <div class="loctext"><i class="fa fa-map-marker" aria-hidden="true"></i>
 
@@ -52,13 +52,13 @@
 
                             @if(!empty($company->firma))
 
-                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Firma </span>{{$company->firma}} </div>
+                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Unternehmen </span>{{$company->firma}} </div>
 
                             @endif
 
                             @if(!empty($company->geschlecht))
 
-                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Geschlecht </span>{{$company->geschlecht}} </div>
+                                <div style="position: relative;left:150px;" class="loctext"><span style="font-weight: bold">Titel </span>{{$company->geschlecht}} </div>
 
                             @endif
 
@@ -204,7 +204,7 @@
 
                     <div class="contentbox">
 
-                        <h3>{{__('About Company')}}</h3>
+                        <h3>{{__('Über das Unternehmen')}}</h3>
 
                         <p>{!! $company->description !!}</p>
 
@@ -218,7 +218,7 @@
 
                 <div class="relatedJobs">
 
-                    <h3>{{__('Job Openings')}}</h3>
+                    <h3>{{__('Stellenangebote')}}</h3>
 
                     <ul class="searchList">
 
@@ -270,7 +270,7 @@
 
                                     <div class="listbtn"><a
 
-                                            href="{{route('job.detail', [$companyJob->slug])}}">{{__('View Detail')}}</a>
+                                            href="{{route('job.detail', [$companyJob->slug])}}">{{__('Details anzeigen')}}</a>
 
                                     </div>
 
@@ -300,21 +300,21 @@
 
             <div class="col-md-4">
 
-                <!-- Company Detail start -->
+                <!-- Unternehmen Detail start -->
 
                 <div class="job-header">
 
                     <div class="jobdetail">
 
-                        <h3>{{__('Company Detail')}}</h3>
+                        <h3>{{__('Unternehmen Detail')}}</h3>
 
                         <ul class="jbdetail">
 
                             <li class="row">
 
-                                <div class="col-md-6 col-xs-6">{{__('Is Email Verified')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Verifizierte E-Mail')}}</div>
 
-                                <div class="col-md-6 col-xs-6"><span>{{((bool)$company->verified)? 'Yes':'No'}}</span>
+                                <div class="col-md-6 col-xs-6"><span>{{((bool)$company->verified)? 'Ja':'Nein'}}</span>
 
                                 </div>
 
@@ -322,7 +322,7 @@
 
                             <li class="row">
 
-                                <div class="col-md-6 col-xs-6">{{__('Total Employees')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__(' Beschäftigte insgesamt')}}</div>
 
                                 <div class="col-md-6 col-xs-6"><span>{{$company->no_of_employees}}</span></div>
 
@@ -338,7 +338,7 @@
 
                             <li class="row">
 
-                                <div class="col-md-6 col-xs-6">{{__('Current jobs')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Aktuelle jobs')}}</div>
 
                                 <div class="col-md-6 col-xs-6">
 

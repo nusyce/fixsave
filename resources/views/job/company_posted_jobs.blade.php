@@ -34,10 +34,10 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">                
-                                    <div class="listbtn"><a href="{{route('list.favourite.applied.users', [$job->id])}}">{{__('List Short Listed Candidates')}}</a></div>
+                                    <div class="listbtn"><a href="{{route('list.favourite.applied.users', [$job->id])}}">{{__('LISTE DER IN DIE ENGERE WAHL GEZOGENEN')}}</a></div>
                                     <div class="listbtn"><a href="{{route('list.applied.users', [$job->id])}}">{{__('KANDIDATENLISTE')}}</a></div>
-                                    <div class="listbtn"><a href="{{route('edit.front.job', [$job->id])}}">{{__('Edit')}}</a></div>
-                                    <div class="listbtn"><a href="javascript:;" onclick="deleteJob({{$job->id}});">{{__('Delete')}}</a></div>
+                                    <div class="listbtn"><a href="{{route('edit.front.job', [$job->id])}}">{{__('BEARBEITEN')}}</a></div>
+                                    <div class="listbtn"><a href="javascript:;" onclick="deleteJob({{$job->id}});">{{__('Löschen')}}</a></div>
                                 </div>
                             </div>
                             <p>{{\Illuminate\Support\Str::limit(strip_tags($job->description), 150, '...')}}</p>

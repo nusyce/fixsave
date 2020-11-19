@@ -5,11 +5,11 @@
 				<div class="searchform">
 					<div class="row">
 						<div class="col-lg-9">
-							<input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills, job title or Location')}}" />
+							<input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Stellenbezeichnung oder Fähigkeiten')}}" />
 						</div>
 
 						<div class="col-lg-3">
-							<button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Find Jobs')}}</button>
+							<button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Stelle suchen')}}</button>
 						</div>
 
 					</div>

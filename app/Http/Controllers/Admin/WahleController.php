@@ -71,6 +71,13 @@ class WahleController extends Controller
         return \Redirect::route('list.wahle');
     }
 
+    public function deleteWahle($id) {
+
+        $remove = new Wahle();
+        $sup = $remove::destroy($id);
+        return \Redirect::route('list.wahle');
+    }
+
 
 
 }

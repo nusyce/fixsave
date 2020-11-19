@@ -131,6 +131,7 @@ include_once($real_path . 'admin_auth.php');
 
 
 Route::get('bewerbung', 'BewerbungController@index')->name('bewerbung');
+Route::get('datenschutzbestimmung', 'DatenschutzbestimmungController@index')->name('datenschutzbestimmung');
 Route::post('bewerbung_save', 'BewerbungController@register')->name('bewerbung.save');
 
 Route::get('blog', 'BlogController@index')->name('blogs');
@@ -149,6 +150,7 @@ Route::get('/sitemap', 'SitemapController@index');
 Route::get('/sitemap/companies', 'SitemapController@companies');
 
 
+
 Route::get('list-berufe',['uses' => 'Admin\BerufeController@indexBerufe'])->name('list.berufe');
 Route::get('create-berufe',['uses' => 'Admin\BerufeController@createBerufe'])->name('create.berufe');
 
@@ -157,6 +159,7 @@ Route::get('list-wahle',['uses' => 'Admin\WahleController@indexWahle'])->name('l
 Route::get('create-wahle',['uses' => 'Admin\WahleController@createWahle'])->name('create.wahle');
 Route::post('store-wahle',['uses' => 'Admin\WahleController@storeWahle'])->name('store.wahle');
 Route::get('ajax-wahle',['uses' => 'Admin\WahleController@ajaxWahle'])->name('ajax.wahle');
+Route::get('loschen-wahle/{id}',['uses' => 'Admin\WahleController@deleteWahle'])->name('loschen.wahle');
 
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');

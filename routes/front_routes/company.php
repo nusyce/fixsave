@@ -24,3 +24,4 @@ Route::get('append-only-messages', 'CompanyMessagesController@appendonly_message
 Route::post('company-submit-messages', 'CompanyMessagesController@submit_message')->name('company.submit-message');
 Route::get('company-message-detail/{id}', 'Company\CompanyController@companyMessageDetail')->name('company.message.detail');
 Route::get('my-favourite-jobsb', 'Company\CompanyController@myFavouriteJobsb')->name('my.favourite2.jobs');
+Route::get('add-to-favourite-jobb/{job_slug}', 'Company\CompanyController@addToFavouriteJobb')->name('add.to.favouriteE');
