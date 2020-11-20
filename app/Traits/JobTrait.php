@@ -302,13 +302,14 @@ trait JobTrait
         $job->wanie = $request->input('wanie');
         $job->description = $request->input('description');
         $job->expiry_date = '2027-05-15 21:00:00';
+        $job->slug = Str::slug($request->input('title'), '-') . '-' . $job->id;
 
 
         // $job = $this->assignJobValues($job, $request);
 
         $job->save();
         /*         * ******************************* */
-        $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
+      //  $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
         /*         * ******************************* */
        // $job->update();
         /*         * ************************************ */

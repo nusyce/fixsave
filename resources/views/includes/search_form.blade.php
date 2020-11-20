@@ -26,8 +26,8 @@
             </span>
         </div>
 		</div>
-		
-		
+
+
 		<div class="input-group">
 		  <input type="text"  name="search" id="empsearch" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Stellenbezeichnung oder Fähigkeiten')}}" autocomplete="off" />
 		  <span class="input-group-btn">
@@ -35,9 +35,9 @@
 		  </span>
 		</div>
 		</div>
-		
-       
-        
+
+
+
     </div>
 </form>
 @else

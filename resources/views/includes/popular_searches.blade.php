@@ -19,7 +19,7 @@
 				<div class="tab-pane fade show active" id="byfunctional" role="tabpanel" aria-labelledby="byfunctional-tab">
 					<div class="srchbx">				
                 <!--Categories start-->
-               
+
                 <div class="srchint">
                     <ul class="row catelist">
                         @if(isset($topFunctionalAreaIds) && count($topFunctionalAreaIds)) @foreach($topFunctionalAreaIds as $functional_area_id_num_jobs)

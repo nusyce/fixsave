@@ -15,7 +15,7 @@
             <span class="help-block cv_file-error"></span> </div>
 
         <div class="formrow" id="div_is_default">
-            <label for="is_default" class="bold">{{__('Standardmabig?')}}</label>
+            <label for="is_default" class="bold">{{__('Standardmäßig?')}}</label>
             <div class="radio-list">
                 <?php
                 $val_1_checked = '';

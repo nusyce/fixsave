@@ -10,7 +10,7 @@
 
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                <h4 class="modal-title">{{__('LEBENSLAUF HINZUFUGEN')}}</h4>
+                <h4 class="modal-title">{{__('LEBENSLAUF HINZUFüGEN')}}</h4>
 
             </div>
 
@@ -18,7 +18,7 @@
 
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-primary" onclick="submitProfileCvForm();">{{__('LEBENSLAUF HINZUFUGEN')}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-primary" onclick="submitProfileCvForm();">{{__('LEBENSLAUF HINZUFüGEN')}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
 
             </div>
 

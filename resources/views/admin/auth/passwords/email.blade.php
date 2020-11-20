@@ -27,7 +27,7 @@
             <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email Address" name="email" value="{{old('email')}}" />
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn btn-success uppercase pull-right">Send Password Reset Link</button>
+            <button type="submit" class="btn btn-success uppercase pull-right">Passwortlink anfordern</button>
         </div>
     </form>
     @endif 

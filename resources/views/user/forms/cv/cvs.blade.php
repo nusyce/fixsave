@@ -10,7 +10,7 @@
 
 </div>
 
-<a href="javascript:;" onclick="showProfileCvModal();"> {{__('LEBENSLAUF HINZUFUGEN')}} </a>
+<a href="javascript:;" onclick="showProfileCvModal();"> {{__('LEBENSLAUF HINZUFüGEN')}} </a>
 
 <hr>
 

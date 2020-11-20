@@ -121,8 +121,8 @@
                         <ul class="jbdetail">
 
                             <li class="row">
-                                <div class="col-md-6 col-xs-6">{{__('Ist E-Mail verifiziert')}}</div>
-                                <div class="col-md-6 col-xs-6"><span>{{((bool)$user->verified)? 'Yes':'No'}}</span></div>
+                                <div class="col-md-6 col-xs-6">{{__('E-Mail verifiziert')}}</div>
+                                <div class="col-md-6 col-xs-6"><span>{{((bool)$user->verified)? 'Ja':'Nein'}}</span></div>
                             </li>
                             <li class="row">
                                 <div class="col-md-6 col-xs-6">{{__('Sofort verfügbar')}}</div>

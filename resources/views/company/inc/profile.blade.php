@@ -76,28 +76,28 @@
     <div class="col-md-12">
         <div class="formrow">
             <label>{{__('straße')}}</label>
-            {!! Form::text('strabe', '', array('class'=>'form-control', 'placeholder'=>__($company->strabe),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+            {!! Form::text('strabe', null, array('class'=>'form-control', 'placeholder'=>__($company->strabe),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="formrow">
             <label>{{__('Bundesland')}}</label>
-            {!! Form::text('bundesland', '', array('class'=>'form-control', 'placeholder'=>__($company->bundesland),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+            {!! Form::text('bundesland', null, array('class'=>'form-control', 'placeholder'=>__($company->bundesland),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
              </div>
     </div>
 
     <div class="col-md-12">
         <div class="formrow">
             <label>{{__('Plz')}}</label>
-            {!! Form::text('plz', '', array('class'=>'form-control', 'placeholder'=>__($company->plz),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+            {!! Form::text('plz', null, array('class'=>'form-control', 'placeholder'=>__($company->plz),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="formrow">
             <label>{{__('Hausnummer')}}</label>
-            {!! Form::text('hausnummer', '', array('class'=>'form-control', 'placeholder'=>__($company->hausnummer),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+            {!! Form::text('hausnummer', null, array('class'=>'form-control', 'placeholder'=>__($company->hausnummer),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
         </div>
     </div>
 
@@ -136,7 +136,7 @@
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'phone') !!}">
             <label>{{__('Telefonnummer')}}</label>
-            {!! Form::text('phone','', array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__($company->telefon))) !!}
+            {!! Form::text('phone',null, array('class'=>'form-control', 'id'=>'phone', 'placeholder'=>__($company->telefon))) !!}
             <span style="color: #ea5c90;position: relative;top:8px;">   {!! APFrmErrHelp::showErrors($errors, 'phone') !!} </span> </div>
     </div>
     <div class="clearfix"></div>
@@ -179,12 +179,14 @@
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'state_id') !!}">
             <label>{{__('Staat')}}</label>
-            <span id="default_state_dd"> {!! Form::select('state_id', ['' => __('Staat auswählen')], null, array('class'=>'form-control', 'id'=>'state_id')) !!} </span> {!! APFrmErrHelp::showErrors($errors, 'state_id') !!} </div>
+            <span id="default_state_dd"> {!! Form::select('state_id', ['' => __('Staat auswählen')], null, array('class'=>'form-control', 'id'=>'state_id')) !!} </span>
+            <span style="color: #ea5c90;position: relative;top:8px;"> {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}  </span> </div>
     </div>
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'city_id') !!}">
             <label>{{__('Stadt')}}</label>
-            <span id="default_city_dd"> {!! Form::select('city_id', ['' => __('Stadt auswählen')], null, array('class'=>'form-control', 'id'=>'city_id')) !!} </span> {!! APFrmErrHelp::showErrors($errors, 'city_id') !!} </div>
+            <span id="default_city_dd"> {!! Form::select('city_id', ['' => __('Stadt auswählen')], null, array('class'=>'form-control', 'id'=>'city_id')) !!} </span>
+            <span style="color: #ea5c90;position: relative;top:8px;"> {!! APFrmErrHelp::showErrors($errors, 'city_id') !!} </span> </div>
     </div>
     <div class="col-md-12">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'map') !!}">

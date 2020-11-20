@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Traits\JobTrait;
+use Illuminate\Support\Str;
 
 class JobPublishController extends Controller
 {
@@ -56,7 +57,8 @@ class JobPublishController extends Controller
             'ausstattung'=>$request->input('ausstattung'),
             'wanie'=>$request->input('wanie'),
             'description'=>$request->input('description'),
-                'expiry_date' => '2027-05-15 21:00:00']
+                'expiry_date' => '2027-05-15 21:00:00',
+                'slug' => Str::slug($request->input('title'), '-') . '-' . $id]
 
 
         );

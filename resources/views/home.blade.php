@@ -73,7 +73,7 @@
 			 <div class="row">
                         <div class="col-lg-7">
                             <div class="profbox">
-                                <h3><i class="fa fa-black-tie" aria-hidden="true"></i>Empfohlen Jobs</h3>
+                                <h3><i class="fa fa-black-tie" aria-hidden="true"></i>Empfohlene Stellen</h3>
                                 <ul class="recomndjobs">
                                     @if(null!==($matchingJobs)) @foreach($matchingJobs as $match)
                                     <li>

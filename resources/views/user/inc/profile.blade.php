@@ -19,7 +19,7 @@
 
 <hr>
 
-<h5>{{__('Personal Information')}}</h5>
+<h5>{{__('Persönliche Informationen')}}</h5>
 
 <div class="row">
     <div class="col-md-6">
@@ -30,7 +30,7 @@
     <div class="col-md-6">
         <div class="formrow">
             <div id="thumbnail"></div>
-            <label class="btn btn-default"> {{__('Wählen Sie Profilbild')}}
+            <label class="btn btn-default"> {{__('Profilbild auswählen')}}
                 <input type="file" name="image" id="image" style="display: none;">
             </label>
             {!! APFrmErrHelp::showErrors($errors, 'image') !!} </div>
@@ -71,7 +71,7 @@
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'marital_status_id') !!}">
-			<label for="">{{__('Martial Status')}}</label>
+			<label for="">{{__('Familienstand')}}</label>
 			{!! Form::select('marital_status_id', [''=>__('Select Marital Status')]+$maritalStatuses, null, array('class'=>'form-control', 'id'=>'marital_status_id','required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
             {!! APFrmErrHelp::showErrors($errors, 'marital_status_id') !!} </div>
     </div>
@@ -107,7 +107,7 @@
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'national_id_card_number') !!}">
 			<label for="">{{__('Personalausweis')}}</label>
-			{!! Form::text('national_id_card_number', null, array('class'=>'form-control', 'id'=>'national_id_card_number', 'placeholder'=>__('Personalausweis#'),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+			{!! Form::text('national_id_card_number', null, array('class'=>'form-control', 'id'=>'national_id_card_number', 'placeholder'=>__('Personalausweis'),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
             {!! APFrmErrHelp::showErrors($errors, 'national_id_card_number') !!} </div>
     </div>
     <div class="col-md-6">

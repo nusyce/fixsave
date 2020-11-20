@@ -284,7 +284,7 @@ trait ProfileProjectsTrait
         $images = session()->get($session_id . 'temp.project_images', []);
         if (count($images) > 0) {
             foreach ($images as $fileName) {
-                $newFileName = $profileProject->name . '_' . str_random(5);
+                $newFileName = $profileProject->name . '_' . Str::random(5);
                 $newFileName = ImgUploader::MoveImage($fileName, $newFileName, 'temp_project_images', 'project_images');
                 if ($newFileName) {
                     $this->saveImage($newFileName, $profileProject);

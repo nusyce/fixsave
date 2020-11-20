@@ -1,15 +1,15 @@
 <div class="header">
     <div class="container">
         <div class="row" style="margin-bottom: 20px;">
-            <div class="col-lg-2 col-md-12 col-12 offset-lg-1" style="position: relative;right: 45px;top:9px;"> <a href="{{url('/')}}" class="logo"><!--<img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" alt="{{ $siteSetting->site_name }}" />--><h2>FlixSave24</h2></a>
+            <div class="col-lg-2 col-md-12 col-12"> <a href="{{url('/')}}" class="logo"><!--<img src="{{ asset('/') }}sitesetting_images/thumb/{{ $siteSetting->site_logo }}" alt="{{ $siteSetting->site_name }}" />--><h2 id="titrebar">FlixSave24</h2></a>
                 <div class="navbar-header navbar-light">
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                 </div>
                 <div class="clearfix"></div>
             </div>
 
-            <div class="col-lg-5 offset-lg-5" style="float:right;position: absolute;top: 1px;">
-                <div class="row">
+            <div class="col-lg-5 offset-lg-5">
+                <div class="row" id="languebar">
                     <div>
 
                             <ul style="display: flex;flex-direction: row;position: relative;left: 390px;">
@@ -17,7 +17,7 @@
                                 <li style="color: #003A65;">
                                 <?php $i=1; ?>
                                 @foreach($siteLanguages as $siteLang)
-                                    <li><a href="javascript:;" onclick="event.preventDefault(); document.getElementById('locale-form-{{$siteLang->iso_code}}').submit();"  style="color: #003A65;"><?php echo strtoupper($siteLang->iso_code); ?></a>
+                                    <li>{{--<a href="javascript:;" onclick="event.preventDefault(); document.getElementById('locale-form-{{$siteLang->iso_code}}').submit();"  style="color: #003A65;">--}}<?php echo strtoupper($siteLang->iso_code); ?>{{--</a>--}}
                                         <form id="locale-form-{{$siteLang->iso_code}}" action="{{ route('set.locale') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                             <input type="hidden" name="locale" value="{{$siteLang->iso_code}}"/>
@@ -38,7 +38,7 @@
                     <div>
 
                         <nav>
-                            <ul style="display: flex;flex-direction: row;position: relative;right: 190px;">
+                            <ul style="display: flex;flex-direction: row;">
                                 @if(Auth::check())  <li><a href="{{ route('bewerbung') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li> @endif
                             <!-- <li><a href="{{ route('bewerbung') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li> -->
                                 <li><a href="{{ route('my.favourite2.jobs') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">star_rate</span>  Meine Merkliste</a></li>
@@ -169,8 +169,26 @@
 </div>
 
 
+@push('styles')
 
+            <style>
 
+                @media screen and (max-width: 991px) {
+
+                    #languebar {
+
+                        display: none;
+                    }
+
+                    #titrebar {
+                        position: relative;
+                        top:12px;
+                    }
+                }
+
+            </style>
+
+@endpush
 
 
 <?php /*?>@if(!Auth::user() && !Auth::guard('company')->user())

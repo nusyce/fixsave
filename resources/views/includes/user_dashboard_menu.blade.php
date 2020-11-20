@@ -17,11 +17,11 @@
         </li>
         <li <?=Request::path()=='my-profile'?'class="active"':''?> ><a href="{{ route('my.profile') }}"><i class="fa fa-pencil" aria-hidden="true"></i> {{__('Profil bearbeiten')}}</a>
         </li>
-        <li <?=Request::path()=='view-public-profile'?'class="active"':''?>><a href="{{ route('view.public.profile', Auth::user()->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> {{__('Öffentliches Profile anzeigen')}}</a>
+        <li <?=Request::path()=='view-public-profile'?'class="active"':''?>><a href="{{ route('view.public.profile', Auth::user()->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> {{__('Profil anzeigen')}}</a>
         </li>
         <li <?=Request::path()=='my-job-applications'?'class="active"':''?>><a href="{{ route('my.job.applications') }}"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Bewerbungen')}}</a>
         </li>
-        <li <?=Request::path()=='my-favourite-jobs'?'class="active"':''?>><a href="{{ route('my.favourite.jobs') }}"><i class="fa fa-heart" aria-hidden="true"></i> {{__('Favorisierten jobs')}}</a>
+        <li <?=Request::path()=='my-favourite-jobs'?'class="active"':''?>><a href="{{ route('my.favourite.jobs') }}"><i class="fa fa-heart" aria-hidden="true"></i> {{__('Favoriten')}}</a>
         </li>
         <li <?=Request::path()=='my-alerts'?'class="active"':''?>><a href="{{ route('my-alerts') }}"><i class="fa fa-bullhorn" aria-hidden="true"></i> {{__('Job-Alarm')}}</a>
         </li>

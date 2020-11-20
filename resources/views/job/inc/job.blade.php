@@ -1,4 +1,4 @@
-<h5>{{__('Details Zur Stelle')}}</h5>
+<h5>{{__('Details zur Stelle')}}</h5>
  @if(isset($job))
 {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
 {!! Form::hidden('id', $job->id) !!}
@@ -11,7 +11,7 @@
     <div class="col-lg-12">
         <div class="formrow">
 
-            <input type="text" name="title" class="form-control" required="required"
+            <input type="text" name="title" class="form-control" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                    placeholder="{{__('Titel')}}" value="<?php if(isset($job)){ echo $job->title; } ?>" >
 
         </div>
@@ -167,7 +167,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <select name="beruf"  class="form-control form-control-sm" required="">
+                <select name="beruf"  class="form-control form-control-sm" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')">
 
                     <option value="Schlosser">Schlosser</option>
 
@@ -202,7 +202,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <select name="bereich"  class="form-control form-control-sm" required="">
+                <select name="bereich"  class="form-control form-control-sm" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')">
 
                     <option value="Lebensmittel">Lebensmittel</option>
 
@@ -428,7 +428,7 @@
             <div class="col-lg-4 offset-lg-3" style="position: relative;right: 16px;">
                 <div class="formrow">
 
-                    <input type="text" name="land" class="form-control" required="required"
+                    <input type="text" name="land" class="form-control" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                            placeholder="{{$compagny->land}}" value="{{$compagny->land}}">
 
                 </div>
@@ -461,7 +461,7 @@
             <div class="col-lg-4 offset-lg-3" style="position: relative;right: 16px;">
                 <div class="formrow">
 
-                    <input type="text" name="bundesland" class="form-control" required="required"
+                    <input type="text" name="bundesland" class="form-control" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                            placeholder="{{$compagny->bundesland}}" value="{{$compagny->bundesland}}" >
 
                 </div>
@@ -495,7 +495,7 @@
             <div class="col-lg-4 offset-lg-3" style="position: relative;right: 16px;">
                 <div class="formrow">
 
-                    <input type="text" name="plz" class="form-control" required="required"
+                    <input type="text" name="plz" class="form-control" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                            placeholder="{{$compagny->plz}}" value="{{$compagny->plz}}">
 
                 </div>
@@ -532,7 +532,7 @@
             <div class="col-lg-4 offset-lg-3" style="position: relative;right: 16px;">
                 <div class="formrow">
 
-                    <input type="text" name="stadt" class="form-control" required="required"
+                    <input type="text" name="stadt" class="form-control" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                            placeholder="{{$compagny->stadt}}" value="{{$compagny->stadt}}">
 
                 </div>
@@ -595,7 +595,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <select name="deutschlevel"  class="form-control form-control-sm" required="">
+                <select name="deutschlevel"  class="form-control form-control-sm" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')">
 
                     <option value="A1">A1</option>
 
@@ -631,7 +631,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <select name="englischlevel"  class="form-control form-control-sm" required="">
+                <select name="englischlevel"  class="form-control form-control-sm" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')">
 
                     <option value="A1">A1</option>
 
@@ -697,7 +697,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <select name="fuhrerschein"  class="form-control form-control-sm" required="">
+                <select name="fuhrerschein"  class="form-control form-control-sm" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')">
 
                     <option value="Nein">Nein</option>
 
@@ -727,7 +727,7 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
-                <select name="unterkunft"  class="form-control form-control-sm" required="">
+                <select name="unterkunft"  class="form-control form-control-sm" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')">
 
                     <option value="Appartement">Appartement</option>
 
@@ -811,7 +811,7 @@
     <div class="col-lg-12">
     <div class="formrow"  style="position: relative;">
 
-        <input type="text" name="wanie" class="form-control" id="tagswannie" autocomplete="off" required="required"
+        <input type="text" name="wanie" class="form-control" id="tagswannie" autocomplete="off" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
                placeholder="{{__('Wähle deine Tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
 
     </div>

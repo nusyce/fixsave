@@ -1,7 +1,7 @@
 <form class="form" id="add_edit_profile_cv" method="POST" action="{{ route('store.profile.cv', [$user->id]) }}" target="cv_iframe">{{ csrf_field() }}
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h4 class="modal-title">{{__('LEBENSLAUF HINZUFUGEN')}}</h4>
+        <h4 class="modal-title">{{__('LEBENSLAUF HINZUFüGEN')}}</h4>
     </div>
     <div class="modal-body">
         <div class="form-body">
@@ -24,7 +24,7 @@
 
 
             <div class="form-group" id="div_is_default">
-                <label for="is_default" class="bold">{{__('Standardmabig?')}}?</label>
+                <label for="is_default" class="bold">{{__('Standardmäßig?')}}?</label>
                 <div class="radio-list" style="margin-left:22px;">
                     <?php
                     $val_1_checked = '';
@@ -45,6 +45,6 @@
 
         <div class="modal-footer">
             <button type="button" class="btn dark btn-outline" data-dismiss="modal">{{__('Close')}}</button>
-            <button type="submit" class="btn btn-large btn-primary">{{__('LEBENSLAUF HINZUFUGEN')}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+            <button type="submit" class="btn btn-large btn-primary">{{__('LEBENSLAUF HINZUFüGEN')}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
         </div>
 </form>

@@ -172,7 +172,7 @@ class UserController extends Controller
 			/*************************/
 		/*}*/
 
-        flash(__('You have updated your profile successfully'))->success();
+        flash(__('Profil erfolgreich aktualisiert'))->success();
         return \Redirect::route('my.profile');
     }
 

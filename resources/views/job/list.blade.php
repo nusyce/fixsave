@@ -47,7 +47,7 @@
 
                         <!-- job start -->
 
-                        @if(isset($jobs) && count($jobs)) <?php $count_1 = 1; ?> @foreach($jobs2 as $job) @php $company =
+                        @if(isset($jobs) && count($jobs)) <?php $count_1 = 1; ?> @foreach($jobs as $job) @php $company =
 
                             $job->getCompany();  @endphp
 

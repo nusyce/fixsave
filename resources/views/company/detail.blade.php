@@ -322,7 +322,7 @@
 
                             <li class="row">
 
-                                <div class="col-md-6 col-xs-6">{{__(' Beschäftigte insgesamt')}}</div>
+                                <div class="col-md-6 col-xs-6">{{__('Beschäftigte insgesamt')}}</div>
 
                                 <div class="col-md-6 col-xs-6"><span>{{$company->no_of_employees}}</span></div>
 

@@ -4,10 +4,10 @@
     <div class="form-body">
         <div id="success_msg" class="has-error"></div>
         <div class="form-group" id="div_summary">
-            <label for="summary" class="bold">Profile Summary</label>
+            <label for="summary" class="bold">Ich arbeite ...</label>
             <textarea name="summary" class="form-control" id="summary" placeholder="Profile Summary">{{ old('summary', (isset($user))? $user->getProfileSummary('summary'):'') }}</textarea>
             <span class="help-block summary-error"></span> </div>
-        <button type="button" class="btn btn-large btn-primary" onClick="submitProfileSummaryForm();">Update Summary <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-large btn-primary" onClick="submitProfileSummaryForm();">Aktualisieren <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
     </div>
 </form>
 @push('scripts') 
@@ -20,7 +20,7 @@
             data: form.serialize(),
             dataType: 'json',
             success: function (json) {
-                $("#success_msg").html('<span class="text text-success">Summary updated successfully</span>');
+                $("#success_msg").html('<span class="text text-success">Erfolgreich aktualisiert</span>');
             },
             error: function (json) {
                 if (json.status === 422) {
