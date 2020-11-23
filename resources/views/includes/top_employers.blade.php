@@ -12,14 +12,14 @@
             @foreach($topCompanyIds as $company_id_num_jobs)
             <?php
             $company = App\Company::where('id', '=', $company_id_num_jobs->company_id)->active()->first();
-            if (null !== $company && $company->printCompanyImage() != false) {
+            if (null !== $company) {
                 ?>
                 <li class="item" data-toggle="tooltip" data-placement="bottom" title="{{$company->name}}" data-original-title="{{$company->name}}">
-					<div class="empint">
-					<a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}">{{$company->printCompanyImage()}}</a>
+                    <div class="empint">
+                        <?php if(isset($company->logo)){ ?>   <a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}"><img width="93" height="93" src="{{ asset('company_logos/'.$company->logo)}}" /></a> <?php }else{ } ?>{{--<a href="{{route('company.detail', $company->slug)}}" title="{{$company->name}}">{{$company->printCompanyImage()}}</a>--}}
 
-					</div>
-			</li>
+                    </div>
+                </li>
                 <?php
             }
             ?>

@@ -39,13 +39,35 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+            'permission' => [
+                'file'=>[
+                    'public'=> 0777,
+                    'private'=> 0777
+                ],
+                'dir'=>[
+                    'public'=> 0777,
+                    'private'=> 0777
+                ]
+            ],
         ],
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
+            'permission' => [
+                'file'=>[
+                    'public'=> 0777,
+                    'private'=> 0777
+                ],
+                'dir'=>[
+                    'public'=> 0777,
+                    'private'=> 0777
+                ]
+            ],
+
         ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

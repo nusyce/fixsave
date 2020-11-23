@@ -27,7 +27,7 @@
                             <div class="jobloc">
                                 <label class="fulltime" title="{{$featuredJob->getJobType('job_type')}}">{{$featuredJob->getJobType('job_type')}}</label> - <span>{{$featuredJob->getCity('city')}}</span></div>
                         </div>
-                        <div class="col-lg-4 col-md-4"><a href="{{route('job.detail', [$featuredJob->slug])}}" class="applybtn">{{__('Details anzeigen')}}</a></div>
+                        <div class="col-lg-4 col-md-4" id="feat"><a href="{{route('job.detail', [$featuredJob->slug])}}" class="applybtn" id="featurejob">{{__('Details anzeigen')}}</a></div>
                     </div>
                 </div>
             </li>
@@ -44,3 +44,35 @@
         <!--button end--> 
     </div>
 </div>
+@push('styles')
+
+    <style>
+
+        @media screen and (max-width: 1199px) {
+
+            #featurejob {
+
+               text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+
+            #feat {
+
+                margin-right: 12px;
+
+            }
+
+            #featurejob {
+
+                width: 200px;
+
+            }
+
+        }
+
+    </style>
+
+@endpush

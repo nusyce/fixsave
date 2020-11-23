@@ -31,11 +31,13 @@
 <div class="listpgWraper">
 <div class="container">
     <ul class="row compnaieslist">
+
         @if($companies)
         @foreach($companies as $company)
+
         <li class="col-md-3 col-sm-6">
             <div class="compint">
-            <div class="imgwrap"><a href="{{route('company.detail',$company->slug)}}">{{$company->printCompanyImage()}}</a></div>
+            <div class="imgwrap">  <img src="{{ asset('company_logos/'.$company->logo)}}" /> {{--<a href="{{route('company.detail',$company->slug)}}">{{$company->printCompanyImage()}}</a>--}}</div>
             <h3><a href="{{route('company.detail',$company->slug)}}">{{$company->name}}</a></h3>
             <div class="loctext"><i class="fa fa-map-marker" aria-hidden="true"></i> {{$company->location}}</div>
             <div class="curentopen"><i class="fa fa-black-tie" aria-hidden="true"></i> {{__('Aktuelle Stellen')}} : {{$company->countNumJobs('company_id',$company->id)}}</div>

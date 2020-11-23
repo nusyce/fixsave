@@ -62,10 +62,12 @@ class CompanyController extends Controller
     public function index()
     {
         return view('company_home');
+
     }
     public function company_listing()
     {
         $data['companies']=Company::paginate(20);
+
         return view('company.listing')->with($data);
     }
 
