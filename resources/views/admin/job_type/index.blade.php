@@ -14,12 +14,12 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Job Types</span> </li>
+                <li> <span>Job Typ</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR --> 
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">Manage Job Types <small>Job Types</small> </h3>
+        <h3 class="page-title">Manage Job Typ <small>Job Typ</small> </h3>
         <!-- END PAGE TITLE--> 
         <!-- END PAGE HEADER-->
         <div class="row">
@@ -27,8 +27,8 @@
                 <!-- Begin: life time stats -->
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
-                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Job Types</span> </div>
-                        <div class="actions"> <a href="{{ route('create.job.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Job Type</a> </div>
+                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Job Typ</span> </div>
+                        <div class="actions"> <a href="{{ route('create.job.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Job Typ</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -45,7 +45,7 @@
                                                 </select></td></tr>
                                         <tr role="row" class="heading">                                            
                                             <th>Language</th>
-                                            <th>Job Type</th>
+                                            <th>Job Typ</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -108,7 +108,7 @@
     function deleteJobType(id, is_default) {
         var msg = 'Are you sure?';
         if (is_default == 1) {
-            msg = 'Are you sure? You are going to delete default Job Type, all other non default Job Types will be deleted too!';
+            msg = 'Are you sure? You are going to delete default Job Typ, all other non default Job Typ will be deleted too!';
         }
         if (confirm(msg)) {
             $.post("{{ route('delete.job.type') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})

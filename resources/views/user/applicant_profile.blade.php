@@ -11,7 +11,7 @@
         @include('flash::message')  
         
 
-        <!-- Job Detail start -->
+        <!-- Stellenbeschreibung start -->
         <div class="row">
             <div class="col-md-8"> 
 				

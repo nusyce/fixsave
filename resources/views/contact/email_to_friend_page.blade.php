@@ -4,7 +4,7 @@
 @include('includes.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('Email to Friend')])
+@include('includes.inner_page_title', ['page_title'=>__('Teilen')])
 <!-- Inner Page Title end -->
 <!-- Page Title End -->
 <div class="listpgWraper">
@@ -16,7 +16,7 @@
                     {!! Form::open(array('method' => 'post', 'route' => ['email.to.friend', $slug])) !!}
                     <div class="formpanel"> 
                         <!-- Ad Information -->
-                        <h5>Email to Friend</h5>            
+                        <h5>Teilen</h5>            
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="formrow{{ $errors->has('job_url') ? ' has-error' : '' }}">

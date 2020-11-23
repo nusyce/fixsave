@@ -14,12 +14,12 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Degree Types</span> </li>
+                <li> <span>Degree Typ</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR --> 
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">Manage Degree Types <small>Degree Types</small> </h3>
+        <h3 class="page-title">Manage Degree Typ <small>Degree Typ</small> </h3>
         <!-- END PAGE TITLE--> 
         <!-- END PAGE HEADER-->
         <div class="row">
@@ -27,8 +27,8 @@
                 <!-- Begin: life time stats -->
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
-                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Degree Types</span> </div>
-                        <div class="actions"> <a href="{{ route('create.degree.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Degree Type</a> </div>
+                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Degree Typ</span> </div>
+                        <div class="actions"> <a href="{{ route('create.degree.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Degree Typ</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -39,7 +39,7 @@
                                             <td>{!! Form::select('lang', ['' => 'Select Language']+$languages, config('default_lang'), array('id'=>'lang', 'class'=>'form-control')) !!}</td><td>{!! Form::select('degree_level_id', ['' => 'Select Degree Level']+$degreeLevels, null, array('id'=>'degree_level_id', 'class'=>'form-control')) !!}</td><td><input type="text" class="form-control" name="degree_type" id="degree_type" autocomplete="off" placeholder="Degree Type"></td><td><select name="is_active" id="is_active"  class="form-control"><option value="-1">Is Active?</option><option value="1" selected="selected">Active</option><option value="0">In Active</option></select></td>
                                         </tr>
                                         <tr role="row" class="heading">
-                                            <th>Language</th><th>Degree Level</th><th>Degree Type</th><th>Actions</th>
+                                            <th>Language</th><th>Degree Level</th><th>Degree Typ</th><th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -104,7 +104,7 @@
     function deleteDegreeType(id, is_default) {
         var msg = 'Are you sure?';
         if (is_default == 1) {
-            msg = 'Are you sure? You are going to delete default Degree Type, all other non default Degree Types will be deleted too!';
+            msg = 'Are you sure? You are going to delete default Degree Typ, all other non default Degree Typ will be deleted too!';
         }
         if (confirm(msg)) {
             $.post("{{ route('delete.degree.type') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})

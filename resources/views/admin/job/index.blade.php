@@ -36,7 +36,7 @@
                                 <table class="table table-striped table-bordered table-hover"  id="jobDatatableAjax">
                                     <thead>
                                         <tr role="row" class="filter">
-                                            <td>{!! Form::select('company_id', ['' => 'Select Company']+$companies, null, array('id'=>'company_id', 'class'=>'form-control')) !!}</td>
+                                            <td>{!! Form::select('company_id', ['' => 'Select Unternehmen']+$companies, null, array('id'=>'company_id', 'class'=>'form-control')) !!}</td>
                                             <td><input type="text" class="form-control" name="title" id="title" autocomplete="off" placeholder="Job title"></td>
                                             <td><input type="text" class="form-control" name="description" id="description" autocomplete="off" placeholder="Job description"></td>
                                             <td>
@@ -60,7 +60,7 @@
                                                 </select></td>
                                         </tr>
                                         <tr role="row" class="heading">
-                                            <th>Company</th>
+                                            <th>Unternehmen</th>
                                             <th>Job title</th>
                                             <th>Job description</th>
                                             <th>Stadt</th>

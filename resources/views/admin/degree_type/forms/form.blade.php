@@ -21,8 +21,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'degree_type') !!}">
-        {!! Form::label('degree_type', 'Degree Type', ['class' => 'bold']) !!}
-        {!! Form::text('degree_type', null, array('class'=>'form-control', 'id'=>'degree_type', 'placeholder'=>'Degree Type', 'dir'=>$direction)) !!}
+        {!! Form::label('degree_type', 'Degree Typ', ['class' => 'bold']) !!}
+        {!! Form::text('degree_type', null, array('class'=>'form-control', 'id'=>'degree_type', 'placeholder'=>'Degree Typ', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'degree_type') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_default') !!}">
@@ -46,8 +46,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'is_default') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'degree_type_id') !!}" id="degree_type_id_div">
-        {!! Form::label('degree_type_id', 'Default Degree Type', ['class' => 'bold']) !!}                    
-        {!! Form::select('degree_type_id', ['' => 'Select Default Degree Type']+$degreeTypes, null, array('class'=>'form-control', 'id'=>'degree_type_id')) !!}
+        {!! Form::label('degree_type_id', 'Default Degree Typ', ['class' => 'bold']) !!}                    
+        {!! Form::select('degree_type_id', ['' => 'Select Default Degree Typ']+$degreeTypes, null, array('class'=>'form-control', 'id'=>'degree_type_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'degree_type_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_active') !!}">

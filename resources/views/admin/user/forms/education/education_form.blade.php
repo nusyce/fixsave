@@ -10,12 +10,12 @@
 
 
         <div class="form-group" id="div_degree_type_id">
-            <label for="degree_type_id" class="bold">Degree Type</label>
+            <label for="degree_type_id" class="bold">Degree Typ</label>
             <?php
             $degree_type_id = (isset($profileEducation) ? $profileEducation->degree_type_id : null);
             ?>
             <span id="degree_types_dd">
-                {!! Form::select('degree_type_id', [''=>'Select Degree Type'], $degree_type_id, array('class'=>'form-control', 'id'=>'degree_type_id')) !!}
+                {!! Form::select('degree_type_id', [''=>'Select Degree Typ'], $degree_type_id, array('class'=>'form-control', 'id'=>'degree_type_id')) !!}
             </span>
             <span class="help-block degree_type_id-error"></span> </div>
 
@@ -77,11 +77,11 @@
 
 
         <div class="form-group" id="div_result_type_id">
-            <label for="result_type_id" class="bold">Result Type</label>
+            <label for="result_type_id" class="bold">Result Typ</label>
             <?php
             $result_type_id = (isset($profileEducation) ? $profileEducation->result_type_id : null);
             ?>
-            {!! Form::select('result_type_id', [''=>'Select Result Type']+$resultTypes, $result_type_id, array('class'=>'form-control', 'id'=>'result_type_id')) !!}
+            {!! Form::select('result_type_id', [''=>'Select Result Typ']+$resultTypes, $result_type_id, array('class'=>'form-control', 'id'=>'result_type_id')) !!}
             <span class="help-block result_type_id-error"></span> </div>
 
     </div>

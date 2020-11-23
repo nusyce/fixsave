@@ -1,7 +1,7 @@
 {!! APFrmErrHelp::showErrorsNotice($errors) !!}
 @include('flash::message')
 <div class="form-body">
-    <h3>Drag and Drop to Sort Result Types</h3>
+    <h3>Drag and Drop to Sort Result Typ</h3>
     {!! Form::select('lang', ['' => 'Select Language']+$languages, 'en', array('class'=>'form-control', 'id'=>'lang', 'onchange'=>'refreshResultTypeSortData();')) !!}
     <div id="resultTypeSortDataDiv"></div>
 </div>

@@ -174,7 +174,7 @@
 
                     href="{{route('remove.from.favourite.company', $company->slug)}}" class="btn"><i
 
-                        class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favourite Company')}} </a> @else <a
+                        class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favourite Unternehmen')}} </a> @else <a
 
                     href="{{route('add.to.favourite.company', $company->slug)}}" class="btn"><i class="fa fa-floppy-o"
 
@@ -192,7 +192,7 @@
 
 
 
-        <!-- Job Detail start -->
+        <!-- Stellenbeschreibung start -->
 
         <div class="row">
 

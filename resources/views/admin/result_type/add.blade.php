@@ -9,7 +9,7 @@
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
                 <li> <a href="{{ route('list.result.types') }}">Result Types</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Add Result Type</span> </li>
+                <li> <span>Add Result Typ</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR -->        
@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <div class="portlet light bordered">
                     <div class="portlet-title">
-                        <div class="caption font-red-sunglo"> <i class="icon-settings font-red-sunglo"></i> <span class="caption-subject bold uppercase">Result Type Form</span> </div>
+                        <div class="caption font-red-sunglo"> <i class="icon-settings font-red-sunglo"></i> <span class="caption-subject bold uppercase">Result Typ Form</span> </div>
                     </div>
                     <div class="portlet-body form">          
                         <ul class="nav nav-tabs">              

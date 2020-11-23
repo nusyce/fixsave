@@ -14,12 +14,12 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Result Types</span> </li>
+                <li> <span>Result Typ</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR --> 
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">Manage Result Types <small>Result Types</small> </h3>
+        <h3 class="page-title">Manage Result Typ <small>Result Typ</small> </h3>
         <!-- END PAGE TITLE--> 
         <!-- END PAGE HEADER-->
         <div class="row">
@@ -27,8 +27,8 @@
                 <!-- Begin: life time stats -->
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
-                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Result Types</span> </div>
-                        <div class="actions"> <a href="{{ route('create.result.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Result Type</a> </div>
+                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Result Typ</span> </div>
+                        <div class="actions"> <a href="{{ route('create.result.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Result Typ</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -46,7 +46,7 @@
                                         </tr>
                                         <tr role="row" class="heading">
                                             <th>Language</th>
-                                            <th>Result Type</th>
+                                            <th>Result Typ</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
