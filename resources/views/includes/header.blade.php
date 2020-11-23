@@ -41,7 +41,11 @@
                             <ul style="display: flex;flex-direction: row;">
                                 @if(Auth::check())  <li><a href="{{ route('bewerbung') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li> @endif
                             <!-- <li><a href="{{ route('bewerbung') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">assignment</span> Initiativbewerbung</a></li> -->
-                                <li><a href="{{ route('my.favourite2.jobs') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">star_rate</span>  Meine Merkliste</a></li>
+                            @if(Auth::check())       
+                            <li><a href="{{ route('my.favourite.jobs') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">star_rate</span>  Meine Merkliste</a></li>
+@else
+<li><a href="{{ route('my.favourite2.jobs') }}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">star_rate</span>  Meine Merkliste</a></li>
+                            @endif
 
                                @if(!Auth::user() && !Auth::guard('company')->user())
                                     <li><a href="{{route('login')}}" class="nav-link" style="color: #003A65;"> <span class="material-icons" style="color: #C60C30;position: relative;top:6px;">person</span> Mein Profil</a></li>
@@ -89,7 +93,7 @@
                            {{-- <li class="nav-item {{ Request::url() == route('bewerbung') ? 'active' : '' }}"><a href="{{ route('bewerbung') }}" class="nav-link" style="color: white">{{__('Initiative-Bewerbung')}}</a> </li>--}}
 
                             <li class="nav-item {{ Request::url() == route('contact.us') ? 'active' : '' }}"><a href="{{ route('contact.us') }}" class="nav-link" style="color: white">{{__('Kontaktdaten')}}</a> </li>
-                            <li class="nav-item"><a href="#" class="nav-link" style="color: white">{{__('Standorte')}}</a> </li>
+                            <li class="nav-item"><a href="{{ url('not found') }}" class="nav-link" style="color: white">{{__('Standorte')}}</a> </li>
 
                         @if(Auth::check())
                                 <li class="nav-item dropdown userbtn"><a href="">{{Auth::user()->printUserImage()}}</a>

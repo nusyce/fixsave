@@ -48,7 +48,7 @@ class CompanyResetPassword extends Notification
                         ->subject('Company Password Reset')
                         ->from([config('mail.from.address') => config('mail.from.name')])
                         ->line('You are receiving this email because we received a password reset request for your account.')
-                        ->action('Reset Password', url('company/password/reset', $this->token))
+                        ->action('Passwort zurücksetzten', url('company/password/reset', $this->token))
                         ->line('If you did not request a password reset, no further action is required.');
     }
 
