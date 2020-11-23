@@ -30,4 +30,16 @@ class Industry extends Model
         return App\Industry::whereIn('industry_id', $industryIds)->lang()->active()->inRandomOrder()->paginate($limit);
     }
 
+
+    public static function getIndustryById($id)
+    {
+        $industry = self::where('industries.industry_id', '=', $id)->lang()->active()->first();
+
+        if (null === $industry) {
+            $industry = self::where('industries.industry_id', '=', $id)->active()->first();
+        }
+
+        return $industry;
+    }
+
 }

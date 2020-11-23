@@ -24,7 +24,7 @@
                     <ul class="row catelist">
                         @if(isset($topFunctionalAreaIds) && count($topFunctionalAreaIds)) @foreach($topFunctionalAreaIds as $functional_area_id_num_jobs)
                         <?php
-                        $functionalArea = App\FunctionalArea::where('functional_area_id', '=', $functional_area_id_num_jobs->functional_area_id)->lang()->active()->first();
+                        $functionalArea = App\FunctionalArea::getFunctionalAreaById($functional_area_id_num_jobs->functional_area_id);
                         ?> @if(null !== $functionalArea)
 
                         <li class="col-md-4 col-sm-6"><a href="{{route('job.list', ['functional_area_id[]'=>$functionalArea->functional_area_id])}}" title="{{$functionalArea->functional_area}}">{{$functionalArea->functional_area}} <span>({{$functional_area_id_num_jobs->num_jobs}})</span></a>
@@ -66,7 +66,8 @@
                     <ul class="row catelist">					
                         @if(isset($topIndustryIds) && count($topIndustryIds)) @foreach($topIndustryIds as $industry_id => $num_jobs)
                         <?php
-                        $industry = App\ Industry::where('industry_id', '=', $industry_id)->lang()->active()->first();
+                        $industry = App\ Industry::getIndustryById($industry_id);
+                        
                         ?> @if(null !== $industry)
                         <li class="col-md-4 col-sm-6"><a href="{{route('job.list', ['industry_id[]'=>$industry->industry_id])}}" title="{{$industry->industry}}">{{$industry->industry}} <span>({{$num_jobs}})</span></a>
                         </li>
