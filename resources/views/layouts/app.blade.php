@@ -10,7 +10,7 @@ if (!isset($seo)) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{__("FlixSave24") }}</title>
+    <title>{{__($seo->seo_title) }}</title>
     <meta name="Description" content="{!! $seo->seo_description !!}">
     <meta name="Keywords" content="{!! $seo->seo_keywords !!}">
     {!! $seo->seo_other !!}

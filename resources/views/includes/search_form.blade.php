@@ -8,10 +8,10 @@
         </div>
 
         @if((bool)$siteSetting->country_specific_site)
-        {!! Form::hidden('country_id[]', Request::get('country_id[]', 82), array('id'=>'country_id')) !!}
+        {!! Form::hidden('country_id[]', Request::get('country_id[]', $siteSetting->default_country_id), array('id'=>'country_id')) !!}
         @else
         <div class="col-md-3">
-            {!! Form::select('country_id[]', ['' => __('Land auswählen')]+$countries, Request::get('country_id', 82), array('class'=>'form-control', 'id'=>'country_id')) !!}
+            {!! Form::select('country_id[]', ['' => __('Land auswählen')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         </div>
         @endif
 
@@ -62,11 +62,11 @@
         </div>
 
         @if((bool)$siteSetting->country_specific_site)
-        {!! Form::hidden('country_id[]', Request::get('country_id[]', 82), array('id'=>'country_id')) !!}
+        {!! Form::hidden('country_id[]', Request::get('country_id[]', $siteSetting->default_country_id), array('id'=>'country_id')) !!}
         @else
         <div class="col-lg-3">
 			<label for="">{{__('Land')}}</label>
-            {!! Form::select('country_id[]', ['' => __('Land auswählen')]+$countries, Request::get('country_id', 82), array('class'=>'form-control','autocomplete'=>"on", 'id'=>'country_id')) !!}
+            {!! Form::select('country_id[]', ['' => __('Land auswählen')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control','autocomplete'=>"on", 'id'=>'country_id')) !!}
         </div>
         @endif
 
