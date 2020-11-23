@@ -6,7 +6,7 @@
     <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.password.request') }}">
         {{ csrf_field() }}
         <input type="hidden" name="token" value="{{ $token }}">
-        <h3 class="font-green">Reset Password</h3>
+        <h3 class="font-green">Passwort zurücksetzten</h3>
         @if ($errors->has('email'))
         <div class="alert alert-danger">
             <button class="close" data-close="alert"></button>
@@ -41,7 +41,7 @@
             <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="confirm password" name="password_confirmation" />  
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn btn-success uppercase pull-right">Reset Password</button>
+            <button type="submit" class="btn btn-success uppercase pull-right">Passwort zurücksetzten</button>
         </div>
     </form>
     <!-- END FORGOT PASSWORD FORM -->
