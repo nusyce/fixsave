@@ -2,7 +2,7 @@
     <div class="container">
         <!-- title start -->
         <div class="titleTop">
-            <h3>{{__('Neusten')}} <span>{{__('Jobs')}}</span></h3>
+            <h3>{{__('Neuste')}} <span>{{__('Stellen')}}</span></h3>
         </div>
         <!-- title end -->
 
@@ -35,7 +35,7 @@
             @endif
         </ul>
         <!--view button-->
-        <div class="viewallbtn"><a href="{{route('job.list')}}">{{__('View All Neusten Jobs')}}</a></div>
+        <div class="viewallbtn"><a href="{{route('job.list')}}">{{__('Alle neuesten Jobs anzeigen')}}</a></div>
         <!--view button end-->
     </div>
 </div>
