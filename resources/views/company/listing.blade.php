@@ -4,7 +4,7 @@
 @include('includes.header') 
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('All Companies')]) 
+@include('includes.inner_page_title', ['page_title'=>__('Alle Unternehmen')])
 <!-- Inner Page Title end -->
 
 <div class="pageSearch">
@@ -13,10 +13,10 @@
             <form id="top-search" method="GET" action="{{route('company.listing')}}">
                 <div class="row">                    
                     <div class="col-lg-9">
-						<input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control search" placeholder="{{__('keywords e.g. "Google"')}}" />
+						<input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control search" placeholder="{{__('Unternehmen')}}" />
                     </div>
                     <div class="col-lg-3">
-                        <button type="submit" id="submit-form-top" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Search Unternehmen')}}</button>
+                        <button type="submit" id="submit-form-top" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Unternehmen suchen')}}</button>
                     </div>
                 </div>
             </form>
@@ -31,14 +31,16 @@
 <div class="listpgWraper">
 <div class="container">
     <ul class="row compnaieslist">
+
         @if($companies)
         @foreach($companies as $company)
+
         <li class="col-md-3 col-sm-6">
             <div class="compint">
-            <div class="imgwrap"><a href="{{route('company.detail',$company->slug)}}">{{$company->printCompanyImage()}}</a></div>
+                <div class="imgwrap"> <a href="{{route('company.detail',$company->slug)}}">  <img src="{{ asset('company_logos/'.$company->logo)}}" /> </a>{{--<a href="{{route('company.detail',$company->slug)}}">{{$company->printCompanyImage()}}</a>--}}</div>
             <h3><a href="{{route('company.detail',$company->slug)}}">{{$company->name}}</a></h3>
             <div class="loctext"><i class="fa fa-map-marker" aria-hidden="true"></i> {{$company->location}}</div>
-            <div class="curentopen"><i class="fa fa-black-tie" aria-hidden="true"></i> {{__('Current jobs')}} : {{$company->countNumJobs('company_id',$company->id)}}</div>
+            <div class="curentopen"><i class="fa fa-black-tie" aria-hidden="true"></i> {{__('Aktuelle Stellen')}} : {{$company->countNumJobs('company_id',$company->id)}}</div>
             </div>
         </li>
         @endforeach
@@ -49,7 +51,7 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="showreslt">
-                                    {{__('Showing Pages')}} : {{ $companies->firstItem() }} - {{ $companies->lastItem() }} {{__('Total')}} {{ $companies->total() }}
+                                    {{__('Angezeigte Unternehmen')}} : {{ $companies->firstItem() }} - {{ $companies->lastItem() }} {{__('Gesamt')}} {{ $companies->total() }}
                                 </div>
                             </div>
                             <div class="col-md-7 text-right">

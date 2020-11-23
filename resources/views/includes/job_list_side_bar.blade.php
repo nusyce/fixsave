@@ -12,7 +12,7 @@
 	@if(Auth::guard('company')->check())
 	<a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Stelle ausschreiben')}}</a>
 	@else
-	<a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
+	<a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Lebenslauf hochladen')}}</a>
 	@endif
 	</div>
     <!-- Side Bar start -->
@@ -21,7 +21,7 @@
         
         <!-- Jobs By Title -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Title')}}</h4>
+            <h4 class="widget-title">{{__('Titel')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($jobTitlesArray) && count($jobTitlesArray))
                 @foreach($jobTitlesArray as $key=>$jobTitle)
@@ -139,7 +139,7 @@
 
         <!-- Jobs By Job Type -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Job Typ')}}</h4>
+            <h4 class="widget-title">{{__('Jobs By Job Type')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($jobTypeIdsArray) && count($jobTypeIdsArray))
                 @foreach($jobTypeIdsArray as $key=>$job_type_id)
@@ -163,7 +163,7 @@
 
         <!-- Jobs By Job Shift -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Job Schicht')}}</h4>
+            <h4 class="widget-title">{{__('Jobs By Job Shift')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($jobShiftIdsArray) && count($jobShiftIdsArray))
                 @foreach($jobShiftIdsArray as $key=>$job_shift_id)
@@ -339,7 +339,7 @@
 
         <!-- Top Companies -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Unternehmen')}}</h4>
+            <h4 class="widget-title">{{__('Jobs By Company')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($companyIdsArray) && count($companyIdsArray))
                 @foreach($companyIdsArray as $key=>$company_id)

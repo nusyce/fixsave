@@ -65,10 +65,10 @@
 				 <div class="sidebar"> 
           <!-- Search -->
           <div class="widget">
-            <h5 class="widget-title">Search</h5>
+            <h5 class="widget-title">Suchen</h5>
             <div class="search">
               <form action="{{route('blog-search')}}" method="GET">
-                <input type="text" class="form-control" placeholder="Search" name="search">
+                <input type="text" class="form-control" placeholder="Suchen" name="search">
                 <button type="submit" class="btn"><i class="fa fa-search"></i></button>
               </form>
             </div>
@@ -76,7 +76,7 @@
           <!-- Categories -->
           @if(null!==($categories))
           <div class="widget">
-            <h5 class="widget-title">Categories</h5>
+            <h5 class="widget-title">Kategorien</h5>
             <ul class="categories">
             @foreach($categories as $category)
               <li><a href="{{url('/blog/category/').'/'.$category->slug}}">{{$category->heading}}</a></li>

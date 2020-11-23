@@ -13,12 +13,12 @@
 
             <!--Quick Links-->
             <div class="col-md-3 col-sm-6">
-                <h5>{{__('Quick Links')}}</h5>
+                <h5>{{__('Links')}}</h5>
                 <!--Quick Links menu Start-->
                 <ul class="quicklinks">
-                    <li><a href="{{ route('index') }}">{{__('Home')}}</a></li>
-                    <li><a href="{{ route('contact.us') }}">{{__('Contact Us')}}</a></li>
-                    <li class="postad"><a href="{{ route('post.job') }}">{{__('Post a Job')}}</a></li>
+                    <li><a href="{{ route('index') }}">{{__('Homepage')}}</a></li>
+                    <li><a href="{{ route('contact.us') }}">{{__('Kontakt')}}</a></li>
+                    <li class="postad"><a href="{{ route('post.job') }}">{{__('Stelle ausschreiben')}}</a></li>
                     <li><a href="{{ route('faq') }}">{{__('FAQs')}}</a></li>
                     @foreach($show_in_footer_menu as $footer_menu)
                     @php
@@ -65,7 +65,7 @@
                 <h5>{{__('Contact Us')}}</h5>
                 <div class="address">{{ $siteSetting->site_street_address }}</div>
                 <div class="email"> <a href="mailto:{{ $siteSetting->mail_to_address }}">{{ $siteSetting->mail_to_address }}</a> </div>
-                <div class="Telefonnummer"> <a href="tel:{{ $siteSetting->site_phone_primary }}">{{ $siteSetting->site_phone_primary }}</a></div>
+                <div class="phone"> <a href="tel:{{ $siteSetting->site_phone_primary }}">{{ $siteSetting->site_phone_primary }}</a></div>
                 <!-- Social Icons -->
                 <div class="social">@include('includes.footer_social')</div>
                 <!-- Social Icons end --> 

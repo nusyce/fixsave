@@ -2,7 +2,7 @@
     <div class="container">
         <!-- title start -->
         <div class="titleTop">
-            <h3>{{__('Latest')}} <span>{{__('Jobs')}}</span></h3>
+            <h3>{{__('Neuste')}} <span>{{__('Stellen')}}</span></h3>
         </div>
         <!-- title end -->
 
@@ -16,9 +16,9 @@
                 <div class="jobint">
                     <div class="row">
                         <div class="col-md-3 col-sm-3">
-                            <a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}">
+                            <a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}"> <img src="{{ asset('company_logos/'.$company->logo)}}" /> </a>{{--<a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}">
                                 {{$company->printCompanyImage()}}
-                            </a>
+                            </a>--}}
                         </div>
                         <div class="col-md-9 col-sm-9">
                             <h4><a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}">{{$latestJob->title}}</a></h4>
@@ -35,7 +35,7 @@
             @endif
         </ul>
         <!--view button-->
-        <div class="viewallbtn"><a href="{{route('job.list')}}">{{__('View All Latest Jobs')}}</a></div>
+        <div class="viewallbtn"><a href="{{route('job.list')}}">{{__('Alle neuesten Jobs anzeigen')}}</a></div>
         <!--view button end-->
     </div>
 </div>

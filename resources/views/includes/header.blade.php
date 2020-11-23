@@ -76,7 +76,7 @@
                     <div class="navbar-collapse collapse" id="nav-main">
                         <ul class="navbar-nav ml-auto" >
                             <li class="nav-item {{ Request::url()}}"><a href="{{url('/companies')}}" class="nav-link" style="color: white">{{__('Unternehmen')}}</a> </li>
-                            <li class="nav-item {{ Request::url() == route('blogs') ? 'active' : '' }}"><a href="{{url('/jobs')}}" class="nav-link" style="color: white">{{__('Für Bewerber')}}</a> </li>
+                            <li class="nav-item {{ Request::url() == route('blogs') ? '' : '' }}"><a href="{{url('/jobs')}}" class="nav-link" style="color: white">{{__('Für Bewerber')}}</a> </li>
 
                           {{--  {{ route('blogs') }} <li class="nav-item {{ Request::url() == route('index') ? 'active' : '' }}"><a href="{{url('/')}}" class="nav-link" style="color: white">{{__('Home')}}</a> </li>
 

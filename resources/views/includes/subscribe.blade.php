@@ -6,7 +6,7 @@
 		<div class="col-lg-4">
 		
 		 <h6>{{__('Newsletter')}}</h6> 
-    <p>{{__('Subscribe to our newsletter and stay updated.')}}</p>	
+    <p>{{__('Abonnieren Sie unseren Newsletter und bleiben Sie auf dem Laufenden.')}}</p>
 		
 		</div>
 		
@@ -21,7 +21,7 @@
 		  <input type="text" class="form-control" placeholder="{{__('Name')}}" name="name" id="name" required="required">
 			<input type="text" class="form-control" placeholder="{{__('Email')}}" name="email" id="email" required="required">
 		  <div class="input-group-append">
-			<button class="btn btn-default" type="button" id="send_subscription_form">{{__('Subscribe')}}</button>			  
+			<button class="btn btn-default" type="button" id="send_subscription_form">{{__('ABONNIEREN')}}</button>
 		  </div>
 		</div> 
       
