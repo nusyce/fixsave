@@ -93,7 +93,7 @@
                            {{-- <li class="nav-item {{ Request::url() == route('bewerbung') ? 'active' : '' }}"><a href="{{ route('bewerbung') }}" class="nav-link" style="color: white">{{__('Initiative-Bewerbung')}}</a> </li>--}}
 
                             <li class="nav-item {{ Request::url() == route('contact.us') ? 'active' : '' }}"><a href="{{ route('contact.us') }}" class="nav-link" style="color: white">{{__('Kontaktdaten')}}</a> </li>
-                            <li class="nav-item"><a href="{{ url('not found') }}" class="nav-link" style="color: white">{{__('Standorte')}}</a> </li>
+                            <li class="nav-item"><a href="{{ route('standorte') }}" class="nav-link" style="color: white">{{__('Standorte')}}</a> </li>
 
                         @if(Auth::check())
                                 <li class="nav-item dropdown userbtn"><a href="">{{Auth::user()->printUserImage()}}</a>

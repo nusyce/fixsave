@@ -131,6 +131,7 @@ include_once($real_path . 'admin_auth.php');
 
 
 Route::get('bewerbung', 'BewerbungController@index')->name('bewerbung');
+Route::get('standorte', 'StandorteController@index')->name('standorte');
 Route::get('datenschutzbestimmung', 'DatenschutzbestimmungController@index')->name('datenschutzbestimmung');
 Route::post('bewerbung_save', 'BewerbungController@register')->name('bewerbung.save');
 

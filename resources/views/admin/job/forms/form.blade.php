@@ -1,6 +1,6 @@
 {!! APFrmErrHelp::showErrorsNotice($errors) !!}
 @include('flash::message')
-<div class="form-body">        
+<div class="form-body">
     {!! Form::hidden('id', null) !!}
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'company_id') !!}" id="company_id_div">
         {!! Form::label('company_id', 'Unternehmen', ['class' => 'bold']) !!}                    
