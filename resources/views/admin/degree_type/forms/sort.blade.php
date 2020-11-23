@@ -1,7 +1,7 @@
 {!! APFrmErrHelp::showErrorsNotice($errors) !!}
 @include('flash::message')
 <div class="form-body">
-    <h3>Drag and Drop to Sort Degree Types</h3>
+    <h3>Drag and Drop to Sort Degree Typ</h3>
     <div class="form-group">
         {!! Form::select('lang', ['' => 'Select Language']+$languages, config('default_lang'), array('class'=>'form-control', 'id'=>'lang', 'onchange'=>'refreshDegreeTypeSortData();')) !!}
     </div>

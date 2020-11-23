@@ -7,7 +7,7 @@
                 <div class="fileinput fileinput-new" data-provides="fileinput">
                     <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;"> <img src="{{ asset('/') }}admin_assets/no-image.png" alt="" /> </div>
                     <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
-                    <div> <span class="btn default btn-file"> <span class="fileinput-new"> Select Company logo </span> <span class="fileinput-exists"> Change </span> {!! Form::file('logo', null, array('id'=>'logo')) !!} </span> <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a> </div>
+                    <div> <span class="btn default btn-file"> <span class="fileinput-new"> Select Unternehmen logo </span> <span class="fileinput-exists"> Change </span> {!! Form::file('logo', null, array('id'=>'logo')) !!} </span> <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a> </div>
                 </div>
                 {!! APFrmErrHelp::showErrors($errors, 'logo') !!} </div>
         </div>
@@ -17,26 +17,26 @@
         </div>    
         @endif  
     </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'name') !!}"> {!! Form::label('name', 'Company Name', ['class' => 'bold']) !!}
-        {!! Form::text('name', null, array('class'=>'form-control', 'id'=>'name', 'placeholder'=>'Company Name')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'name') !!}"> {!! Form::label('name', 'Unternehmen Name', ['class' => 'bold']) !!}
+        {!! Form::text('name', null, array('class'=>'form-control', 'id'=>'name', 'placeholder'=>'Unternehmen Name')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'name') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'email') !!}"> {!! Form::label('email', 'Company Email', ['class' => 'bold']) !!}
-        {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>'Company Email')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'email') !!}"> {!! Form::label('email', 'Unternehmen Email', ['class' => 'bold']) !!}
+        {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>'Unternehmen Email')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'email') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'password') !!}"> {!! Form::label('password', 'Password', ['class' => 'bold']) !!}
         {!! Form::password('password', array('class'=>'form-control', 'id'=>'password', 'placeholder'=>'Password')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'password') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ceo') !!}"> {!! Form::label('ceo', 'Company CEO', ['class' => 'bold']) !!}
-        {!! Form::text('ceo', null, array('class'=>'form-control', 'id'=>'ceo', 'placeholder'=>'Company CEO')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ceo') !!}"> {!! Form::label('ceo', 'Unternehmen CEO', ['class' => 'bold']) !!}
+        {!! Form::text('ceo', null, array('class'=>'form-control', 'id'=>'ceo', 'placeholder'=>'Unternehmen CEO')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'ceo') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}"> {!! Form::label('industry_id', 'Industry', ['class' => 'bold']) !!}                    
         {!! Form::select('industry_id', ['' => 'Select Industry']+$industries, null, array('class'=>'form-control', 'id'=>'industry_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ownership_type') !!}"> {!! Form::label('ownership_type', 'Ownership Type', ['class' => 'bold']) !!}
-        {!! Form::select('ownership_type_id', ['' => 'Select Ownership type']+$ownershipTypes, null, array('class'=>'form-control', 'id'=>'ownership_type_id')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ownership_type') !!}"> {!! Form::label('ownership_type', 'Ownership Typ', ['class' => 'bold']) !!}
+        {!! Form::select('ownership_type_id', ['' => 'Select Ownership typ']+$ownershipTypes, null, array('class'=>'form-control', 'id'=>'ownership_type_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'ownership_type_id') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'description') !!}"> {!! Form::label('description', 'Company details', ['class' => 'bold']) !!}
-        {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Company details')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'description') !!}"> {!! Form::label('description', 'Unternehmen details', ['class' => 'bold']) !!}
+        {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Unternehmen details')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'description') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'location') !!}"> {!! Form::label('location', 'Location', ['class' => 'bold']) !!}
         {!! Form::text('location', null, array('class'=>'form-control', 'id'=>'location', 'placeholder'=>'Location')) !!}

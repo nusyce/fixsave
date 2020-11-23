@@ -28,7 +28,7 @@
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
                         <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Companies</span> </div>
-                        <div class="actions"> <a href="{{ route('create.company') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Company</a> </div>
+                        <div class="actions"> <a href="{{ route('create.company') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Unternehmen</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -36,8 +36,8 @@
                                 <table class="table table-striped table-bordered table-hover"  id="companyDatatableAjax">
                                     <thead>
                                         <tr role="row" class="filter">
-                                            <td><input type="text" class="form-control" name="name" id="name" autocomplete="off" placeholder="Company Name"></td>
-                                            <td><input type="text" class="form-control" name="email" id="email" autocomplete="off" placeholder="Company Email"></td>
+                                            <td><input type="text" class="form-control" name="name" id="name" autocomplete="off" placeholder="Unternehmen Name"></td>
+                                            <td><input type="text" class="form-control" name="email" id="email" autocomplete="off" placeholder="Unternehmen Email"></td>
                                             <td><select name="is_active" id="is_active" class="form-control">
                                                     <option value="-1">Is Active?</option>
                                                     <option value="1" selected="selected">Active</option>

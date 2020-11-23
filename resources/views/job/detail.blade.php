@@ -4,7 +4,7 @@
 @include('includes.header') 
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('Job Detail')]) 
+@include('includes.inner_page_title', ['page_title'=>__('Stellenbeschreibung')]) 
 <!-- Inner Page Title end -->
 @include('flash::message')
 @include('includes.inner_top_search')
@@ -24,7 +24,7 @@ $company = $job->getCompany();
         @include('flash::message')
        
 
-        <!-- Job Detail start -->
+        <!-- Stellenbeschreibung start -->
         <div class="row">
             <div class="col-lg-8">
 				
@@ -33,10 +33,10 @@ $company = $job->getCompany();
             <div class="jobinfo">
                
                         <h2>{{$job->title}} - {{$company->name}}</h2>
-                        <div class="ptext">{{__('Date Posted')}}: {{$job->created_at->format('M d, Y')}}</div>
+                        <div class="ptext">{{__('Erstellt am')}}: {{$job->created_at->format('M d, Y')}}</div>
 						
 						@if(!Auth::user() && !Auth::guard('company')->user())
-                        <a href="{{route('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i> {{__('Login to View Salary')}} </a>
+                        <a href="{{route('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i> {{__('Gehalt einsehen')}} </a>
 						@else
 						@if(!(bool)$job->hide_salary)
                         <div class="salary">{{$job->getSalaryPeriod('salary_period')}}: <strong>{{$job->salary_from.' '.$job->salary_currency}} - {{$job->salary_to.' '.$job->salary_currency}}</strong></div>
@@ -45,7 +45,7 @@ $company = $job->getCompany();
                     
             </div>
 			
-			<!-- Job Detail start -->
+			<!-- Stellenbeschreibung start -->
                 <div class="jobmainreq">
                     <div class="jobdetail">
                        <h3><i class="fa fa-align-left" aria-hidden="true"></i> {{__('Auftragsdetail')}}</h3>
@@ -63,15 +63,15 @@ $company = $job->getCompany();
                                 </div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Company')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Unternehmen')}}:</div>
                                 <div class="col-md-8 col-xs-7"><a href="{{route('company.detail', $company->id)}}">{{$company->name}}</a></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Type')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Typ')}}:</div>
                                 <div class="col-md-8 col-xs-7"><span class="permanent">{{$job->getJobType('job_type')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Shift')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Schicht')}}:</div>
                                 <div class="col-md-8 col-xs-7"><span class="freelance">{{$job->getJobShift('job_shift')}}</span></div>
                             </li>
                             <li class="row">
@@ -95,7 +95,7 @@ $company = $job->getCompany();
                                 <div class="col-md-8 col-xs-7"><span>{{$job->getDegreeLevel('degree_level')}}</span></div>
                             </li>
                             <li class="row">
-                                <div class="col-md-4 col-xs-5">{{__('Apply Before')}}:</div>
+                                <div class="col-md-4 col-xs-5">{{__('Bewerbungsfrist')}}:</div>
                                 <div class="col-md-8 col-xs-7"><span>{{$job->expiry_date->format('M d, Y')}}</span></div>
                             </li> 
                             
@@ -108,7 +108,7 @@ $company = $job->getCompany();
 			
 			<hr>
             <div class="jobButtons">
-                <a href="{{route('email.to.friend', $job->slug)}}" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Email to Friend')}}</a> 
+                <a href="{{route('email.to.friend', $job->slug)}}" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Teilen')}}</a> 
                 @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug)) <a href="{{route('remove.from.favourite', $job->slug)}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favourite Job')}} </a> @else  <?php if(Auth::check()) { ?> <a href="{{route('add.to.favourite', $job->slug)}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favorisieren')}}</a> <?php }else{ ?> <a href="{{route('add.to.favouriteE', $job->slug)}}"  class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Favorisieren')}}</a>  <?php } ?> @endif
                 <a href="{{route('report.abuse', $job->slug)}}" class="btn report"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{__('Missbrauch melden')}}</a>
             </div>
@@ -134,7 +134,7 @@ $company = $job->getCompany();
 				
 				<div class="job-header">
                     <div class="contentbox">                        
-                        <h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i> {{__('Fähigkeiten benötigt')}}</h3>
+                        <h3><i class="fa fa-puzzle-piece" aria-hidden="true"></i> {{__('Fähigkeiten')}}</h3>
                         <ul class="skillslist">
                             {!!$job->getJobSkillsList()!!}
                         </ul>
@@ -161,20 +161,20 @@ $company = $job->getCompany();
 				
 				
 				<div class="companyinfo">
-					<h3><i class="fa fa-building-o" aria-hidden="true"></i> {{__('Company Overview')}}</h3>
+					<h3><i class="fa fa-building-o" aria-hidden="true"></i> {{__('Übersicht')}}</h3>
                             <div class="companylogo"><a href="{{route('company.detail',$company->slug)}}">{{$company->printCompanyImage()}}</a></div>
                             <div class="title"><a href="{{route('company.detail',$company->slug)}}">{{$company->name}}</a></div>
                             <div class="ptext">{{$company->getLocation()}}</div>
                             <div class="opening">
                                 <a href="{{route('company.detail',$company->slug)}}">
-                                    {{App\Company::countNumJobs('company_id', $company->id)}} {{__('Current Jobs Openings')}}
+                                    {{App\Company::countNumJobs('company_id', $company->id)}} {{__('aktuelle Stellen')}}
                                 </a>
                             </div>
                             <div class="clearfix"></div>
 					<hr>
 				<div class="companyoverview">
 				
-					<p>{{\Illuminate\Support\Str::limit(strip_tags($company->description), 250, '...')}} <a href="{{route('company.detail',$company->slug)}}">Read More</a></p>
+					<p>{{\Illuminate\Support\Str::limit(strip_tags($company->description), 250, '...')}} <a href="{{route('company.detail',$company->slug)}}">Mehr</a></p>
 					</div>
                         </div>
 				
@@ -182,7 +182,7 @@ $company = $job->getCompany();
 				
 				<!-- related jobs start -->
                 <div class="relatedJobs">
-                    <h3>{{__('Related Jobs')}}</h3>
+                    <h3>{{__('Stellen')}}</h3>
                     <ul class="searchList">
                         @if(isset($relatedJobs) && count($relatedJobs))
                         @foreach($relatedJobs as $relatedJob)

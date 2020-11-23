@@ -14,12 +14,12 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li> <a href="{{ route('admin.home') }}">Home</a> <i class="fa fa-circle"></i> </li>
-                <li> <span>Ownership Types</span> </li>
+                <li> <span>Ownership Typ</span> </li>
             </ul>
         </div>
         <!-- END PAGE BAR --> 
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">Manage Ownership Types <small>Ownership Types</small> </h3>
+        <h3 class="page-title">Manage Ownership Typ <small>Ownership Typ</small> </h3>
         <!-- END PAGE TITLE--> 
         <!-- END PAGE HEADER-->
         <div class="row">
@@ -27,8 +27,8 @@
                 <!-- Begin: life time stats -->
                 <div class="portlet light portlet-fit portlet-datatable bordered">
                     <div class="portlet-title">
-                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Ownership Types</span> </div>
-                        <div class="actions"> <a href="{{ route('create.ownership.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Ownership Type</a> </div>
+                        <div class="caption"> <i class="icon-settings font-dark"></i> <span class="caption-subject font-dark sbold uppercase">Ownership Typ</span> </div>
+                        <div class="actions"> <a href="{{ route('create.ownership.type') }}" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i> Add New Ownership Typ</a> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-container">
@@ -46,7 +46,7 @@
                                         </tr>
                                         <tr role="row" class="heading">
                                             <th>Language</th>
-                                            <th>Ownership Type</th>
+                                            <th>Ownership Typ</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -109,7 +109,7 @@
     function deleteOwnershipType(id, is_default) {
         var msg = 'Are you sure?';
         if (is_default == 1) {
-            msg = 'Are you sure? You are going to delete default Ownership Type, all other non default Ownership Types will be deleted too!';
+            msg = 'Are you sure? You are going to delete default Ownership Typ, all other non default Ownership Typ will be deleted too!';
         }
         if (confirm(msg)) {
             $.post("{{ route('delete.ownership.type') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})

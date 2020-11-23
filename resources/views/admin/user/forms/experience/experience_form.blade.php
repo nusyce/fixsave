@@ -6,8 +6,8 @@
             <span class="help-block title-error"></span> </div>
 
         <div class="form-group" id="div_company">
-            <label for="company" class="bold">Company</label>
-            <input class="form-control" id="company" placeholder="Company" name="company" type="text" value="{{(isset($profileExperience)? $profileExperience->company:'')}}">
+            <label for="company" class="bold">Unternehmen</label>
+            <input class="form-control" id="company" placeholder="Unternehmen" name="company" type="text" value="{{(isset($profileExperience)? $profileExperience->company:'')}}">
             <span class="help-block company-error"></span> </div>
 
         <div class="form-group" id="div_country_id">

@@ -16,7 +16,7 @@
 						<input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control search" placeholder="{{__('keywords e.g. "Google"')}}" />
                     </div>
                     <div class="col-lg-3">
-                        <button type="submit" id="submit-form-top" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Search Company')}}</button>
+                        <button type="submit" id="submit-form-top" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Search Unternehmen')}}</button>
                     </div>
                 </div>
             </form>

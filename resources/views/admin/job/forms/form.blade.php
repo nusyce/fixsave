@@ -3,8 +3,8 @@
 <div class="form-body">        
     {!! Form::hidden('id', null) !!}
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'company_id') !!}" id="company_id_div">
-        {!! Form::label('company_id', 'Company', ['class' => 'bold']) !!}                    
-        {!! Form::select('company_id', ['' => 'Select Company']+$companies, null, array('class'=>'form-control', 'id'=>'company_id')) !!}
+        {!! Form::label('company_id', 'Unternehmen', ['class' => 'bold']) !!}                    
+        {!! Form::select('company_id', ['' => 'Select Unternehmen']+$companies, null, array('class'=>'form-control', 'id'=>'company_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'company_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'title') !!}">
@@ -115,13 +115,13 @@
         {!! APFrmErrHelp::showErrors($errors, 'functional_area_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'job_type_id') !!}" id="job_type_id_div">
-        {!! Form::label('job_type_id', 'Job Type', ['class' => 'bold']) !!}                    
-        {!! Form::select('job_type_id', ['' => 'Select Job Type']+$jobTypes, null, array('class'=>'form-control', 'id'=>'job_type_id')) !!}
+        {!! Form::label('job_type_id', 'Job Typ', ['class' => 'bold']) !!}                    
+        {!! Form::select('job_type_id', ['' => 'Select Job Typ']+$jobTypes, null, array('class'=>'form-control', 'id'=>'job_type_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'job_shift_id') !!}" id="job_shift_id_div">
-        {!! Form::label('job_shift_id', 'Job Shift', ['class' => 'bold']) !!}                    
-        {!! Form::select('job_shift_id', ['' => 'Select Job Shift']+$jobShifts, null, array('class'=>'form-control', 'id'=>'job_shift_id')) !!}
+        {!! Form::label('job_shift_id', 'Job Schicht', ['class' => 'bold']) !!}                    
+        {!! Form::select('job_shift_id', ['' => 'Select Job Schicht']+$jobShifts, null, array('class'=>'form-control', 'id'=>'job_shift_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'job_shift_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'num_of_positions') !!}" id="num_of_positions_div">

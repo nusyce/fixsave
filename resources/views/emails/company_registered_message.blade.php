@@ -17,7 +17,7 @@
                     <td class="row" valign="top" style="padding-left:12px;padding-right:12px;padding-top:18px;padding-bottom:12px"><table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
                             <tr>
                                 <td class="subtitle" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:22px;font-weight:400;color:#333;padding-bottom:30px; text-align: left;">
-                                    <p>Employer/Company with name "{{ $name }}" has been registered on "{{ $siteSetting->site_name }}"</p>                  
+                                    <p>Employer/Unternehmen with name "{{ $name }}" has been registered on "{{ $siteSetting->site_name }}"</p>                  
                                     <p>
                                         <br>
                                         Front link :

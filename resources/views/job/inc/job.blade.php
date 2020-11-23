@@ -933,7 +933,7 @@
             {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!} </div>
     </div>
     <div class="col-md-6">
-        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'job_shift_id') !!}" id="job_shift_id_div"> {!! Form::select('job_shift_id', ['' => __('Select Job Shift')]+$jobShifts, null, array('class'=>'form-control', 'id'=>'job_shift_id')) !!}
+        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'job_shift_id') !!}" id="job_shift_id_div"> {!! Form::select('job_shift_id', ['' => __('Select Job Schicht')]+$jobShifts, null, array('class'=>'form-control', 'id'=>'job_shift_id')) !!}
             {!! APFrmErrHelp::showErrors($errors, 'job_shift_id') !!} </div>
     </div>
     <div class="col-md-6">

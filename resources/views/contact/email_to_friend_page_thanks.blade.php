@@ -4,7 +4,7 @@
 @include('includes.header')
 <!-- Header end --> 
 <!-- Inner Page Title start -->
-@include('includes.inner_page_title', ['page_title'=>__('Email to Friend')])
+@include('includes.inner_page_title', ['page_title'=>__('Teilen')])
 <!-- Inner Page Title end -->
 <div class="listpgWraper">
     <div class="container">

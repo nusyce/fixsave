@@ -5,7 +5,7 @@
     <div class="col-md-4">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'email') !!}">
             <label>{{__('E-Mail')}}</label>
-            {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>__('Company Email'))) !!}
+            {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>__('Unternehmen Email'))) !!}
           <span style="color: #ea5c90;position: relative;top:8px;">  {!! APFrmErrHelp::showErrors($errors, 'email') !!}  </span> </div>
     </div>
     <div class="col-md-4">
@@ -28,7 +28,7 @@
     <div class="col-md-6">
         <div class="formrow">
             <div id="thumbnail"></div>
-            <label class="btn btn-default"> {{__('Select Company Logo')}}
+            <label class="btn btn-default"> {{__('Select Unternehmen Logo')}}
                 <input type="file" name="logo" id="logo" style="display: none;">
             </label>
             <span style="color: #ea5c90;position: relative;top:8px;">    {!! APFrmErrHelp::showErrors($errors, 'logo') !!} </span> </div>
@@ -37,7 +37,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'name') !!}">
-            <label>{{__('Company Name')}}</label>
+            <label>{{__('Unternehmen Name')}}</label>
             {!! Form::text('name', null, array('class'=>'form-control', 'id'=>'name', 'placeholder'=>__('Name des Unternehmens'))) !!}
             <span style="color: #ea5c90;position: relative;top:8px;">    {!! APFrmErrHelp::showErrors($errors, 'name') !!} </span> </div>
     </div>
@@ -63,7 +63,7 @@
     <div class="col-md-12">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'description') !!}">
             <label>{{__('Beschreibung')}}</label>
-            {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>__('Company details'))) !!}
+            {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>__('Unternehmen details'))) !!}
             <span style="color: #ea5c90;position: relative;top:8px;">   {!! APFrmErrHelp::showErrors($errors, 'description') !!} </span> </div>
     </div>
     <div class="col-md-12">

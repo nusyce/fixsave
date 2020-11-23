@@ -34,7 +34,7 @@ Table Of Index
 
 13. Search List css
 
-14. Job Detail css
+14. Stellenbeschreibung css
 
 15. Cms Pages css
 
@@ -2084,7 +2084,7 @@ label.partTime[title="Rotating"] {
 }
 /************************************************
 
-           == Job Detail css==
+           == Stellenbeschreibung css==
 
 *************************************************/
 
@@ -4379,7 +4379,7 @@ ul.orderlist li {
 .pageTitle h1, .breadCrumb {
 	text-align: center;
 }
-/*job detail*/
+/*Stellenbeschreibung*/
 
 .job-header .jobinfo .companyinfo {
 	text-align: left;

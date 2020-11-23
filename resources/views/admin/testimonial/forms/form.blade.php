@@ -25,8 +25,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'testimonial') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'company') !!}">
-        {!! Form::label('company', 'Company and Designation', ['class' => 'bold']) !!}
-        {!! Form::text('company', null, array('class'=>'form-control', 'id'=>'company', 'placeholder'=>'Company and Designation', 'dir'=>$direction)) !!}
+        {!! Form::label('company', 'Unternehmen and Designation', ['class' => 'bold']) !!}
+        {!! Form::text('company', null, array('class'=>'form-control', 'id'=>'company', 'placeholder'=>'Unternehmen and Designation', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'company') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_default') !!}">
