@@ -12,7 +12,7 @@
 	@if(Auth::guard('company')->check())
 	<a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Stelle ausschreiben')}}</a>
 	@else
-	<a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
+	<a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Lebenslauf hochladen')}}</a>
 	@endif
 	</div>
     <!-- Side Bar start -->
@@ -21,7 +21,7 @@
         
         <!-- Jobs By Title -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Title')}}</h4>
+            <h4 class="widget-title">{{__('Titel')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($jobTitlesArray) && count($jobTitlesArray))
                 @foreach($jobTitlesArray as $key=>$jobTitle)
@@ -37,7 +37,7 @@
                 @endif
             </ul>
             <!-- title end --> 
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
 
         <!-- Jobs By Land -->
         <div class="widget">
@@ -339,7 +339,7 @@
 
         <!-- Top Companies -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Company')}}</h4>
+            <h4 class="widget-title">{{__('Unternehmen')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($companyIdsArray) && count($companyIdsArray))
                 @foreach($companyIdsArray as $key=>$company_id)
@@ -364,21 +364,21 @@
 
         <!-- Salary -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Salary Range')}}</h4>
+            <h4 class="widget-title">{{__('Gehaltsspanne')}}</h4>
             <div class="form-group">
-                {!! Form::number('salary_from', Request::get('salary_from', null), array('class'=>'form-control', 'id'=>'salary_from', 'placeholder'=>__('Salary From'))) !!}
+                {!! Form::number('salary_from', Request::get('salary_from', null), array('class'=>'form-control', 'id'=>'salary_from', 'placeholder'=>__('Gehalt von'))) !!}
             </div>
             <div class="form-group">
-                {!! Form::number('salary_to', Request::get('salary_to', null), array('class'=>'form-control', 'id'=>'salary_to', 'placeholder'=>__('Salary To'))) !!}
+                {!! Form::number('salary_to', Request::get('salary_to', null), array('class'=>'form-control', 'id'=>'salary_to', 'placeholder'=>__('Gahalt bis'))) !!}
             </div>
             <div class="form-group">
-                {!! Form::select('salary_currency', ['' =>__('Select Salary Currency')]+$currencies, Request::get('salary_currency'), array('class'=>'form-control', 'id'=>'salary_currency')) !!}
+                {!! Form::select('salary_currency', ['' =>__('Währung')]+$currencies, Request::get('salary_currency'), array('class'=>'form-control', 'id'=>'salary_currency')) !!}
             </div>
             <!-- Salary end --> 
 
             <!-- button -->
             <div class="searchnt">
-                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Stelle suchens')}}</button>
+                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('STELLE SUCHEN')}}</button>
             </div>
             <!-- button end--> 
         </div>

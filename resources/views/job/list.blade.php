@@ -10,7 +10,7 @@
 
 <!-- Inner Page Title start --> 
 
-@include('includes.inner_page_title', ['page_title'=>__('Job Listing')]) 
+@include('includes.inner_page_title', ['page_title'=>__('Stellen')])
 
 
 
@@ -153,7 +153,7 @@
 
                                 <div class="showreslt">
 
-                                    {{__('Showing Pages')}} : {{ $jobs->firstItem() }} - {{ $jobs->lastItem() }} {{__('Total')}} {{ $jobs->total() }}
+                                    {{__('Angezeigte Stellen')}} : {{ $jobs->firstItem() }} - {{ $jobs->lastItem() }} {{__('Gesamt')}} {{ $jobs->total() }}
 
                                 </div>
 
