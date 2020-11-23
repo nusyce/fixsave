@@ -20,6 +20,8 @@ class FunctionalArea extends Model
     protected $table = 'functional_areas';
     public $timestamps = true;
     protected $guarded = ['id'];
+    
+
     //protected $dateFormat = 'U';
     protected $dates = ['created_at', 'updated_at'];
 
@@ -27,6 +29,17 @@ class FunctionalArea extends Model
     {
         $functionalAreaIds = App\Job::select('functional_area_id')->pluck('functional_area_id')->toArray();
         return App\FunctionalArea::whereIn('functional_area_id', $functionalAreaIds)->lang()->active()->inRandomOrder()->paginate($limit);
+    }
+
+    public static function getFunctionalAreaById($id)
+    {
+        $functionalarea = self::where('functional_areas.functional_area_id', '=', $id)->lang()->active()->first();
+
+        if (null === $functionalarea) {
+            $functionalarea = self::where('functional_areas.functional_area_id', '=', $id)->active()->first();
+        }
+
+        return $functionalarea;
     }
 
 }
