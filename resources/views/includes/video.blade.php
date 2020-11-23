@@ -12,10 +12,10 @@
 			
 				<div class="vidover">
         <div class="titleTop">
-            <h3>{{__('Watch Our')}} <span>{{__('Video')}}</span></h3>
+            <h3>{{__('Unser ')}} <span>{{__('Video')}}</span></h3>
         </div>
         <!-- title end -->
-        <p>{{$video->video_text}}</p>
+        <p>{{__('Text folgt ... ')}}</p>
 			</div>
 			
 			</div>
