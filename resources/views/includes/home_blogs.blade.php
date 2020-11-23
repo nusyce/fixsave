@@ -2,8 +2,8 @@
     <div class="container"> 
         <!-- title start -->
         <div class="titleTop">
-            <div class="subtitle">{{__('Here You Can See')}}</div>
-            <h3>{{__('Latest')}} <span>{{__('Blogs')}}</span></h3>
+            <div class="subtitle">{{__('Hier sehen Sie')}}</div>
+            <h3>{{__('Neusten')}} <span>{{__('Blogs')}}</span></h3>
         </div>
         <!-- title end -->
 
@@ -50,7 +50,7 @@
                         @endif
         </ul>
         <!--view button-->
-        <div class="viewallbtn"><a href="{{route('blogs')}}">{{__('View All Blog Posts')}}</a></div>
+        <div class="viewallbtn"><a href="{{route('blogs')}}">{{__('Blogs ansehen')}}</a></div>
         <!--view button end--> 
     </div>
 </div>
