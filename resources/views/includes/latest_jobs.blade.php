@@ -16,9 +16,9 @@
                 <div class="jobint">
                     <div class="row">
                         <div class="col-md-3 col-sm-3">
-                            <a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}">
+                            <a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}"> <img src="{{ asset('company_logos/'.$company->logo)}}" /> </a>{{--<a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}">
                                 {{$company->printCompanyImage()}}
-                            </a>
+                            </a>--}}
                         </div>
                         <div class="col-md-9 col-sm-9">
                             <h4><a href="{{route('job.detail', [$latestJob->slug])}}" title="{{$latestJob->title}}">{{$latestJob->title}}</a></h4>

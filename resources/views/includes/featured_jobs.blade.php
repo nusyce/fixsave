@@ -17,9 +17,9 @@
                 <div class="jobint">
                     <div class="row">
                         <div class="col-lg-2 col-md-2">
-                            <a href="{{route('job.detail', [$featuredJob->slug])}}" title="{{$featuredJob->title}}">
+                            <a href="{{route('job.detail', [$featuredJob->slug])}}" title="{{$featuredJob->title}}"> <img src="{{ asset('company_logos/'.$company->logo)}}" /> </a> {{-- <a href="{{route('job.detail', [$featuredJob->slug])}}" title="{{$featuredJob->title}}">
                                 {{$company->printCompanyImage()}}
-                            </a>
+                            </a>--}}
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <h4><a href="{{route('job.detail', [$featuredJob->slug])}}" title="{{$featuredJob->title}}">{{$featuredJob->title}}</a></h4>
@@ -48,7 +48,7 @@
 
     <style>
 
-        @media screen and (max-width: 1199px) {
+        @media all and (max-width: 1199px) {
 
             #featurejob {
 
@@ -57,7 +57,7 @@
 
         }
 
-        @media screen and (max-width: 991px) and (min-width: 768px) {
+        @media all and (max-width: 991px) and (min-width: 768px) {
 
             #feat {
 

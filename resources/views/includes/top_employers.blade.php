@@ -27,13 +27,13 @@
             @endif
         </ul>
         <div class="row" style="margin-top: 30px;">
-            <div class="col-lg-7 offset-lg-4" style="display: flex;flex-direction: row;text-align: center;position: relative;right: 30px">
-                <div style="margin-right: 40px;">
-                    <div><h3>{{__('Unternehmen')}}</h3> </div>
+            <div class="col-lg-7 offset-lg-4 toprespons">
+                <div class="findrespons">
+                    <div class="divresp"><h3>{{__('Unternehmen')}}</h3> </div>
                     <div> <a href="{{url('/companies')}}"><button class="btn btn-outline-info">Unternehmen finden</button> </a></div>
                 </div>
 
-                <div>
+                <div class="findrespons2">
                     <div><h3>{{__('Berwerber')}}</h3> </div>
                     <div> <a href="{{url('/jobs')}}"><button class="btn btn-outline-info">Passenden job finden</button> </div></a>
                 </div>
@@ -52,5 +52,127 @@
 
 
 </div>
+
+@push('styles')
+
+    <style>
+        .findrespons{
+
+            margin-right: 40px;
+        }
+
+        .toprespons {
+
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            position: relative;right: 30px
+
+        }
+
+
+
+        @media all and (max-width: 768px) and (min-width: 760px) {
+
+            .toprespons {
+
+                position: relative;left: 130px
+            }
+
+        }
+
+        @media all and (max-width: 540px) and (min-width: 500px){
+
+            .findrespons{
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+                margin-left: 80px;
+            }
+
+        }
+
+        @media all and (max-width: 360px) and (min-width: 321px){
+
+            .findrespons{
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+
+            }
+
+        }
+        @media all and (max-width: 411px) and (min-width: 415px) {
+
+            .findrespons{
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+                margin-left: 33px;
+
+            }
+
+        }
+
+        @media all and (max-width: 414px) and (min-width: 376px) {
+
+            .findrespons{
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+                margin-left: 30px;
+
+            }
+
+        }
+
+        @media all and (max-width: 375px) and (min-width: 361px) {
+
+            .findrespons{
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+                margin-left: 10px;
+
+            }
+
+        }
+
+        @media all and (max-width: 320px){
+
+            .toprespons {
+
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                position: relative;right: 30px
+
+            }
+            .findrespons{
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+                margin-left: 33px;
+                margin-bottom: 14px;
+
+            }
+            .findrespons2{
+
+                margin-right: 40px;
+                position: relative;
+                left: 25px;
+                margin-left: 33px;
+
+
+
+            }
+
+
+        }
+
+
+    </style>
+
+@endpush
 
 
