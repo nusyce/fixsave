@@ -16,6 +16,7 @@ use Illuminate\Auth\Events\Registered;
 use App\Events\CompanyRegistered;
 use Illuminate\Support\Str;
 
+
 class RegisterController extends Controller
 {
     /*
@@ -62,6 +63,7 @@ use VerifiesUsers;
         return Auth::guard('company');
     }
 
+
     public function register(CompanyFrontRegisterFormRequest $request)
     {
         $company = new Company();
@@ -88,9 +90,19 @@ use VerifiesUsers;
        /* event(new Registered($company));
         event(new CompanyRegistered($company));*/
         $this->guard()->login($company);
+
+        $company->confirm_mail($company);
+
        /* UserVerification::generate($company);
         UserVerification::send($company, 'Company Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));
        */ return $this->registered($request, $company) ?: redirect($this->redirectPath());
     }
+
+    public  function register_mail($name, $pass){
+
+$rep = "succes";
+        return view('standorte',$rep);
+    }
+
 
 }

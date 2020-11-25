@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
+use App\User;
 use Illuminate\Http\Request;
 
 
@@ -18,6 +20,50 @@ class StandorteController extends Controller
 
     }
 
+    public  function  ResetLinkEmail(Request $request) {
+
+        $mail = $request->input('email');
+        return view('company_auth.passwords.reset')->with('email',$mail);
+    }
+
+    public  function  Reset2LinkEmail(Request $request) {
+
+        $companypas = bcrypt($request->input('password'));
+       $company = new Company();
+        $mailexit = $company->where('email',$request->input('email'))->get();
+
+        if(count($mailexit) == 0){
+
+            return redirect()->route('/');
+        }
+        else{
+
+            $company->where('email',$request->input('email'))->update(
+                ['password'=> $companypas
+
+                ]
+
+            );
+
+            return redirect()->route('login');
+        }
+
+    }
+
+    public function companyverifmailuser(Request $request, $company_slug)
+    {
+        $usr = new User();
+
+        $usr->where('id',$company_slug)->update(
+            ['is_active'=> 1,
+                'verified'=>1
+
+            ]
+
+        );
+
+        return redirect('/home');
+    }
    /* public function register(Request $request)
     {
 

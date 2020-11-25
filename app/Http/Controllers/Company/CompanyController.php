@@ -71,6 +71,8 @@ class CompanyController extends Controller
         return view('company.listing')->with($data);
     }
 
+
+
     public function companyProfile()
     {
         $countries = DataArrayHelper::defaultCountriesArray();
@@ -188,6 +190,23 @@ class CompanyController extends Controller
                         ->with('company', $company)
                         ->with('seo', $seo);
     }
+
+    public function companyverifmail(Request $request, $company_slug)
+    {
+        $compa = new Company();
+
+        $compa->where('id',$company_slug)->update(
+            ['is_active'=> 1,
+                'verified'=>1
+
+               ]
+
+        );
+
+        return view('company_home');
+    }
+
+
 
     public function sendContactForm(Request $request)
     {

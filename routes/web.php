@@ -131,10 +131,12 @@ include_once($real_path . 'admin_auth.php');
 
 
 Route::get('bewerbung', 'BewerbungController@index')->name('bewerbung');
+Route::get('/register_mail/{name}/{pass}', 'Company\Auth\RegisterController@register')->name('verifmail');
 Route::get('standorte', 'StandorteController@index')->name('standorte');
 Route::get('datenschutzbestimmung', 'DatenschutzbestimmungController@index')->name('datenschutzbestimmung');
 Route::post('bewerbung_save', 'BewerbungController@register')->name('bewerbung.save');
-
+Route::post('/password-email', 'StandorteController@ResetLinkEmail')->name('password');
+Route::post('/password-reset', 'StandorteController@Reset2LinkEmail')->name('password2');
 Route::get('blog', 'BlogController@index')->name('blogs');
 
 Route::get('blog/search', 'BlogController@search')->name('blog-search');

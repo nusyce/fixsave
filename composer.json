@@ -23,6 +23,7 @@
         "laravel/ui": "^2.1",
         "maatwebsite/excel": "^3.1",
         "paypal/rest-api-sdk-php": "^1.14",
+        "phpmailer/phpmailer": "^6.1",
         "spatie/laravel-newsletter": "^4.8",
         "stripe/stripe-php": "^7.49",
         "yajra/laravel-datatables": "^1.5"
@@ -48,6 +49,9 @@
         "psr-4": {
             "App\\": "app/"
         },
+        "files": [
+            "App/mail_helpers.php"
+        ],
         "classmap": [
             "database/seeds",
             "database/factories"
