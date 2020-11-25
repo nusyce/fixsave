@@ -506,7 +506,7 @@
     <div class="col-lg-12">
         <div class="row">
             <div class="col-lg-1">
-                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Start/Zeitraum*: </label></div>
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Start/Zeitraum: </label></div>
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">

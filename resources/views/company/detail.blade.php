@@ -113,7 +113,7 @@
 {{--
                             @if(!empty($company->Telefonnummer))
 
-                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$company->Telefonnummer}}">{{$company->Telefonnummer}}</a></div>
+                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$company->Telefonnummer}}">{{$company->Telefonnummer}}</a></div>
 
                             @endif--}}
                             @if(!empty($company->land))

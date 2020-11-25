@@ -28,7 +28,7 @@
 						</div>
 
 						<ul class="row userdata">
-							<li class="col-lg-6 col-md-6"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> {{auth()->user()->Telefonnummer}}</li>							
+							<li class="col-lg-6 col-md-6"><i class="fa fa-phone" aria-hidden="true"></i> {{auth()->user()->Telefonnummer}}</li>							
 							<li class="col-lg-6 col-md-6"><i class="fa fa-envelope" aria-hidden="true"></i> {{auth()->user()->email}}</li>
 						</ul>
 

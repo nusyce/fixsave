@@ -100,10 +100,10 @@
                         <h3>{{__('Kontakt')}}</h3>
                         <div class="candidateinfo">            
                             @if(!empty($user->Telefonnummer))
-                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->Telefonnummer}}">{{$user->Telefonnummer}}</a></div>
+                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$user->Telefonnummer}}">{{$user->Telefonnummer}}</a></div>
                             @endif
                             @if(!empty($user->mobile_num))
-                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->mobile_num}}">{{$user->mobile_num}}</a></div>
+                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$user->mobile_num}}">{{$user->mobile_num}}</a></div>
                             @endif
                             @if(!empty($user->email))
                             <div class="loctext"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:{{$user->email}}">{{$user->email}}</a></div>

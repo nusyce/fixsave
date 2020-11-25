@@ -2,10 +2,9 @@
 @section('content') 
 <!-- Header start --> 
 @include('includes.header') 
-    <!--Style CV -->
 
-    <link rel="stylesheet" href="{{asset('/')}}css/styles.css">
 
+ 
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
 @include('includes.inner_page_title', ['page_title'=>__($page_title)]) 
@@ -50,10 +49,10 @@
                         <h3>{{__('Kontakt')}}</h3>
                         <div class="candidateinfo">            
                             @if(!empty($user->Telefonnummer))
-                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->Telefonnummer}}">{{$user->Telefonnummer}}</a></div>
+                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$user->Telefonnummer}}">{{$user->Telefonnummer}}</a></div>
                             @endif
                             @if(!empty($user->mobile_num))
-                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$user->mobile_num}}">{{$user->mobile_num}}</a></div>
+                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$user->mobile_num}}">{{$user->mobile_num}}</a></div>
                             @endif
                             @if(!empty($user->email))
                             <div class="loctext"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:{{$user->email}}">{{$user->email}}</a></div>
@@ -159,11 +158,14 @@
 @include('includes.footer')
 @endsection
 @push('styles')
+<link rel="stylesheet" href="{{asset('/')}}css/styles.css">
+
 <style type="text/css">
     .formrow iframe {
         height: 78px;
     }
 </style>
+
 @endpush
 @push('scripts') 
 <script type="text/javascript">

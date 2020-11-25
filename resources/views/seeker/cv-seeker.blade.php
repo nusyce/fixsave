@@ -1,4 +1,6 @@
-   <div class="resume">
+
+
+    <div class="resume">
    <div class="resume_left">
      <div class="resume_profile">
        <img src="{{asset('/')}}images/KJ7.JPG" alt="profile_pic">
@@ -455,4 +457,4 @@ Person,</p><br>
     
   </div>
 </div>
-    
+
