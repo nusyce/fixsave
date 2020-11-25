@@ -27,7 +27,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Land end--> 
 
 
@@ -52,7 +52,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Staat end--> 
 
 
@@ -77,7 +77,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Stadt end--> 
 
         <!-- Jobs By Experience -->
@@ -101,7 +101,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr)}}</span> </div>
         <!-- Jobs By Experience end --> 
 
 
@@ -126,7 +126,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Career Level end --> 
 
         <!-- Jobs By Gender -->
@@ -150,7 +150,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Gender end --> 
 
 
@@ -176,7 +176,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Industry end --> 
 
         <!-- Jobs By Skill -->
@@ -201,7 +201,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Industry end --> 
 
 
@@ -228,12 +228,12 @@
 
             </ul>
             <!-- title end --> 
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
 
 
         <!-- Salary -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Salary Range')}}</h4>
+            <h4 class="widget-title">{{__('Gehaltsspanne')}}</h4>
             <div class="form-group">
                 {!! Form::number('current_salary', Request::get('current_salary', null), array('class'=>'form-control', 'id'=>'current_salary', 'placeholder'=>__('Current Salary'))) !!}
             </div>
@@ -241,7 +241,7 @@
                 {!! Form::number('expected_salary', Request::get('expected_salary', null), array('class'=>'form-control', 'id'=>'expected_salary', 'placeholder'=>__('Expected Salary'))) !!}
             </div>
             <div class="form-group">
-                {!! Form::select('salary_currency', ['' =>__('Select Salary Currency')]+$currencies, Request::get('salary_currency', $siteSetting->default_currency_code), array('class'=>'form-control', 'id'=>'salary_currency')) !!}
+                {!! Form::select('salary_currency', ['' =>__('Währung')]+$currencies, Request::get('salary_currency', $siteSetting->default_currency_code), array('class'=>'form-control', 'id'=>'salary_currency')) !!}
             </div>
             <!-- Salary end --> 
 

@@ -70,18 +70,18 @@
         {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'salary_from') !!}" id="salary_from_div">
-        {!! Form::label('salary_from', 'Salary From', ['class' => 'bold']) !!}                    
+        {!! Form::label('salary_from', 'Gehalt von', ['class' => 'bold']) !!}
         {!! Form::number('salary_from', null, array('class'=>'form-control', 'id'=>'salary_from')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'salary_from') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'salary_to') !!}" id="salary_to_div">
-        {!! Form::label('salary_to', 'Salary To', ['class' => 'bold']) !!}                    
+        {!! Form::label('salary_to', 'Gahalt bis', ['class' => 'bold']) !!}
         {!! Form::number('salary_to', null, array('class'=>'form-control', 'id'=>'salary_to')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'salary_to') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'salary_currency') !!}" id="salary_currency_div">
         {!! Form::label('salary_currency', 'Salary Currency', ['class' => 'bold']) !!}                    
-        {!! Form::select('salary_currency', ['' => 'Select Salary Currency']+$currencies, null, array('class'=>'form-control', 'id'=>'salary_currency')) !!}
+        {!! Form::select('salary_currency', ['' => 'Währung']+$currencies, null, array('class'=>'form-control', 'id'=>'salary_currency')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'salary_currency') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'salary_period_id') !!}" id="salary_period_id_div">

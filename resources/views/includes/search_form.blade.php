@@ -49,12 +49,12 @@
 			<div class="col-lg-9 col-md-8">
 				<label for=""> {{__('Berufstitel')}}</label>
 				<input type="text"  name="search" id="jbsearch" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Stellenbezeichnung oder Fähigkeiten')}}" autocomplete="off" /></div>
-			<div class="col-lg-3 col-md-4">
+			<div class="col-lg-3 col-md-4" id="stelleresp">
 				<label for="">&nbsp;</label>
 				<input type="submit" class="btn" value="{{__('Stelle suchen')}}"></div>
 		</div>
 				
-		<div class="srcsubfld additional_fields">
+		<div class="srcsubfld additional_fields" id="champrespon">
 			<div class="row">
         <div class="col-lg-{{((bool)$siteSetting->country_specific_site)? 6:3}}">
 			<label for="">{{__('Funktionsbereich')}}</label>
@@ -95,4 +95,34 @@
 		
     </div>
 </form>
+@push('styles')
+
+	<style>
+
+		@media all and (max-width: 767px){
+
+			#stelleresp{
+
+
+				position: relative;top:350px;
+
+			}
+
+			#champrespon {
+
+				position: relative;
+				bottom: 80px;
+			}
+
+
+		}
+
+
+
+
+	</style>
+
+@endpush
 @endif
+
+

@@ -61,13 +61,13 @@
 
             #feat {
 
-                margin-right: 12px;
+
 
             }
 
             #featurejob {
 
-                width: 200px;
+
 
             }
 

@@ -30,12 +30,12 @@
             <div class="col-lg-7 offset-lg-4 toprespons">
                 <div class="findrespons">
                     <div class="divresp"><h3>{{__('Unternehmen')}}</h3> </div>
-                    <div> <a href="{{url('/companies')}}"><button class="btn btn-outline-info">Unternehmen finden</button> </a></div>
+                    <div> <a href="{{url('/companies')}}"><button class="btn btn-outline-info">FINDEN</button> </a></div>
                 </div>
 
                 <div class="findrespons2">
                     <div><h3>{{__('Berwerber')}}</h3> </div>
-                    <div> <a href="{{url('/jobs')}}"><button class="btn btn-outline-info">Passenden job finden</button> </div></a>
+                    <div> <a href="{{url('/jobs')}}"><button class="btn btn-outline-info">FINDEN</button> </div></a>
                 </div>
             </div>
         </div>

@@ -37,7 +37,7 @@
                 @endif
             </ul>
             <!-- title end --> 
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
 
         <!-- Jobs By Land -->
         <div class="widget">
@@ -60,7 +60,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Land end--> 
 
 
@@ -85,7 +85,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Staat end--> 
 
 
@@ -110,7 +110,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Stadt end--> 
 
         <!-- Jobs By Experience -->
@@ -134,7 +134,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Experience end --> 
 
         <!-- Jobs By Job Type -->
@@ -158,7 +158,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Job Type end --> 
 
         <!-- Jobs By Job Shift -->
@@ -182,7 +182,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Job Shift end --> 
 
         <!-- Jobs By Career Level -->
@@ -206,7 +206,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Career Level end --> 
 
 
@@ -231,7 +231,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Degree Level end --> 
 
 
@@ -256,7 +256,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Gender end --> 
 
 
@@ -282,7 +282,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Industry end --> 
 
         <!-- Jobs By Skill -->
@@ -307,7 +307,7 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Jobs By Industry end --> 
 
 
@@ -334,12 +334,12 @@
 
             </ul>
             <!-- title end --> 
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
 
 
         <!-- Top Companies -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Jobs By Company')}}</h4>
+            <h4 class="widget-title">{{__('Unternehmen')}}</h4>
             <ul class="optionlist view_more_ul">
                 @if(isset($companyIdsArray) && count($companyIdsArray))
                 @foreach($companyIdsArray as $key=>$company_id)
@@ -359,26 +359,26 @@
                 @endforeach
                 @endif
             </ul>
-            <span class="text text-primary view_more hide_vm">{{__('View More')}}</span> </div>
+            <span class="text text-primary view_more hide_vm">{{__('Mehr')}}</span> </div>
         <!-- Top Companies end --> 
 
         <!-- Salary -->
         <div class="widget">
-            <h4 class="widget-title">{{__('Salary Range')}}</h4>
+            <h4 class="widget-title">{{__('Gehaltsspanne')}}</h4>
             <div class="form-group">
-                {!! Form::number('salary_from', Request::get('salary_from', null), array('class'=>'form-control', 'id'=>'salary_from', 'placeholder'=>__('Salary From'))) !!}
+                {!! Form::number('salary_from', Request::get('salary_from', null), array('class'=>'form-control', 'id'=>'salary_from', 'placeholder'=>__('Gehalt von'))) !!}
             </div>
             <div class="form-group">
-                {!! Form::number('salary_to', Request::get('salary_to', null), array('class'=>'form-control', 'id'=>'salary_to', 'placeholder'=>__('Salary To'))) !!}
+                {!! Form::number('salary_to', Request::get('salary_to', null), array('class'=>'form-control', 'id'=>'salary_to', 'placeholder'=>__('Gahalt bis'))) !!}
             </div>
             <div class="form-group">
-                {!! Form::select('salary_currency', ['' =>__('Select Salary Currency')]+$currencies, Request::get('salary_currency'), array('class'=>'form-control', 'id'=>'salary_currency')) !!}
+                {!! Form::select('salary_currency', ['' =>__('Währung')]+$currencies, Request::get('salary_currency'), array('class'=>'form-control', 'id'=>'salary_currency')) !!}
             </div>
             <!-- Salary end --> 
 
             <!-- button -->
             <div class="searchnt">
-                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('Stelle suchens')}}</button>
+                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i> {{__('STELLE SUCHEN')}}</button>
             </div>
             <!-- button end--> 
         </div>
