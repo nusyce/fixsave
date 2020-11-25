@@ -196,6 +196,12 @@ class UserController extends Controller
         return \Redirect::route('my.profile');
     }
 
+
+    
+   
+
+
+
     public function addToFavouriteCompany(Request $request, $company_slug)
     {
         $data['company_slug'] = $company_slug;

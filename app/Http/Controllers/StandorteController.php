@@ -26,29 +26,6 @@ class StandorteController extends Controller
         return view('company_auth.passwords.reset')->with('email',$mail);
     }
 
-    public  function  Reset2LinkEmail(Request $request) {
-
-        $companypas = bcrypt($request->input('password'));
-       $company = new Company();
-        $mailexit = $company->where('email',$request->input('email'))->get();
-
-        if(count($mailexit) == 0){
-
-            return redirect()->route('/');
-        }
-        else{
-
-            $company->where('email',$request->input('email'))->update(
-                ['password'=> $companypas
-
-                ]
-
-            );
-
-            return redirect()->route('login');
-        }
-
-    }
 
     public function companyverifmailuser(Request $request, $company_slug)
     {
@@ -96,4 +73,74 @@ class StandorteController extends Controller
 
         return view('Standorte');
     }*/
+
+
+    public function verifyEmailUser(Request $request)
+
+    {
+        // $user = new User();
+        //  $mailexit = $user->where('email',$request->input('email'))->get();
+ 
+        //  if(count($mailexit) == 0){
+
+        //      return view('auth.passwords.verify-email');
+        //  }
+        //  else{
+        //     return view('auth.passwords.resetpassword')->with('email',$mailexit->email);
+
+        //  }
+
+        $mail = $request->input('email');
+    
+
+        return view('auth.passwords.reset')->with('email',$mail);;
+    }
+
+    public function resetPasswordUser(Request $request)
+    {
+        $resetpassword = bcrypt($request->input('password'));
+        $user = new User();
+         $mailexit = $user->where('email',$request->input('email'))->get();
+ 
+         if(count($mailexit) == 0){
+ 
+             return redirect()->route('user.password.reset');
+         }
+         else{
+ 
+             $user->where('email',$request->input('email'))->update(
+                 ['password'=> $resetpassword
+ 
+                 ]
+ 
+             );
+ 
+             return redirect()->route('login');
+         }
+    }
+
+    
+    public  function  Reset2LinkEmail(Request $request) {
+
+        $companypas = bcrypt($request->input('password'));
+       $company = new Company();
+        $mailexit = $company->where('email',$request->input('email'))->get();
+
+        if(count($mailexit) == 0){
+
+            return redirect()->route('/');
+        }
+        else{
+
+            $company->where('email',$request->input('email'))->update(
+                ['password'=> $companypas
+
+                ]
+
+            );
+
+            return redirect()->route('login');
+        }
+
+    }
 }

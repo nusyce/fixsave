@@ -137,6 +137,8 @@ Route::get('datenschutzbestimmung', 'DatenschutzbestimmungController@index')->na
 Route::post('bewerbung_save', 'BewerbungController@register')->name('bewerbung.save');
 Route::post('/password-email', 'StandorteController@ResetLinkEmail')->name('password');
 Route::post('/password-reset', 'StandorteController@Reset2LinkEmail')->name('password2');
+Route::post('/reset-user-password', 'StandorteController@resetPasswordUser')->name('user.password.reset');
+Route::post('/verify-email', 'StandorteController@verifyEmailUser')->name('user.verify');
 Route::get('blog', 'BlogController@index')->name('blogs');
 
 Route::get('blog/search', 'BlogController@search')->name('blog-search');
