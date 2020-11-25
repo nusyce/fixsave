@@ -140,6 +140,170 @@ trait JobTrait
     {
         $job = new Job();
         $job->company_id = $request->input('company_id');
+        $job->options = $request->input('option');
+        $job->wochenstunden = $request->input('wochenstunden');
+        $job->verdienstpro = $request->input('verdienstpro');
+        $job->verdienstim = $request->input('verdienstim');
+        $job->bundesland = $request->input('bundesland');
+        $job->plz = $request->input('plz');
+        $job->arbeitsort = $request->input('arbeitsort');
+        $job->sonstige = $request->input('sonstige');
+        $job->ausstattung = serialize($request->input('ausstattung'));
+        $job->wanie = $request->input('wanie');
+
+        
+
+        if($request->input('fuhrerschein')=== 0)
+        {
+            $job->fuhrerschein = "Nein";
+
+        }
+        else
+        {
+            $job->fuhrerschein = "Ya";
+
+        } 
+        
+
+
+        if($request->input('fuhrerschein')=== 0)
+        {
+            $job->fuhrerschein = "Appartement";
+
+        }
+        else if($request->input('fuhrerschein')=== 1)
+        {
+            $job->fuhrerschein = "Pension";
+
+        } 
+      
+        else
+        {
+            $job->fuhrerschein = "Hotel";
+
+        }
+
+        if($request->input('deutschlevel')=== 0)
+        {
+            $job->deutschlevel = "A1";
+
+        }
+        else if($request->input('deutschlevel')=== 1)
+        {
+            $job->deutschlevel = "A2";
+
+        } 
+        else if($request->input('deutschlevel')=== 2)
+        {
+            $job->deutschlevel = "B1";
+
+        }
+        else
+        {
+            $job->deutschlevel = "B2";
+
+        }
+
+        if($request->input('englischlevel')=== 0)
+        {
+            $job->englischlevel = "A1";
+
+        }
+        else if($request->input('englischlevel')=== 1)
+        {
+            $job->englischlevel = "A2";
+
+        } 
+        else if($request->input('englischlevel')=== 2)
+        {
+            $job->englischlevel = "B1";
+
+        }
+        else
+        {
+            $job->englischlevel = "B2";
+
+        }
+
+        if($request->input('geschlecht')=== 0)
+        {
+            $job->geschlecht = "Herr";
+
+        }
+        else
+        {
+            $job->geschlecht = "Frau";
+
+        }
+
+
+        if($request->input('bereich')=== 0)
+        {
+            $job->bereich = "Lebensmittel";
+
+        }
+        else
+        {
+            $job->bereich = "Metall";
+
+        }
+
+        
+        if($request->input('zeit')=== 0)
+        {
+            $job->zeit = "Voltzeit";
+
+        }
+        else
+        {
+            $job->zeit = "Teilzeit";
+
+        }
+
+
+        if($request->input('vertragsart')=== 0)
+        {
+            $job->vertragsart = "Festeinstellung";
+
+        }
+        else
+        {
+            $job->vertragsart = "Arbeitnehmerüberlassung";
+
+        }
+
+        if($request->input('branche')=== 0)
+        {
+            $job->branche = "Industrie";
+
+        }
+        else if($request->input('branche')=== 1)
+        {
+            $job->branche = "Dienstleistungen";
+
+        }
+       else
+        {
+            $job->branche = "Einzelhandel";
+
+        }
+        
+        if($request->input('beruf')=== 0)
+        {
+            $job->beruf = "Schlosser";
+
+        }
+        else if($request->input('beruf')=== 1)
+        {
+            $job->beruf = "Bürokaufmann";
+
+        }
+       else
+        {
+            $job->beruf = "Verkäufer";
+
+        }
+
         $job = $this->assignJobValues($job, $request);
         $job->is_active = $request->input('is_active');
         $job->is_featured = $request->input('is_featured');
@@ -154,7 +318,7 @@ trait JobTrait
         /*         * ************************************ */
         $this->updateFullTextSearch($job);
         /*         * ************************************ */
-        flash('Job has been added!')->success();
+        flash('Job has been added admin!')->success();
         return \Redirect::route('edit.job', array($job->id));
     }
 
@@ -276,6 +440,13 @@ trait JobTrait
 
         $job = new Job();
         $job->company_id = $company->id;
+        $job->job_type_id = $request->input('job_type_id');
+
+        $job->job_shift_id = $request->input('job_shift_id');
+        $job->career_level_id = $request->input('career_level_id');
+        $job->num_of_positions = $request->input('num_of_positions');
+        $job->job_experience_id = $request->input('job_experience_id');
+        $job->degree_level_id = $request->input('degree_level_id');
         $job->title = $request->input('title');
         $job->geschlecht = $request->input('geschlecht');
         $job->vertragsart = $request->input('vertragsart');

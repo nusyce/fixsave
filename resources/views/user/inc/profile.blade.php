@@ -39,16 +39,17 @@
 
 <div class="row">
     <div class="col-md-6">
+        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'gender_id') !!}">
+			<label for="">{{__('Geschlecht')}}</label>
+			{!! Form::select('gender_id', [''=>__('Wähle Geschlecht')]+$genders, null, array('class'=>'form-control', 'id'=>'gender_id','required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'gender_id') !!} </div>
+    </div>
+
+    <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'first_name') !!}">
 			<label for="">{{__('Vorname')}}</label>
 			{!! Form::text('first_name', null, array('class'=>'form-control', 'id'=>'first_name', 'placeholder'=>__('Vorname'),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
             {!! APFrmErrHelp::showErrors($errors, 'first_name') !!} </div>
-    </div>
-    <div class="col-md-6">
-        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'middle_name') !!}">
-			<label for="">{{__('Zweiter Vorname')}}</label>
-			{!! Form::text('middle_name', null, array('class'=>'form-control', 'id'=>'middle_name', 'placeholder'=>__('Middle Name'),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'middle_name') !!}</div>
     </div>
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'last_name') !!}">
@@ -56,6 +57,14 @@
 			{!! Form::text('last_name', null, array('class'=>'form-control', 'id'=>'last_name', 'placeholder'=>__('Nachname'),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
             {!! APFrmErrHelp::showErrors($errors, 'last_name') !!}</div>
     </div>
+    
+    <div class="col-md-6">
+        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'middle_name') !!}">
+			<label for="">{{__('Zweiter Vorname')}}</label>
+			{!! Form::text('middle_name', null, array('class'=>'form-control', 'id'=>'middle_name', 'placeholder'=>__('Middle Name'),'required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'middle_name') !!}</div>
+    </div>
+   
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'father_name') !!}">
 			<label for="">{{__('Der Name des Vaters')}}</label>
@@ -63,12 +72,7 @@
             {!! APFrmErrHelp::showErrors($errors, 'father_name') !!} </div>
     </div>
     
-    <div class="col-md-6">
-        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'gender_id') !!}">
-			<label for="">{{__('Geschlecht')}}</label>
-			{!! Form::select('gender_id', [''=>__('Wähle Geschlecht')]+$genders, null, array('class'=>'form-control', 'id'=>'gender_id','required' => 'required','oninvalid'=>"this.setCustomValidity('Bitte füllen Sie dieses Feld aus')",'oninput'=>"this.setCustomValidity('')")) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'gender_id') !!} </div>
-    </div>
+  
     <div class="col-md-6">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'marital_status_id') !!}">
 			<label for="">{{__('Familienstand')}}</label>

@@ -159,6 +159,7 @@ return [
         Yajra\DataTables\DataTablesServiceProvider::class,
         App\Providers\CustomConfigServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------
@@ -215,5 +216,6 @@ return [
         'MiscHelper' => App\Helpers\MiscHelper::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 ];

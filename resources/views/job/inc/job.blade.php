@@ -19,7 +19,7 @@
     </div>
     <div class="col-lg-12">
         <div class="formrow">
-
+         
 
 
         </div>
@@ -146,20 +146,105 @@
 
 
 
-{{--
+
 
     <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Branche: </label></div>
-            <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
+        <div class="row">
 
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Typ Job: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+              
+                <div class=" {!! APFrmErrHelp::hasError($errors, 'job_type_id') !!}" > {!! Form::select('job_type_id', ['' =>__('Select Required Typ')]+$jobTypes, null, array('class'=>'form-control')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!} </div>
+            </div>
+    
         </div>
+       
 
     </div>
---}}
 
 
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Job Schicht: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+              
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'job_shift_id') !!}" id="job_shift_id_div"> {!! Form::select('job_shift_id', ['' => __('Select Job Schicht')]+$jobShifts, null, array('class'=>'form-control', 'id'=>'job_shift_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'job_shift_id') !!} </div>  </div>
+    
+        </div>
+       
+
+    </div>
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Career Level: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+              
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'career_level_id') !!}" id="career_level_id_div"> {!! Form::select('career_level_id', ['' => __('Select Career level')]+$careerLevels, null, array('class'=>'form-control', 'id'=>'career_level_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!} </div> </div>
+    
+        </div>
+       
+
+    </div>
+
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Positions: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'num_of_positions') !!}" id="num_of_positions_div"> {!! Form::select('num_of_positions', ['' => __('Select number of Positions')]+MiscHelper::getNumPositions(), null, array('class'=>'form-control', 'id'=>'num_of_positions')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'num_of_positions') !!} </div></div>
+    
+        </div>
+       
+
+    </div>
+
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Job Experience: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'job_experience_id') !!}" id="job_experience_id_div"> {!! Form::select('job_experience_id', ['' => __('Select Required job experience')]+$jobExperiences, null, array('class'=>'form-control', 'id'=>'job_experience_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'job_experience_id') !!} </div></div>
+    
+        </div>
+       
+
+    </div>
+  
+
+
+   
+    
+   
     <div class="col-lg-12">
         <div class="row">
             <div class="col-lg-1">

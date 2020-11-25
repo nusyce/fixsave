@@ -43,7 +43,7 @@ use App\Traits\ProfileLanguageTrait;
 use App\Traits\Skills;
 use App\Http\Requests\Front\UserFrontFormRequest;
 use App\Helpers\DataArrayHelper;
-
+use PDF;
 class UserController extends Controller
 {
 
@@ -79,6 +79,26 @@ class UserController extends Controller
                         ->with('profileCv', $profileCv)
                         ->with('page_title', $user->getName())
                         ->with('form_title', 'Contact ' . $user->getName());
+    }
+
+    public function viewCVProfile($id)
+    {
+
+        $user = User::findOrFail($id);
+        $profileCv = $user->getDefaultCv();
+
+        return view('user.applicant_cv')
+                        ->with('user', $user)
+                        ->with('profileCv', $profileCv)
+                        ->with('page_title', $user->getName())
+                        ->with('form_title', 'Contact ' . $user->getName());
+    }
+
+    public function CVPdfProfile()
+    {
+        $pdf = PDF::loadView('seeker.cv-download-seeker',[2])->setWarnings(false);
+        
+        return $pdf->download('cv.pdf');
     }
 
     public function myProfile()

@@ -4,6 +4,8 @@
 Route::get('my-profile', 'UserController@myProfile')->name('my.profile');
 Route::put('my-profile', 'UserController@updateMyProfile')->name('my.profile');
 Route::get('view-public-profile/{id}', 'UserController@viewPublicProfile')->name('view.public.profile');
+Route::get('view-cv-profile/{id}', 'UserController@viewCVProfile')->name('view.public.cv');
+Route::get('download-cv-profile', 'UserController@CVPdfProfile')->name('cv-pdf');
 Route::post('update-front-profile-summary/{id}', 'UserController@updateProfileSummary')->name('update.front.profile.summary');
 Route::post('update-immediate-available-status', 'UserController@updateImmediateAvailableStatus')->name('update.immediate.available.status');
 Route::get('add-to-favourite-company/{company_slug}', 'UserController@addToFavouriteCompany')->name('add.to.favourite.company');

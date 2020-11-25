@@ -2,6 +2,10 @@
 @section('content') 
 <!-- Header start --> 
 @include('includes.header') 
+    <!--Style CV -->
+
+    <link rel="stylesheet" href="{{asset('/')}}css/styles.css">
+
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
 @include('includes.inner_page_title', ['page_title'=>__($page_title)]) 
@@ -13,86 +17,32 @@
 
         <!-- Stellenbeschreibung start -->
         <div class="row">
-            <div class="col-md-8"> 
+            <div class="col-md-9"> 
 				
 				<!-- Job Header start -->
         <div class="job-header">
-            <div class="jobinfo">
-                
-                   
-                        <!-- Candidate Info -->
-                        <div class="candidateinfo">
-                            <div class="userPic">{{$user->printUserImage()}}</div>
-                            <div class="title">
-                                {{$user->getName()}}
-                                @if((bool)$user->is_immediate_available)
-                                <sup style="font-size:12px; color:#090;">{{__('Sofort verfügbar')}}</sup>
-                                @endif
-                            </div>
-                            <div class="desi">{{$user->getLocation()}}</div>
-                            <div class="loctext"><i class="fa fa-history" aria-hidden="true"></i> {{__('Mitglied seit')}}, {{$user->created_at->format('M d, Y')}}</div>
-                            
-                            <div class="clearfix"></div>
-                        </div>
-                    
-                    
-                                 
-                   
-                
-            </div>
+    
 
             <!-- Buttons -->
             <div class="jobButtons">
-                @if(isset($job) && isset($company))
-                @if(Auth::guard('company')->check() && Auth::guard('company')->user()->isFavouriteApplicant($user->id, $job->id, $company->id))
-                <a href="{{route('remove.from.favourite.applicant', [$job_application->id, $user->id, $job->id, $company->id])}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Short Listed Applicant')}} </a>
-                @else
-                <a href="{{route('add.to.favourite.applicant', [$job_application->id, $user->id, $job->id, $company->id])}}" class="btn"><i class="fa fa-floppy-o" aria-hidden="true"></i> {{__('Short List This Applicant')}}</a>
-                @endif
-                @endif
-
-                @if(null !== $profileCv)<a href="{{ route('view.public.cv', Auth::user()->id) }}" class="btn"><i class="fa fa-download" aria-hidden="true"></i> {{__('Lebenslauf herunterladen')}}</a>@endif
-              {{--  <a href="javascript:;" onclick="send_message()" class="btn"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Nachricht senden')}}</a>--}}
-
+                @if(null !== $profileCv)<a href="{{ route('cv-pdf')}}" class="btn"><i class="fa fa-download" aria-hidden="true"></i> {{__('Lebenslauf hochladen')}}</a>@endif
+                
             </div>
+
+           <!-- begin include view cv -->
+
+           @include('seeker.cv-seeker') 
+
+<!-- end include view cv --> 
         </div>
 				
+						
+		
 				
 				
-				
-                <!-- About Employee start -->
-                <div class="job-header">
-                    <div class="contentbox">
-                        <h3>{{__('Über mich')}}</h3>
-                        <p>{{$user->getProfileSummary('summary')}}</p>
-                    </div>
-                </div>
-
-                <!-- Education start -->
-                <div class="job-header">
-                    <div class="contentbox">
-                        <h3>{{__('Bildung')}}</h3>
-                        <div class="" id="education_div"></div>            
-                    </div>
-                </div>
-
-                <!-- Experience start -->
-                <div class="job-header">
-                    <div class="contentbox">
-                        <h3>{{__('Erfahrung')}}</h3>
-                        <div class="" id="experience_div"></div>            
-                    </div>
-                </div>
-
-                <!-- Portfolio start -->
-                <div class="job-header">
-                    <div class="contentbox">
-                        <h3>{{__('Geschäftsbereich')}}</h3>
-                        <div class="" id="projects_div"></div>            
-                    </div>
-                </div>
+           
             </div>
-            <div class="col-md-4"> 
+            <div class="col-md-3"> 
 				
 				 <!-- Candidate Contact -->
 				<div class="job-header">

@@ -2,16 +2,136 @@
 @include('flash::message')
 <div class="form-body">        
     {!! Form::hidden('id', null) !!}
+    
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'title') !!}">
+        {!! Form::label('title', 'Job title', ['class' => 'bold']) !!}
+        {!! Form::text('title', null, array('class'=>'form-control', 'id'=>'title', 'placeholder'=>'Job title')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'title') !!} 
+    </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'company_id') !!}" id="company_id_div">
         {!! Form::label('company_id', 'Unternehmen', ['class' => 'bold']) !!}                    
         {!! Form::select('company_id', ['' => 'Select Unternehmen']+$companies, null, array('class'=>'form-control', 'id'=>'company_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'company_id') !!}                                       
     </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'title') !!}">
-        {!! Form::label('title', 'Job title', ['class' => 'bold']) !!}
-        {!! Form::text('title', null, array('class'=>'form-control', 'id'=>'title', 'placeholder'=>'Job title')) !!}
-        {!! APFrmErrHelp::showErrors($errors, 'title') !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'geschlecht') !!}" id="geschlecht_div">
+        {!! Form::label('geschlecht', 'Geschlecht', ['class' => 'bold']) !!}                    
+        {!! Form::select('geschlecht', ['' => 'Select Geschlecht']+["Herr","Frau"], null, array('class'=>'form-control', 'id'=>'geschlecht')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'geschlecht') !!}                                       
     </div>
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'vertragsart') !!}" id="vertragsart_div">
+        {!! Form::label('vertragsart', 'Vertragsart', ['class' => 'bold']) !!}                    
+        {!! Form::select('vertragsart', ['' => 'Select Vertragsart']+["Festeinstellung","Arbeitnehmerüberlassung"], null, array('class'=>'form-control', 'id'=>'vertragsart')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'vertragsart') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'branche') !!}" id="branche_div">
+        {!! Form::label('branche', 'Branche', ['class' => 'bold']) !!}                    
+        {!! Form::select('branche', ['' => 'Select Branche']+["Industrie","Dienstleistungen","Einzelhandel"], null, array('class'=>'form-control', 'id'=>'branche')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'branche') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'beruf') !!}" id="beruf_div">
+        {!! Form::label('beruf', 'Beruf', ['class' => 'bold']) !!}                    
+        {!! Form::select('beruf', ['' => 'Select Beruf']+["Schlosser","Bürokaufmann","Verkäufer"], null, array('class'=>'form-control', 'id'=>'beruf')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'beruf') !!}                                       
+    </div>
+
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'bereich') !!}" id="bereich_div">
+        {!! Form::label('bereich', 'Bereich', ['class' => 'bold']) !!}                    
+        {!! Form::select('bereich', ['' => 'Select Bereich']+["Lebensmittel","Metall"], null, array('class'=>'form-control', 'id'=>'bereich')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'bereich') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'zeit') !!}" id="zeit_div">
+        {!! Form::label('zeit', 'Zeit', ['class' => 'bold']) !!}                    
+        {!! Form::select('zeit', ['' => 'Select Zeit']+["Voltzeit","Teilzeit"], null, array('class'=>'form-control', 'id'=>'zeit')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'zeit') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'option') !!}" id="option_div">
+        {!! Form::label('option', 'option', ['class' => 'bold']) !!}                    
+        {{ Form::checkbox('option', 'Homeoffice', false) }}
+        {!! APFrmErrHelp::showErrors($errors, 'option') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'wochenstunden') !!}">
+        {!! Form::label('wochenstunden', 'Wochenstunden', ['class' => 'bold']) !!}
+        {!! Form::text('wochenstunden', null, array('class'=>'form-control', 'id'=>'wochenstunden', 'placeholder'=>'Wochenstunden')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'wochenstunden') !!} 
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'verdienstpro') !!}">
+        {!! Form::label('verdienstpro', 'Verdienst pro Stunde', ['class' => 'bold']) !!}
+        {!! Form::text('verdienstpro', null, array('class'=>'form-control', 'id'=>'verdienstpro', 'placeholder'=>'Verdienstpro')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'verdienstpro') !!} 
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'verdienstim') !!}">
+        {!! Form::label('verdienstim', 'Verdienst im Monat:', ['class' => 'bold']) !!}
+        {!! Form::text('verdienstim', null, array('class'=>'form-control', 'id'=>'verdienstim', 'placeholder'=>'Verdienstim')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'verdienstim') !!} 
+    </div>
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'plz') !!}">
+        {!! Form::label('plz', 'Plz', ['class' => 'bold']) !!}
+        {!! Form::text('plz', null, array('class'=>'form-control', 'id'=>'plz', 'placeholder'=>'Plz')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'plz') !!} 
+    </div>
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'arbeitsort') !!}">
+        {!! Form::label('arbeitsort', 'Arbeitsort', ['class' => 'bold']) !!}
+        {!! Form::text('arbeitsort', null, array('class'=>'form-control', 'id'=>'arbeitsort', 'placeholder'=>'Arbeitsort')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'arbeitsort') !!} 
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'deutschlevel') !!}" id="deutschlevel_div">
+        {!! Form::label('deutschlevel', 'Deutschlevel', ['class' => 'bold']) !!}                    
+        {!! Form::select('deutschlevel', ['' => 'Select deutschlevel']+["A1","A2","B1","B2"], null, array('class'=>'form-control', 'id'=>'deutschlevel')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'deutschlevel') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'englischlevel') !!}" id="englischlevel_div">
+        {!! Form::label('englischlevel', 'englischlevel', ['class' => 'bold']) !!}                    
+        {!! Form::select('englischlevel', ['' => 'Select englischlevel']+["A1","A2","B1","B2"], null, array('class'=>'form-control', 'id'=>'englischlevel')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'englischlevel') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'fuhrerschein') !!}" id="fuhrerschein_div">
+        {!! Form::label('fuhrerschein', 'Führerschein', ['class' => 'bold']) !!}                    
+        {!! Form::select('fuhrerschein', ['' => 'Select fuhrerschein']+["Appartement","Pension","Hotel"], null, array('class'=>'form-control', 'id'=>'fuhrerschein')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'fuhrerschein') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'unterkunft') !!}" id="unterkunft_div">
+        {!! Form::label('unterkunft', 'Unterkunft*', ['class' => 'bold']) !!}                    
+        {!! Form::select('unterkunft', ['' => 'Select unterkunft']+["Nein","Ya"], null, array('class'=>'form-control', 'id'=>'unterkunft')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'unterkunft') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'sonstige') !!}">
+        {!! Form::label('sonstige', 'Sonstige Sprachen', ['class' => 'bold']) !!}
+        {!! Form::text('sonstige', null, array('class'=>'form-control', 'id'=>'sonstige', 'placeholder'=>'Sonstige')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'sonstige') !!} 
+    </div>
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ausstattung') !!}" id="ausstattung_div">
+        {!! Form::label('ausstattung', 'ausstattung', ['class' => 'bold']) !!}                    
+        {{ Form::checkbox('ausstattung[]', 'Internet', false) }}
+        {!! Form::label('Internet', 'Internet') !!}                    
+
+        {{ Form::checkbox('ausstattung[]', 'eigenes Bad', false) }}
+        {!! Form::label('eigenes Bad', 'eigenes Bad') !!}                    
+
+        {{ Form::checkbox('ausstattung[]', 'TV', false) }}
+        {!! Form::label('eigenes Bad', 'eigenes Bad') !!}                    
+
+        {!! APFrmErrHelp::showErrors($errors, 'ausstattung') !!}                                       
+    </div>
+
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'wanie') !!}">
+        {!! Form::label('wanie', 'Wanie', ['class' => 'bold']) !!}
+        {!! Form::text('wanie', null, array('class'=>'form-control', 'id'=>'wanie', 'placeholder'=>'Wanie')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'wanie') !!} 
+    </div>
+
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'description') !!}">
         {!! Form::label('description', 'Job description', ['class' => 'bold']) !!}
         {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Job description')) !!}
@@ -29,6 +149,11 @@
         {!! Form::label('country_id', 'Land', ['class' => 'bold']) !!}                    
         {!! Form::select('country_id', ['' => 'Land auswählen']+$countries, old('country_id', (isset($job))? $job->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
+    </div>
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'bundesland') !!}">
+        {!! Form::label('bundesland', 'Bundesland', ['class' => 'bold']) !!}
+        {!! Form::text('bundesland', null, array('class'=>'form-control', 'id'=>'bundesland', 'placeholder'=>'Bundesland')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'bundesland') !!} 
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}" id="state_id_div">
         {!! Form::label('state_id', 'Staat', ['class' => 'bold']) !!}                    
@@ -149,11 +274,7 @@
         {!! Form::select('job_experience_id', ['' => 'Select Required job experience']+$jobExperiences, null, array('class'=>'form-control', 'id'=>'job_experience_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'job_experience_id') !!}                                       
     </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'job_experience_id') !!}" id="job_experience_id_div">
-        {!! Form::label('job_experience_id', 'Required job experience', ['class' => 'bold']) !!}
-        {!! Form::select('job_experience_id', ['' => 'Select Required job experience']+$jobExperiences, null, array('class'=>'form-control', 'id'=>'job_experience_id')) !!}
-        {!! APFrmErrHelp::showErrors($errors, 'job_experience_id') !!}
-    </div>
+    
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_active') !!}">
         {!! Form::label('is_active', 'Is Active?', ['class' => 'bold']) !!}
         <div class="radio-list">
