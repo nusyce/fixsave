@@ -61,7 +61,7 @@ class JobController extends Controller
 
     public function jobsBySearch(Request $request)
     {
-        mail('taffogeraud@gmail.com','emailtest','mail succes');
+        
         $search = $request->query('search', '');
         $job_titles = $request->query('job_title', array());
         $company_ids = $request->query('company_id', array());
