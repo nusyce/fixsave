@@ -17,7 +17,7 @@ class CompanyRegisteredMailable extends Mailable
      *
      * @return void
      */
-    public function __construct($company)
+    public function __construct($company = null)
     {
         $this->company = $company;
     }

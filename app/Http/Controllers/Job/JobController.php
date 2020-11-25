@@ -61,6 +61,7 @@ class JobController extends Controller
 
     public function jobsBySearch(Request $request)
     {
+
         $search = $request->query('search', '');
         $job_titles = $request->query('job_title', array());
         $company_ids = $request->query('company_id', array());

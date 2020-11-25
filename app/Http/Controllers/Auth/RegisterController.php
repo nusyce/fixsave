@@ -70,10 +70,13 @@ class RegisterController extends Controller
       /*  event(new Registered($user));
         event(new UserRegistered($user));*/
         $this->guard()->login($user);
+
+        $user->confirm_mail($user);
       /*  UserVerification::generate($user);
         UserVerification::send($user, 'User Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));*/
 
         return $this->registered($request, $user) ?: redirect($this->redirectPath());
     }
+
 
 }

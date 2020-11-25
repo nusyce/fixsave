@@ -136,7 +136,7 @@
 
                         @if(!empty($company->telefon))
 
-                            <div class="loctext"><i class="fa fa-Telefonnummer" aria-hidden="true"></i> <a href="tel:{{$company->telefon}}">{{$company->telefon}}</a></div>
+                            <div class="loctext"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$company->telefon}}">{{$company->telefon}}</a></div>
 
                             @endif
 

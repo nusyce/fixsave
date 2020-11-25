@@ -6,6 +6,8 @@ Route::get('company-profile', 'Company\CompanyController@companyProfile')->name(
 Route::put('update-company-profile', 'Company\CompanyController@updateCompanyProfile')->name('update.company.profile');
 Route::get('posted-jobs', 'Company\CompanyController@postedJobs')->name('posted.jobs');
 Route::get('company/{slug}', 'Company\CompanyController@companyDetail')->name('company.detail');
+Route::get('mail/{slug}', 'Company\CompanyController@companyverifmail')->name('mail');
+Route::get('mail_user/{slug}', 'StandorteController@companyverifmailuser')->name('mail_user');
 Route::post('contact-company-message-send', 'Company\CompanyController@sendContactForm')->name('contact.company.message.send');
 Route::post('contact-applicant-message-send', 'Company\CompanyController@sendApplicantContactForm')->name('contact.applicant.message.send');
 Route::get('list-applied-users/{job_id}', 'Company\CompanyController@listAppliedUsers')->name('list.applied.users');

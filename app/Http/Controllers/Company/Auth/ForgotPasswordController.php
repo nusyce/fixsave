@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Company\Auth;
 
+use App\Company;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Front\CompanyFrontFormRequest;
+use App\Http\Requests\Front\CompanyFrontRegisterFormRequest;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Support\Facades\Password;
 
@@ -50,5 +53,6 @@ use SendsPasswordResetEmails;
     {
         return Password::broker('companies');
     }
+
 
 }

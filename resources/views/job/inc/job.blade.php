@@ -1,10 +1,10 @@
 <h5>{{__('Details zur Stelle')}}</h5>
- @if(isset($job))
-{!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
-{!! Form::hidden('id', $job->id) !!}
+@if(isset($job))
+    {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
+    {!! Form::hidden('id', $job->id) !!}
 @else
-{!! Form::open(array('method' => 'post', 'route' => array('store.front.job'), 'class' => 'form')) !!}
- @endif
+    {!! Form::open(array('method' => 'post', 'route' => array('store.front.job'), 'class' => 'form')) !!}
+@endif
 
 <div class="row">
 
@@ -29,27 +29,27 @@
 
 
     <div class="col-lg-12">
-       <div class="row">
-           <div class="col-lg-1">
-               <div style="font-weight: bold"> <label style="font-size: 16px;">  Geschlecht: </label></div>
+        <div class="row">
+            <div class="col-lg-1">
+                <div style="font-weight: bold"> <label style="font-size: 16px;">  Geschlecht: </label></div>
 
-           </div>
-           <div class="col-lg-4 offset-lg-3 formrow">
-               <div>
-                   <input type="radio" name="geschlecht"  style="position: relative;bottom: 2px;" id="nationales_recruiting" value="Herr" class="form-check-input">
-                   <label style="position: relative;bottom: 3px;" for="nationales_recruiting" class="form-check-label">Herr</label>
-               </div>
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow">
+                <div>
+                    <input type="radio" name="geschlecht"  style="position: relative;bottom: 2px;" id="nationales_recruiting" value="Herr" class="form-check-input">
+                    <label style="position: relative;bottom: 3px;" for="nationales_recruiting" class="form-check-label">Herr</label>
+                </div>
 
-           </div>
-           <div class="col-lg-4 formrow">
+            </div>
+            <div class="col-lg-4 formrow">
 
 
-               <div style="margin-right: 65px;font-size: 16px;">
-                   <input type="radio" name="geschlecht" style="position: relative;bottom: 2px;"  id="internat_recruiting" value="Frau" class="form-check-input" selected="">
-                   <label style="position: relative;bottom: 3px;" for="internat_recruiting" class="form-check-label">Frau</label>
-               </div>
-           </div>
-       </div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="geschlecht" style="position: relative;bottom: 2px;"  id="internat_recruiting" value="Frau" class="form-check-input" selected="">
+                    <label style="position: relative;bottom: 3px;" for="internat_recruiting" class="form-check-label">Frau</label>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -78,45 +78,45 @@
     </div>
 
 
-{{--
+    {{--
 
-    <div class="col-lg-12">
+        <div class="col-lg-12">
 
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Geschlecht: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="radio"   id="nationales_recruiting" value="nationales Recruiting" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="nationales_recruiting" class="form-check-label">nationales Recruiting </label>
-            </div>
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Geschlecht: </label></div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="radio"   id="nationales_recruiting" value="nationales Recruiting" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="nationales_recruiting" class="form-check-label">nationales Recruiting </label>
+                </div>
 
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="radio"   id="internat_recruiting" value="internat Recruiting" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="internat_recruiting" class="form-check-label">internat Recruiting </label>
-            </div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="radio"   id="internat_recruiting" value="internat Recruiting" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="internat_recruiting" class="form-check-label">internat Recruiting </label>
+                </div>
 
-        </div>
-
-    </div>
---}}
-
-
-  {{--  <div class="col-lg-12">
-
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Vertragsart: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="radio2"   id="festeinstellung" value="Festeinstellung" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="festeinstellung" class="form-check-label">Festeinstellung </label>
-            </div>
-
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="radio2"   id="arbeitnehmeruberlassung" value="Arbeitnehmerüberlassung" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="arbeitnehmeruberlassung" class="form-check-label">Arbeitnehmerüberlassung</label>
             </div>
 
         </div>
+    --}}
 
-    </div>--}}
+
+    {{--  <div class="col-lg-12">
+
+          <div class="form-group" style="display: flex;flex-direction: row">
+              <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Vertragsart: </label></div>
+              <div style="margin-right: 65px;font-size: 16px;">
+                  <input type="radio" name="radio2"   id="festeinstellung" value="Festeinstellung" class="form-check-input" style="position: relative;bottom: 2px;">
+                  <label style="position: relative;bottom: 3px;" for="festeinstellung" class="form-check-label">Festeinstellung </label>
+              </div>
+
+              <div style="margin-right: 65px;font-size: 16px;">
+                  <input type="radio" name="radio2"   id="arbeitnehmeruberlassung" value="Arbeitnehmerüberlassung" class="form-check-input" style="position: relative;bottom: 2px;">
+                  <label style="position: relative;bottom: 3px;" for="arbeitnehmeruberlassung" class="form-check-label">Arbeitnehmerüberlassung</label>
+              </div>
+
+          </div>
+
+      </div>--}}
 
 
 
@@ -157,6 +157,81 @@
 
             </div>
             <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+
+                <div class=" {!! APFrmErrHelp::hasError($errors, 'job_type_id') !!}" > {!! Form::select('job_type_id', ['' =>__('Select Required Typ')]+$jobTypes, null, array('class'=>'form-control')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!} </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Job Schicht: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'job_shift_id') !!}" id="job_shift_id_div"> {!! Form::select('job_shift_id', ['' => __('Select Job Schicht')]+$jobShifts, null, array('class'=>'form-control', 'id'=>'job_shift_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'job_shift_id') !!} </div>  </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Career Level: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'career_level_id') !!}" id="career_level_id_div"> {!! Form::select('career_level_id', ['' => __('Select Career level')]+$careerLevels, null, array('class'=>'form-control', 'id'=>'career_level_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!} </div> </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Positions: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
+                <div class="formrow {!! APFrmErrHelp::hasError($errors, 'num_of_positions') !!}" id="num_of_positions_div"> {!! Form::select('num_of_positions', ['' => __('Select number of Positions')]+MiscHelper::getNumPositions(), null, array('class'=>'form-control', 'id'=>'num_of_positions')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'num_of_positions') !!} </div></div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="col-lg-12">
+        <div class="row">
+
+            <div class="col-lg-1">
+                <div style="font-weight: bold;position:relative;top:17px;"> <label style="font-size: 16px;">  Typ Job: </label></div>
+
+
+            </div>
+            <div class="col-lg-4 offset-lg-3 formrow" style="position: relative;right: 16px;">
               
                 <div class=" {!! APFrmErrHelp::hasError($errors, 'job_type_id') !!}" > {!! Form::select('job_type_id', ['' =>__('Select Required Typ')]+$jobTypes, null, array('class'=>'form-control')) !!}
                     {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!} </div>
@@ -165,7 +240,12 @@
         </div>
        
 
+
     </div>
+
+
+
+
 
 
     <div class="col-lg-12">
@@ -268,15 +348,15 @@
 
     </div>
 
-{{--    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Beruf: </label></div>
-            <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
+    {{--    <div class="col-lg-12">
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Beruf: </label></div>
+                <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
 
-        </div>
+            </div>
 
-    </div>--}}
+        </div>--}}
 
 
 
@@ -301,15 +381,15 @@
 
     </div>
 
-   {{-- <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Bereich: </label></div>
-            <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
+    {{-- <div class="col-lg-12">
+         <div class="form-group" style="display: flex;flex-direction: row">
+             <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Bereich: </label></div>
+             <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
+                 {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
 
-        </div>
+         </div>
 
-    </div>--}}
+     </div>--}}
 
 
     <div class="col-lg-12">
@@ -339,24 +419,24 @@
 
 
 
-{{--
-    <div class="col-lg-12">
+    {{--
+        <div class="col-lg-12">
 
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Zeit: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="radio3"   id="voltzeit" value="Voltzeit" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="voltzeit" class="form-check-label">Voltzeit </label>
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Zeit: </label></div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="radio3"   id="voltzeit" value="Voltzeit" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="voltzeit" class="form-check-label">Voltzeit </label>
+                </div>
+
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="radio3"   id="teilzeit" value="Teilzeit" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="teilzeit" class="form-check-label">Teilzeit</label>
+                </div>
+
             </div>
 
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="radio3"   id="teilzeit" value="Teilzeit" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="teilzeit" class="form-check-label">Teilzeit</label>
-            </div>
-
-        </div>
-
-    </div>--}}
+        </div>--}}
 
 
 
@@ -411,17 +491,17 @@
     </div>
 
 
-{{--
-    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Wochenstunden: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+    {{--
+        <div class="col-lg-12">
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Wochenstunden: </label></div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+                </div>
+
             </div>
 
-        </div>
-
-    </div>--}}
+        </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -438,15 +518,15 @@
 
     </div>
 
-   {{-- <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Start/Zeitraum*: </label></div>
-            <div class="formrow {!! APFrmErrHelp::hasError($errors, 'expiry_date') !!}"> {!! Form::text('expiry_date', null, array('class'=>'form-control datepicker', 'id'=>'expiry_date', 'placeholder'=>__('Job expiry date'), 'autocomplete'=>'off')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'expiry_date') !!} </div>
+    {{-- <div class="col-lg-12">
+         <div class="form-group" style="display: flex;flex-direction: row">
+             <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Start/Zeitraum*: </label></div>
+             <div class="formrow {!! APFrmErrHelp::hasError($errors, 'expiry_date') !!}"> {!! Form::text('expiry_date', null, array('class'=>'form-control datepicker', 'id'=>'expiry_date', 'placeholder'=>__('Job expiry date'), 'autocomplete'=>'off')) !!}
+                 {!! APFrmErrHelp::showErrors($errors, 'expiry_date') !!} </div>
 
-        </div>
+         </div>
 
-    </div>--}}
+     </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -464,16 +544,16 @@
 
     </div>
 
-   {{-- <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Verdienst pro Stunde: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
-            </div>
+    {{-- <div class="col-lg-12">
+         <div class="form-group" style="display: flex;flex-direction: row">
+             <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Verdienst pro Stunde: </label></div>
+             <div style="margin-right: 65px;font-size: 16px;">
+                 <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+             </div>
 
-        </div>
+         </div>
 
-    </div>--}}
+     </div>--}}
 
 
     <div class="col-lg-12">
@@ -491,17 +571,17 @@
         </div>
 
     </div>
-{{--
-    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Verdienst im Monat: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+    {{--
+        <div class="col-lg-12">
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Verdienst im Monat: </label></div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+                </div>
+
             </div>
 
-        </div>
-
-    </div>--}}
+        </div>--}}
 
 
     <div class="col-lg-12">
@@ -523,19 +603,19 @@
 
     </div>
 
-  {{--  <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;"> Land </label></div>
-            <div class="formrow">
+    {{--  <div class="col-lg-12">
+          <div class="form-group" style="display: flex;flex-direction: row">
+              <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;"> Land </label></div>
+              <div class="formrow">
 
-                <input type="text" name="land" class="form-control" required="required"
-                       placeholder="{{$compagny->land}}" value="{{$compagny->land}}">
+                  <input type="text" name="land" class="form-control" required="required"
+                         placeholder="{{$compagny->land}}" value="{{$compagny->land}}">
 
-            </div>
+              </div>
 
-        </div>
+          </div>
 
-    </div>--}}
+      </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -557,19 +637,19 @@
     </div>
 
 
-   {{-- <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;"> Bundesland </label></div>
-            <div class="formrow">
+    {{-- <div class="col-lg-12">
+         <div class="form-group" style="display: flex;flex-direction: row">
+             <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;"> Bundesland </label></div>
+             <div class="formrow">
 
-                <input type="text" name="" class="form-control" required="required"
-                       placeholder="{{$compagny->bundesland}}" value="{{$compagny->bundesland}}" >
+                 <input type="text" name="" class="form-control" required="required"
+                        placeholder="{{$compagny->bundesland}}" value="{{$compagny->bundesland}}" >
 
-            </div>
+             </div>
 
-        </div>
+         </div>
 
-    </div>--}}
+     </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -591,22 +671,22 @@
     </div>
 
 
-{{--
-    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;"> Plz </label></div>
+    {{--
+        <div class="col-lg-12">
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;"> Plz </label></div>
 
-            <div class="formrow">
+                <div class="formrow">
 
-                <input type="text" name=" " class="form-control" required="required"
-                       placeholder="{{$compagny->plz}}" value="{{$compagny->plz}}">
+                    <input type="text" name=" " class="form-control" required="required"
+                           placeholder="{{$compagny->plz}}" value="{{$compagny->plz}}">
+
+                </div>
+
 
             </div>
 
-
-        </div>
-
-    </div>--}}
+        </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -660,17 +740,17 @@
         </div>
 
     </div>
-{{--
-    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Arbeitsort: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+    {{--
+        <div class="col-lg-12">
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Arbeitsort: </label></div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="text" name="check"   id="" value="" class="form-control" style="position: relative;bottom: 2px;">
+                </div>
+
             </div>
 
-        </div>
-
-    </div>--}}
+        </div>--}}
 
 
     <div class="col-lg-12">
@@ -698,16 +778,16 @@
 
     </div>
 
-  {{--
-    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Deutschlevel: </label></div>
-            <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
+    {{--
+      <div class="col-lg-12">
+          <div class="form-group" style="display: flex;flex-direction: row">
+              <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Deutschlevel: </label></div>
+              <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
+                  {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
 
-        </div>
+          </div>
 
-    </div>--}}
+      </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -734,16 +814,16 @@
 
     </div>
 
-   {{-- <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Englischlevel: </label></div>
-            <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
+    {{-- <div class="col-lg-12">
+         <div class="form-group" style="display: flex;flex-direction: row">
+             <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Englischlevel: </label></div>
+             <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
+                 {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
 
-        </div>
+         </div>
 
-    </div>
---}}
+     </div>
+ --}}
 
 
     <div class="col-lg-12">
@@ -794,16 +874,16 @@
         </div>
 
     </div>
-   {{--
-    <div class="col-lg-12">
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Führerschein: </label></div>
-            <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
-                {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
+    {{--
+     <div class="col-lg-12">
+         <div class="form-group" style="display: flex;flex-direction: row">
+             <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Führerschein: </label></div>
+             <div class=" {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div"> {!! Form::select('degree_level_id', ['' =>__('Select Required Degree Level')]+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
+                 {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!} </div>
 
-        </div>
+         </div>
 
-    </div>--}}
+     </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -870,49 +950,49 @@
 
     </div>
 
-{{--
+    {{--
+        <div class="col-lg-12">
+
+            <div class="form-group" style="display: flex;flex-direction: row">
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Ausstattung: </label></div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="checkbox" name="check2"   id=" " value="Internet" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="" class="form-check-label">Internet </label>
+                </div>
+
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="check3"   id="" value="eigenes Bad" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="" class="form-check-label">eigenes Bad </label>
+                </div>
+                <div style="margin-right: 65px;font-size: 16px;">
+                    <input type="radio" name="check4"   id="" value="TV" class="form-check-input" style="position: relative;bottom: 2px;">
+                    <label style="position: relative;bottom: 3px;" for="" class="form-check-label">TV </label>
+                </div>
+
+            </div>
+
+        </div>--}}
+
     <div class="col-lg-12">
+        <div class="formrow"  style="position: relative;">
 
-        <div class="form-group" style="display: flex;flex-direction: row">
-            <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Ausstattung: </label></div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="checkbox" name="check2"   id=" " value="Internet" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="" class="form-check-label">Internet </label>
-            </div>
-
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="check3"   id="" value="eigenes Bad" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="" class="form-check-label">eigenes Bad </label>
-            </div>
-            <div style="margin-right: 65px;font-size: 16px;">
-                <input type="radio" name="check4"   id="" value="TV" class="form-check-input" style="position: relative;bottom: 2px;">
-                <label style="position: relative;bottom: 3px;" for="" class="form-check-label">TV </label>
-            </div>
+            <input type="text" name="wanie" class="form-control" id="tagswannie" autocomplete="off" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
+                   placeholder="{{__('Wähle deine Tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
 
         </div>
 
-    </div>--}}
-
-    <div class="col-lg-12">
-    <div class="formrow"  style="position: relative;">
-
-        <input type="text" name="wanie" class="form-control" id="tagswannie" autocomplete="off" required = "required" oninvalid="this.setCustomValidity('Bitte füllen Sie dieses Feld aus')" oninput="this.setCustomValidity('')"
-               placeholder="{{__('Wähle deine Tags')}}"  value="<?php if(isset($job)){ echo $job->wanie; } ?>">
-
     </div>
-
-</div>
 
 </div>
 <div class="row">
 
 
 
-{{--
-    <div class="col-md-12">
-        <div class="formrow {!! APFrmErrHelp::hasError($errors, 'title') !!}"> {!! Form::text('title', null, array('class'=>'form-control', 'id'=>'title', 'placeholder'=>__('Job title'))) !!}
-            {!! APFrmErrHelp::showErrors($errors, 'title') !!} </div>
-    </div>--}}
+    {{--
+        <div class="col-md-12">
+            <div class="formrow {!! APFrmErrHelp::hasError($errors, 'title') !!}"> {!! Form::text('title', null, array('class'=>'form-control', 'id'=>'title', 'placeholder'=>__('Job title'))) !!}
+                {!! APFrmErrHelp::showErrors($errors, 'title') !!} </div>
+        </div>--}}
 
     <div class="col-lg-12">
         <div class="row">
@@ -928,22 +1008,22 @@
 
 
     <div class="col-md-12">
-{{--
-        <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Beschreibung: </label></div>
---}}
+        {{--
+                <div style="margin-right: 100px;margin-left:10px;font-weight: bold"> <label style="font-size: 16px;">  Beschreibung: </label></div>
+        --}}
 
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'description') !!}"> {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>__('Job description'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'description') !!} </div>
     </div>
 
 
-	{{--
-	 <div class="col-md-12">
+    {{--
+     <div class="col-md-12">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'benefits') !!}"> {!! Form::textarea('benefits', null, array('class'=>'form-control', 'id'=>'benefits', 'placeholder'=>__('Job Benefits'))) !!}
             {!! APFrmErrHelp::showErrors($errors, 'benefits') !!} </div>
     </div>
-	
-	
+
+
     <div class="col-md-12">
         <div class="formrow {!! APFrmErrHelp::hasError($errors, 'skills') !!}">
             <?php
@@ -1071,31 +1151,31 @@
 {!! Form::close() !!}
 <hr>
 @push('styles')
-<style type="text/css">
-    .datepicker>div {
-        display: block;
-    }
-    .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
-    .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
-    .autocomplete-selected { background: #F0F0F0; }
-    .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
-    .autocomplete-group { padding: 2px 5px; }
-    .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
-</style>
+    <style type="text/css">
+        .datepicker>div {
+            display: block;
+        }
+        .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+        .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+        .autocomplete-selected { background: #F0F0F0; }
+        .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+        .autocomplete-group { padding: 2px 5px; }
+        .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+    </style>
 @endpush
 @push('scripts')
-@include('includes.tinyMCEFront')
-<script src="{{ asset('js/jquery.autocomplete.min.js') }}"></script>
+    @include('includes.tinyMCEFront')
+    <script src="{{ asset('js/jquery.autocomplete.min.js') }}"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
+    <script type="text/javascript">
+        $(document).ready(function () {
 
 
-/*
-        $( "#tagswannie" ).autocomplete({
-            source: function( request, response ) {
-                $.ajax( {
-                    url: '{{ route('ajax.wahle') }}',
+            /*
+                    $( "#tagswannie" ).autocomplete({
+                        source: function( request, response ) {
+                            $.ajax( {
+                                url: '{{ route('ajax.wahle') }}',
                     dataType: "jsonp",
                     data: {
                         term: request.term
@@ -1110,60 +1190,60 @@
                 log( "Selected: " + ui.item.value + " aka " + ui.item.id );
             }
         } );*/
-      /*  var countries = [
-            { value: 'Andorra', data: 'AD' },
-            // ...
-            { value: 'Zimbabwe', data: 'ZZ' }
-        ];
-*/
+            /*  var countries = [
+                  { value: 'Andorra', data: 'AD' },
+                  // ...
+                  { value: 'Zimbabwe', data: 'ZZ' }
+              ];
+      */
 
-        // Initialize ajax autocomplete:
-        $('#tagswannie').autocomplete({
-            serviceUrl: '{{ route('ajax.wahle') }}'
-            /*onSelect: function (suggestion) {
-                alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-            }*/
-        });
+            // Initialize ajax autocomplete:
+            $('#tagswannie').autocomplete({
+                serviceUrl: '{{ route('ajax.wahle') }}'
+                /*onSelect: function (suggestion) {
+                    alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                }*/
+            });
 
 
-        $('.select2-multiple').select2({
-            placeholder: "{{__('Select Required Skills')}}",
-            allowClear: true
+            $('.select2-multiple').select2({
+                placeholder: "{{__('Select Required Skills')}}",
+                allowClear: true
+            });
+            $(".datepicker").datepicker({
+                autoclose: true,
+                format: 'yyyy-m-d'
+            });
+            $('#country_id').on('change', function (e) {
+                e.preventDefault();
+                filterLangStates(0);
+            });
+            $(document).on('change', '#state_id', function (e) {
+                e.preventDefault();
+                filterLangCities(0);
+            });
+            filterLangStates(<?php echo old('state_id', (isset($job)) ? $job->state_id : 0); ?>);
         });
-        $(".datepicker").datepicker({
-            autoclose: true,
-            format: 'yyyy-m-d'
-        });
-        $('#country_id').on('change', function (e) {
-            e.preventDefault();
-            filterLangStates(0);
-        });
-        $(document).on('change', '#state_id', function (e) {
-            e.preventDefault();
-            filterLangCities(0);
-        });
-        filterLangStates(<?php echo old('state_id', (isset($job)) ? $job->state_id : 0); ?>);
-    });
-    function filterLangStates(state_id)
-    {
-        var country_id = $('#country_id').val();
-        if (country_id != '') {
-            $.post("{{ route('filter.lang.states.dropdown') }}", {country_id: country_id, state_id: state_id, _method: 'POST', _token: '{{ csrf_token() }}'})
+        function filterLangStates(state_id)
+        {
+            var country_id = $('#country_id').val();
+            if (country_id != '') {
+                $.post("{{ route('filter.lang.states.dropdown') }}", {country_id: country_id, state_id: state_id, _method: 'POST', _token: '{{ csrf_token() }}'})
                     .done(function (response) {
                         $('#default_state_dd').html(response);
                         filterLangCities(<?php echo old('city_id', (isset($job)) ? $job->city_id : 0); ?>);
                     });
+            }
         }
-    }
-    function filterLangCities(city_id)
-    {
-        var state_id = $('#state_id').val();
-        if (state_id != '') {
-            $.post("{{ route('filter.lang.cities.dropdown') }}", {state_id: state_id, city_id: city_id, _method: 'POST', _token: '{{ csrf_token() }}'})
+        function filterLangCities(city_id)
+        {
+            var state_id = $('#state_id').val();
+            if (state_id != '') {
+                $.post("{{ route('filter.lang.cities.dropdown') }}", {state_id: state_id, city_id: city_id, _method: 'POST', _token: '{{ csrf_token() }}'})
                     .done(function (response) {
                         $('#default_city_dd').html(response);
                     });
+            }
         }
-    }
-</script> 
+    </script>
 @endpush
