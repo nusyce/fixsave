@@ -13,9 +13,9 @@
         <div class="clearfix"></div>
     </div>
     <ul class="usernavdash">
-        <li <?=empty(Request::path())||Request::path()=='home'?'class="active"':''?>><a href="{{route('home')}}"><i class="fa fa-tachometer" aria-hidden="true"></i> {{__('Dashboard')}}</a>
+        <li <?=empty(Request::path())||Request::path()=='home'?'class="active"':''?>><a href="{{route('home')}}"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> {{__('Dashboard')}}</a>
         </li>
-        <li <?=Request::path()=='my-profile'?'class="active"':''?> ><a href="{{ route('my.profile') }}"><i class="fa fa-pencil" aria-hidden="true"></i> {{__('Profil bearbeiten')}}</a>
+        <li <?=Request::path()=='my-profile'?'class="active"':''?> ><a href="{{ route('my.profile') }}"><i class="fa fa-pencil-alt" aria-hidden="true"></i> {{__('Profil bearbeiten')}}</a>
         </li>
         <li <?=Request::path()=='view-public-profile'?'class="active"':''?>><a href="{{ route('view.public.profile', Auth::user()->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> {{__('Profil anzeigen')}}</a>
         </li>
@@ -27,11 +27,11 @@
         </li>
        {{-- <li><a href="{{url('my-profile#cvs')}}"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Lebensläufe verwalten')}}</a>
         </li>--}}
-        <li <?=Request::path()=='my-messages'?'class="active"':''?>><a href="{{route('my.messages')}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Nachrichten')}}</a>
+        <li <?=Request::path()=='my-messages'?'class="active"':''?>><a href="{{route('my.messages')}}"><i class="fa fa-envelope" aria-hidden="true"></i> {{__('Nachrichten')}}</a>
         </li>
-        <li <?=Request::path()=='my-followings'?'class="active"':''?>><a href="{{route('my.followings')}}"><i class="fa fa-user-o" aria-hidden="true"></i> {{__('Follower')}}</a>
+        <li <?=Request::path()=='my-followings'?'class="active"':''?>><a href="{{route('my.followings')}}"><i class="fa fa-user-alt" aria-hidden="true"></i> {{__('Follower')}}</a>
         </li>
-        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Abmeldung')}}</a>
+        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> {{__('Abmeldung')}}</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}
             </form>
